@@ -90,7 +90,7 @@ bot.on("message", async message => {
         return message.channel.send('eso es lo que tu quisieras, no?');
     }
     if (message.content.includes('justice')) {
-        return message.channel.send(<@!274718150153732096> + ', te buscan');
+        return message.channel.send('<@!274718150153732096> te buscan');
     }
     if (message.content.includes('trece')) {
         return message.channel.send('mientras mas me lo maman mas me crece');
