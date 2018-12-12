@@ -24,7 +24,7 @@ bot.on("ready", async () =>{
                 bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
             }
             else if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
-                bot.channels.get('465770747223343115').send("merry chrystler @everyone">);
+                bot.channels.get('465770747223343115').send("merry chrystler @everyone");
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
