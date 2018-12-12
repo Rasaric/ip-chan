@@ -20,16 +20,17 @@ bot.on("ready", async () =>{
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send(festivity + "'s birthday is tomorrow, are you ready?");
             }
-            else if (bot.bdays[festivity].day == 26 && bot.bdays[festivity].mon == 3) {
+            if (bot.bdays[festivity].day == 26 && bot.bdays[festivity].mon == 3) {
                 bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
-            }
-            else if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
-                bot.channels.get('465770747223343115').send("merry chrystler @everyone");
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
             }
-            else if (bot.bdays[festivity].day == 11 && bot.bdays[festivity].mon == 9) {
+            if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
+                bot.channels.get('465770747223343115').send("merry chrystler @everyone");
+            }
+            
+            if (bot.bdays[festivity].day == 11 && bot.bdays[festivity].mon == 9) {
                 bot.channels.get('465770747223343115').send("@everyone never forget");
             }
         }
@@ -128,7 +129,7 @@ bot.on("message", async message => {
 
     	fs.writeFile("./bdays.json", JSON.stringify(bot.bdays, null, 4), err => {
     		if (err) throw err;
-    		message.channel.send ("birthday recorded");
+    		message.channel.send ("I will remember this day," + day + "/" + mon + ", as your birthday, faggot");
     	});
     }
 
@@ -136,13 +137,13 @@ bot.on("message", async message => {
     if (message.content.startsWith(':-bget')){
         editget = message.content.split(' ');
         let whom = editget[1]
-        message.channel.send (editget[1] + "'s bday is the " + bot.bdays[editget[1]].day + " of the " + bot.bdays[editget[1]].mon + " month")
+        message.channel.send (editget[1] + "'s bday is the " + bot.bdays[editget[1]].day + "/" + bot.bdays[editget[1]].mon)
     }
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
         for (var prop in bot.bdays) {
-            var dump = dump + "Key:" + prop + "Value:" + bot.bdays[prop];
+            var dump = dump + "Key:" + prop;
         }
          message.channel.send (dump);
     }
