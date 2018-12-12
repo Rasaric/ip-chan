@@ -26,11 +26,11 @@ bot.on("ready", async () =>{
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
             }
-            if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
+            if (dd == 25 && mm == 12) {
                 bot.channels.get('465770747223343115').send("merry chrystler @everyone");
             }
             
-            if (bot.bdays[festivity].day == 11 && bot.bdays[festivity].mon == 9) {
+            if (dd == 11 && mm == 9) {
                 bot.channels.get('465770747223343115').send("@everyone never forget");
             }
         }
@@ -65,6 +65,12 @@ bot.on("message", async message => {
 
 	if (message.content.includes('duro')) {
         return message.channel.send('como mi pito');
+    }
+    if (message.content.includes('69')) {
+        return message.channel.send('( ͡° ͜ʖ ͡°)');
+    }
+    if (message.content.includes('comunismo')) {
+        return message.channel.send('(☭ ͜ʖ ☭)');
     }
     if (message.content.includes('everyone')) {
         return message.channel.send(':triggered:');
@@ -101,6 +107,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('marico')){
         return message.channel.send('marico tu');
+    }
+    if (message.content.includes('our')){
+        return message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
     if (message.content.includes('waifu')){
         return message.channel.send('tu waifu es basura');
