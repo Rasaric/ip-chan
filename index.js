@@ -4,7 +4,6 @@ const fs = require("fs");
 const prefix = botconfig.prefix;
 const bot = new Discord.Client({disableEveryone: true});
 
-
 bot.bdays = require("./bdays.json");
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
@@ -25,16 +24,13 @@ bot.on("ready", async () =>{
                 bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
             }
             else if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
-                bot.channels.get('465770747223343115').send("merry chrystler " + @everyone>);
+                bot.channels.get('465770747223343115').send("merry chrystler @everyone">);
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
             }
             else if (bot.bdays[festivity].day == 11 && bot.bdays[festivity].mon == 9) {
                 bot.channels.get('465770747223343115').send(@everyone + " never forget");
-            }
-            else if (bot.bdays[festivity].day == 25 && bot.bdays[festivity].mon == 12) {
-                bot.channels.get('465770747223343115').send("mer krimis " + @everyone>);
             }
         }
         
