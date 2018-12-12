@@ -30,7 +30,7 @@ bot.on("ready", async () =>{
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
             }
             else if (bot.bdays[festivity].day == 11 && bot.bdays[festivity].mon == 9) {
-                bot.channels.get('465770747223343115').send(@everyone + " never forget");
+                bot.channels.get('465770747223343115').send("@everyone never forget");
             }
         }
         
@@ -64,6 +64,9 @@ bot.on("message", async message => {
 
 	if (message.content.includes('duro')) {
         return message.channel.send('como mi pito');
+    }
+    if (message.content.includes('everyone')) {
+        return message.channel.send(':triggered:');
     }
     if (message.content.includes('owo')) {
         return message.channel.send('*notices bulge*');
