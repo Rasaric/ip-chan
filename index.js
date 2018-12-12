@@ -9,7 +9,7 @@ bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
 	bot.user.setActivity("with my balls");
 
-    
+    bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
 
@@ -20,7 +20,7 @@ bot.on("ready", async () =>{
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send(festivity + "'s birthday is tomorrow, are you ready?");
             }
-            if (bot.bdays[festivity].day == 26 && bot.bdays[festivity].mon == 3) {
+            if (dd == 26 && mm == 3) {
                 bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
