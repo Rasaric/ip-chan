@@ -7,23 +7,6 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.bdays = require("./bdays.json");
 //all the required shit
 
-//random birthday options
-const options = [
-    "IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS",
-    "BRING " + festivity + " SOME CAKE, IT'S BIRTHDAY TIME",
-    festivity + " came out the pussy today, happy b-day!",
-    "BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY " + festivity + " BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY",
-    "happy birthday to " + festivity + " but what's another year when you are immortal and will never die",
-    "happy birthday" + festivity + ", im not gonna suck your dick",
-    "this birthday message was picked specially for you, " + festivity + ", happy birthday",
-    "hap " + festivity,
-    "enjoy your bday, " + festivity + ", enjoy it while it lasts",
-    "one year closer to death, " + festivity + ", happy birthday",
-    festivity + "leveled up! happy birthday!",
-    festivity + " looks older, get better soon!",
-    
-];
-
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
     //game
@@ -37,6 +20,22 @@ bot.on("ready", async () =>{
         var dd = today.getDate();
         var mm = today.getMonth()+1;//jan 
         for (var festivity in bot.bdays) {
+            //random birthday options
+            const options = [
+                "IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS",
+                "BRING " + festivity + " SOME CAKE, IT'S BIRTHDAY TIME",
+                festivity + " came out the pussy today, happy b-day!",
+                "BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY " + festivity + " BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY",
+                "happy birthday to " + festivity + " but what's another year when you are immortal and will never die",
+                "happy birthday" + festivity + ", im not gonna suck your dick",
+                "this birthday message was picked specially for you, " + festivity + ", happy birthday",
+                "hap " + festivity,
+                "enjoy your bday, " + festivity + ", enjoy it while it lasts",
+                "one year closer to death, " + festivity + ", happy birthday",
+                festivity + "leveled up! happy birthday!",
+                festivity + " looks older, get better soon!",
+                
+            ];
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send(festivity + "'s birthday is tomorrow, are you ready?");
             }
