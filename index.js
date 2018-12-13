@@ -91,9 +91,12 @@ bot.on("message", async message => {
             }
         }
     }*/
-    let gunleft = bot.emojis.get("371039866810531861")
-    let dai = bot.emojis.get("314877079386718218")
-    let gunright = bot.emojis.get("371039882916790272")
+    //emoji vars for ease of use
+    let gunleft = bot.emojis.get("371039866810531861");
+    let dai = bot.emojis.get("314877079386718218");
+    let gunright = bot.emojis.get("371039882916790272");
+    let triggered = bot.emojis.get("297115473705697283");
+
     //responses and messages
 	if (message.content.includes('duro')) {
         message.channel.send('como mi pito');
@@ -102,20 +105,23 @@ bot.on("message", async message => {
         //generate random number and multiply by 69
         const randomNum = Math.floor(Math.random() * 69);
         //pick a number and call a birthday greeting
-        if(randomNum < 20){
+        if(randomNum < 18){
             message.channel.send('( ͡° ͜ʖ ͡°)');
         }
     }
     if (message.content.includes('comunismo')) {
         message.channel.send('(☭ ͜ʖ ☭)');
     }
+    if (message.content.includes('somebody')) {
+        message.channel.send('ONCE TOLD ME THE WORLD IS GONNA ROLL ME');
+    }
     if (message.content.includes('good bot')) {
         message.channel.send('(´꒳`)');
     }
     if (message.content.includes('everyone')) {
-        message.channel.send(bot.emojis.get("297115473705697283")); 
+        message.channel.send(triggered); 
     }
-    if (message.content.includes('gunright)')) {
+    if (message.content.includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
     if (message.content.includes('gunleft')) {
@@ -220,7 +226,6 @@ bot.on("message", async message => {
             }
             else {
                 message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-                //only prints first victim? try forEach? might be discord anti-spam
             }
         }
     }
