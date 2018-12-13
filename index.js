@@ -91,7 +91,9 @@ bot.on("message", async message => {
             }
         }
     }*/
-
+    let gunleft = bot.emojis.get("371039866810531861")
+    let dai = bot.emojis.get("314877079386718218")
+    let gunright = bot.emojis.get("371039882916790272")
     //responses and messages
 	if (message.content.includes('duro')) {
         message.channel.send('como mi pito');
@@ -114,10 +116,10 @@ bot.on("message", async message => {
         message.channel.send(bot.emojis.get("297115473705697283")); 
     }
     if (message.content.includes('gunright)')) {
-        message.channel.send(bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272"));
+        message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
     if (message.content.includes('gunleft')) {
-        message.channel.send(bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272"));
+        message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
     if (message.content.includes('owo')) {
         message.channel.send('*notices bulge*');
