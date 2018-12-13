@@ -94,79 +94,87 @@ bot.on("message", async message => {
 
     //responses and messages
 	if (message.content.includes('duro')) {
-        return message.channel.send('como mi pito');
+        message.channel.send('como mi pito');
     }
     if (message.content.includes('69')) {
-        return message.channel.send('( ͡° ͜ʖ ͡°)');
+        //generate random number and multiply by 69
+        const randomNum = Math.floor(Math.random() * 69);
+        //pick a number and call a birthday greeting
+        if(randomNum < 20){
+            message.channel.send('( ͡° ͜ʖ ͡°)');
+        }
     }
     if (message.content.includes('comunismo')) {
-        return message.channel.send('(☭ ͜ʖ ☭)');
+        message.channel.send('(☭ ͜ʖ ☭)');
     }
     if (message.content.includes('good bot')) {
-        return message.channel.send('(´꒳`)');
+        message.channel.send('(´꒳`)');
     }
     if (message.content.includes('everyone')) {
-        return message.channel.send('bot.emojis.get("297115473705697283")'); 
+        message.channel.send(bot.emojis.get("297115473705697283")); 
     }
-    if (message.content.includes('bot.emojis.get("371039866810531861")')) {
-        return message.channel.send('bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272")');
+    if (message.content.includes('gunright)')) {
+        message.channel.send(bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272"));
     }
-    if (message.content.includes('<bot.emojis.get("371039882916790272>")')) {
-        return message.channel.send('bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") <bot.emojis.get("371039882916790272")');
+    if (message.content.includes('gunleft')) {
+        message.channel.send(bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272"));
     }
     if (message.content.includes('owo')) {
-        return message.channel.send('*notices bulge*');
+        message.channel.send('*notices bulge*');
     }
     if (message.content.includes('nice')) {
-        return message.channel.send('nice');
+        message.channel.send('nice');
     }
     if (message.content.includes('play despacito')) {
-        return message.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
+        message.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
     }
     if (message.content.includes('standing')) {
-        return message.channel.send('ON THE EDGE');
+        message.channel.send('ON THE EDGE');
     }
-    if (message.content.includes('F')) {
-        return message.channel.send('F');
+    if (message.content==('F')) {
+        message.channel.send('F');
+    }
+    if (message.content==('f')) {
+        message.channel.send('f');
     }
     if (message.content.includes('big guy')) {
-        return message.channel.send('for you');
+        message.channel.send('for you');
     }
     if (message.content.includes('no u')) {
-        return message.channel.send('no, w');
+        message.channel.send('no, w');
     }
     if (message.content.includes('mamalo')) {
-        return message.channel.send('eso es lo que tu quisieras, no?');
+        message.channel.send('eso es lo que tu quisieras, no?');
     }
     if (message.content.includes('justice')) {
-        return message.channel.send('<@!274718150153732096> i summon thee');
+        message.channel.send('<@!274718150153732096> i summon thee');
     }
     if (message.content.includes('trece')) {
-        return message.channel.send('mientras mas me lo maman mas me crece');
+        message.channel.send('mientras mas me lo maman mas me crece');
     }
     if (message.content.includes('cinco')) {
-        return message.channel.send('por el culo te lo inco');    
+        message.channel.send('por el culo te lo inco');    
     }
     if (message.content.includes('marico')){
-        return message.channel.send('marico tu');
+        message.channel.send('marico tu');
     }
     if (message.content.includes(' our')){
-        return message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
+        message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
     if (message.content.includes('waifu')){
-        return message.channel.send('tu waifu es basura');
+        message.channel.send('tu waifu es basura');
     }
     if (message.content.includes('morning')) {
-        return message.channel.send('hola pendejos');    
+        message.channel.send('hola pendejos');    
     }
     if (message.content.includes('Morning')) {
-        return message.channel.send('sup');    
+        message.channel.send('sup');    
     }
     if (message.content.includes('ayy')) {
-        return message.channel.send('lmao');    
+        message.channel.send('lmao');    
     }
     if (message.content.includes('gib date')) {
-        return message.channel.send('today is ' + dd + ' of the ' + mm);    
+        message.channel.send('today is ' + dd + ' of the ' + mm);    
     }
 
     //record bday
@@ -204,8 +212,10 @@ bot.on("message", async message => {
 
     //order 66
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
-        for (var victim in bot.users) {
-            if (victim == "<@!274720140988252160>") return;
+        for (var victim in bot.bdays) {
+            if (victim == "<@!274720140988252160>") {
+                message.channel.send(victim + " is now the senate");
+            }
             else {
                 message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
                 //only prints first victim? try forEach? might be discord anti-spam
@@ -223,7 +233,7 @@ bot.on('guildMemberAdd', member => {
     }
 });
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('465770747223343115').send(member.user.username + "has died... jk, he just left");
+    bot.channels.get('465770747223343115').send('**' + member.user.username + "** has died... jk, he just left");
 });
     
 
