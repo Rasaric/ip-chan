@@ -5,14 +5,17 @@ const prefix = botconfig.prefix;
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.bdays = require("./bdays.json");
+//all the required shit
+
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
+    //game
 	bot.user.setActivity("with my balls");
-
+    //bootup message
     bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
-
+        //get date, day, month
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1;//jan 
@@ -26,10 +29,11 @@ bot.on("ready", async () =>{
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
             }
+            //krimis
             if (dd == 25 && mm == 12) {
                 bot.channels.get('465770747223343115').send("merry chrystler @everyone");
             }
-            
+            //bush day
             if (dd == 11 && mm == 9) {
                 bot.channels.get('465770747223343115').send("@everyone never forget");
             }
@@ -41,14 +45,17 @@ bot.on("ready", async () =>{
 });
 
 bot.on("message", async message => {
+    //if autor is a bot, ignore
 	if(message.author.bot) return;
+    //if message is DM, ignore
 	if(message.channel.type === "dm") return;
-
+    //get date, day, month
     var today = new Date();
     var dd = today.getDate();
-    var mm = today.getMonth()+1;// i cant figure how to make em global because fucker keeps getting undefined
+    var mm = today.getMonth()+1;// i cant figure how to make em global because fucker keeps getting undefined or wont update
+    //only for gib date so prolly not important but whatever
 
-    //debug
+    //debug birthdays
     /*if (message.content.includes('whosit')) {
         for (var festivity in bot.bdays) {
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
@@ -63,6 +70,7 @@ bot.on("message", async message => {
         }
     }*/
 
+    //responses and messages
 	if (message.content.includes('duro')) {
         return message.channel.send('como mi pito');
     }
@@ -97,7 +105,7 @@ bot.on("message", async message => {
         return message.channel.send('eso es lo que tu quisieras, no?');
     }
     if (message.content.includes('justice')) {
-        return message.channel.send('<@!274718150153732096> te buscan');
+        return message.channel.send('<@!274718150153732096> i summon thee');
     }
     if (message.content.includes('trece')) {
         return message.channel.send('mientras mas me lo maman mas me crece');
@@ -135,7 +143,7 @@ bot.on("message", async message => {
     		day: [day],
     		mon: [mon]
     	}
-
+        //add to JSON
     	fs.writeFile("./bdays.json", JSON.stringify(bot.bdays, null, 4), err => {
     		if (err) throw err;
     		message.channel.send ("I will remember this day," + day + "/" + mon + ", as your birthday, faggot");
@@ -146,25 +154,27 @@ bot.on("message", async message => {
     if (message.content.startsWith(':-bget')){
         editget = message.content.split(' ');
         let whom = editget[1]
-        message.channel.send (editget[1] + "'s bday is the " + bot.bdays[editget[1]].day + "/" + bot.bdays[editget[1]].mon)
+        message.channel.send (whom + "'s bday is the " + bot.bdays[whom].day + "/" + bot.bdays[whom].mon)
     }
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
         for (var prop in bot.bdays) {
-            var dump = dump + "Key:" + prop;
+            var dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
         }
-         message.channel.send (dump);
+         message.channel.send(dump);
     }
 
     //order 66
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
-        bot.bdays.forEach (function(victim) {
-            message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-        });
+        for (var victim in bot.bdays) {
+            if (vicitm == "<@!274720140988252160>") return;
+            else {
+                message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
+                //only prints first victim? try forEach?
+            }
+        }
     }
-
-
 });
     
 
