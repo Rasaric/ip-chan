@@ -108,7 +108,7 @@ bot.on("message", async message => {
     if (message.content.includes('marico')){
         return message.channel.send('marico tu');
     }
-    if (message.content.includes('our')){
+    if (message.content.includes(' our')){
         return message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
     if (message.content.includes('waifu')){
