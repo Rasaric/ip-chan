@@ -159,8 +159,8 @@ bot.on("message", async message => {
 
     //order 66
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
-        for (var victim in bot.bdays) {
-            return message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
+        forEach (var victim in bot.bdays) {
+            message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
         }
     }
 
