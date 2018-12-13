@@ -161,7 +161,7 @@ bot.on("message", async message => {
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
         bot.bdays.forEach (function(victim) {
             message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-        }
+        });
     }
 
 
