@@ -1,11 +1,28 @@
 const botconfig = require ("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const prefix = botconfig.prefix;
+const prefix = botconfig.prefix;//honestly i don't use this
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.bdays = require("./bdays.json");
 //all the required shit
+
+//random birthday options
+const options = [
+    "IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS",
+    "BRING " + festivity + " SOME CAKE, IT'S BIRTHDAY TIME",
+    festivity + " came out the pussy today, happy b-day!",
+    "BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY " + festivity + " BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY",
+    "happy birthday to " + festivity + " but what's another year when you are immortal and will never die",
+    "happy birthday" + festivity + ", im not gonna suck your dick",
+    "this birthday message was picked specially for you, " + festivity + ", happy birthday",
+    "hap " + festivity,
+    "enjoy your bday, " + festivity + ", enjoy it while it lasts",
+    "one year closer to death, " + festivity + ", happy birthday",
+    festivity + "leveled up! happy birthday!",
+    festivity + " looks older, get better soon!",
+    
+];
 
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
@@ -27,7 +44,12 @@ bot.on("ready", async () =>{
                 bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
-                bot.channels.get('465770747223343115').send("IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS");
+                //generate random number
+                const randomNum = Math.floor(Math.random() * bot.options.length);
+                //pick a number and call a birthday greeting
+                const option = bot.options[randomNum];
+
+                bot.channels.get('465770747223343115').send(option);
             }
             //krimis
             if (dd == 25 && mm == 12) {
@@ -44,6 +66,7 @@ bot.on("ready", async () =>{
     setInterval(bdaychecker ,21550000);//thrice a day
 });
 
+//message functions
 bot.on("message", async message => {
     //if autor is a bot, ignore
 	if(message.author.bot) return;
@@ -80,8 +103,17 @@ bot.on("message", async message => {
     if (message.content.includes('comunismo')) {
         return message.channel.send('(☭ ͜ʖ ☭)');
     }
+    if (message.content.includes('good bot')) {
+        return message.channel.send('(´꒳`)');
+    }
     if (message.content.includes('everyone')) {
-        return message.channel.send(':triggered:');
+        return message.channel.send('bot.emojis.get("297115473705697283")'); 
+    }
+    if (message.content.includes('bot.emojis.get("371039866810531861")')) {
+        return message.channel.send('bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") bot.emojis.get("371039882916790272")');
+    }
+    if (message.content.includes('<bot.emojis.get("371039882916790272>")')) {
+        return message.channel.send('bot.emojis.get("371039866810531861") bot.emojis.get("314877079386718218") <bot.emojis.get("371039882916790272")');
     }
     if (message.content.includes('owo')) {
         return message.channel.send('*notices bulge*');
@@ -94,6 +126,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('standing')) {
         return message.channel.send('ON THE EDGE');
+    }
+    if (message.content.includes('F')) {
+        return message.channel.send('F');
     }
     if (message.content.includes('big guy')) {
         return message.channel.send('for you');
@@ -124,6 +159,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('morning')) {
         return message.channel.send('hola pendejos');    
+    }
+    if (message.content.includes('Morning')) {
+        return message.channel.send('sup');    
     }
     if (message.content.includes('ayy')) {
         return message.channel.send('lmao');    
@@ -167,14 +205,26 @@ bot.on("message", async message => {
 
     //order 66
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
-        for (var victim in bot.bdays) {
-            if (vicitm == "<@!274720140988252160>") return;
+        for (var victim in bot.users) {
+            if (victim == "<@!274720140988252160>") return;
             else {
                 message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-                //only prints first victim? try forEach?
+                //only prints first victim? try forEach? might be discord anti-spam
             }
         }
     }
+});
+
+//user functions
+bot.on('guildMemberAdd', member => {
+    if(member == '<@!164916181252308993>'){
+        bot.channels.get('465770747223343115').send('the lost dog found his way back home, welcome back, dessert')   
+    } else {
+       bot.channels.get('465770747223343115').send('**' + member.user.username + '** has joined the hellhole, poor soul')
+    }
+});
+bot.on('guildMemberRemove', member => {
+    bot.channels.get('465770747223343115').send(member.user.username + "has died... jk, he just left");
 });
     
 
