@@ -12,7 +12,7 @@ bot.on("ready", async () =>{
     //game
 	bot.user.setActivity("with my balls");
     //bootup message
-    *bot.channels.get('465770747223343115').send("i'm back bitch");
+    bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
         //get date, day, month
