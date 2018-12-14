@@ -12,7 +12,7 @@ bot.on("ready", async () =>{
     //game
 	bot.user.setActivity("with my balls");
     //bootup message
-    //*bot.channels.get('465770747223343115').send("i'm back bitch");
+    *bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
         //get date, day, month
@@ -48,7 +48,7 @@ bot.on("ready", async () =>{
                 //pick a number and call a birthday greeting
                 const option = options[randomNum];
 
-                bot.channels.get('403575200047693825'/*'465770747223343115'*/).send(option);
+                bot.channels.get('465770747223343115').send(option);
             }
             //krimis
             if (dd == 25 && mm == 12) {
@@ -95,7 +95,7 @@ bot.on("message", async message => {
     let gunleft = bot.emojis.get("371039866810531861");
     let dai = bot.emojis.get("314877079386718218");
     let gunright = bot.emojis.get("371039882916790272");
-    let triggered = bot.emojis.get("297115473705697283");
+
 
     //responses and messages
 	if (message.content.includes('duro')) {
@@ -119,7 +119,7 @@ bot.on("message", async message => {
         message.channel.send('(´꒳`)');
     }
     if (message.content.includes('everyone')) {
-        message.channel.send(triggered); 
+        message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'); 
     }
     if (message.content.includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
