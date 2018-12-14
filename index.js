@@ -12,7 +12,7 @@ bot.on("ready", async () =>{
     //game
 	bot.user.setActivity("with my balls");
     //bootup message
-    bot.channels.get('465770747223343115').send("i'm back bitch");
+    //*bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
         //get date, day, month
@@ -103,9 +103,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('69')) {
         //generate random number and multiply by 69
-        const randomNum = Math.floor(Math.random() * 69);
+        const numsixnine = Math.floor(Math.random() * 69);
         //pick a number and call a birthday greeting
-        if(randomNum < 18){
+        if(numsixnine < 18){
             message.channel.send('( ͡° ͜ʖ ͡°)');
         }
     }
