@@ -233,7 +233,7 @@ bot.on("message", async message => {
 
 //user functions
 bot.on('guildMemberAdd', member => {
-    if(member == '<@!164916181252308993>'){
+    if(member == 'Destro Patuit'){
         bot.channels.get('465770747223343115').send('the lost dog found his way back home, welcome back, dessert')   
     } else {
        bot.channels.get('465770747223343115').send('**' + member.user.username + '** has joined the hellhole, poor soul')
