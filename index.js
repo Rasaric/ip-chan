@@ -48,7 +48,7 @@ bot.on("ready", async () =>{
                 //pick a number and call a birthday greeting
                 const option = bot.options[randomNum];
 
-                bot.channels.get('465770747223343115').send(option);
+                bot.channels.get('403575200047693825'/*'465770747223343115'*/).send(randomNum/*option*/);
             }
             //krimis
             if (dd == 25 && mm == 12) {
@@ -119,7 +119,7 @@ bot.on("message", async message => {
         message.channel.send('(´꒳`)');
     }
     if (message.content.includes('everyone')) {
-        message.channel.send(triggered); 
+        message.channel.send(REEEEEEEEEEEEEEEEEE); 
     }
     if (message.content.includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
