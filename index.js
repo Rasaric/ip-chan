@@ -119,7 +119,7 @@ bot.on("message", async message => {
         message.channel.send('(´꒳`)');
     }
     if (message.content.includes('everyone')) {
-        message.channel.send('REEEEEEEEEEEEEEEEEE'); 
+        message.channel.send(triggered); 
     }
     if (message.content.includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
