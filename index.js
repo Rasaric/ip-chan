@@ -148,7 +148,7 @@ bot.on("message", async message => {
     if (message.content.includes('big guy')) {
         message.channel.send('for you');
     }
-    if (message.content.includes('no u')) {
+    if (message.content==('no u')) {
         message.channel.send('no, w');
     }
     if (message.content.includes('mamalo')) {
@@ -183,6 +183,14 @@ bot.on("message", async message => {
     }
     if (message.content.includes('gib date')) {
         message.channel.send('today is ' + dd + ' of the ' + mm);    
+    }
+    //resend message to main channel
+    if (message.content.startsWith(':-send')){
+        //select what is going to be sent
+        editMsg = message.content.split('//');
+        let msgToSend = editMsg[1];
+        //send to main channel
+        bot.channels.get('465770747223343115').send(msgToSend);
     }
 
     //record bday
