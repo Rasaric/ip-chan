@@ -12,7 +12,7 @@ bot.on("ready", async () =>{
     //game
 	bot.user.setActivity("with my balls");
     //bootup message
-    bot.channels.get('465770747223343115').send("i'm back bitch");
+    //bot.channels.get('465770747223343115').send("i'm back bitch");
 
     function bdaychecker(){
         //get date, day, month
@@ -187,7 +187,7 @@ bot.on("message", async message => {
     //resend message to main channel
     if (message.content.startsWith(':-send')){
         //select what is going to be sent
-        editMsg = message.content.split('//');
+        editMsg = message.content.split('%%');
         let msgToSend = editMsg[1];
         //send to main channel
         bot.channels.get('465770747223343115').send(msgToSend);
