@@ -118,7 +118,7 @@ bot.on("message", async message => {
     if (message.content.includes('good bot')) {
         message.channel.send('(´꒳`)');
     }
-    if (message.content.includes('everyone')) {
+    if (message.content.includes('@everyone')) {
         message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'); 
     }
     if (message.content.includes('gunright')) {
@@ -183,6 +183,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('gib date')) {
         message.channel.send('today is ' + dd + ' of the ' + mm);    
+    }
+    if (message.content.includes('Go read Kimetsu no Yaiba')) {
+        message.channel.send('shut up you goddamn incel');    
     }
     //resend message to main channel
     if (message.content.startsWith(':-send')){
