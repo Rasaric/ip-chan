@@ -184,7 +184,7 @@ bot.on("message", async message => {
     if (message.content.includes('gib date')) {
         message.channel.send('today is ' + dd + ' of the ' + mm);    
     }
-    if (message.content.includes('Go read Kimetsu no Yaiba')) {
+    if (message.content.includes('read Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
     //resend message to main channel
