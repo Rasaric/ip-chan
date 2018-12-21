@@ -115,6 +115,9 @@ bot.on("message", async message => {
     if (message.content.includes('somebody')) {
         message.channel.send('ONCE TOLD ME THE WORLD IS GONNA ROLL ME');
     }
+    if (message.content.includes('square up')) {
+        message.channel.send("(ง'̀-'́)ง");
+    }
     if (message.content.includes('good bot')) {
         message.channel.send('(´꒳`)');
     }
@@ -124,7 +127,7 @@ bot.on("message", async message => {
     if (message.content.includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
-    if (message.content.includes('gunleft')) {
+    else if (message.content.includes('gunleft')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
     if (message.content.includes('owo')) {
@@ -170,7 +173,12 @@ bot.on("message", async message => {
         message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
     if (message.content.includes('waifu')){
-        message.channel.send('tu waifu es basura');
+        //generate random number and multiply by 69
+        const numsixnine = Math.floor(Math.random() * 69);
+        //pick a number and call a birthday greeting
+        if(numsixnine < 18){
+            message.channel.send('tu waifu es basura');
+        }
     }
     if (message.content.includes('morning')) {
         message.channel.send('hola pendejos');    
@@ -184,7 +192,7 @@ bot.on("message", async message => {
     if (message.content.includes('gib date')) {
         message.channel.send('today is ' + dd + ' of the ' + mm);    
     }
-    if (message.content.includes('read Kimetsu no Yaiba')) {
+    if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
     //resend message to main channel
@@ -194,6 +202,8 @@ bot.on("message", async message => {
         let msgToSend = editMsg[1];
         //send to main channel
         bot.channels.get('465770747223343115').send(msgToSend);
+
+        //check how to send to other channels
     }
 
     //record bday
