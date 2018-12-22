@@ -1,7 +1,7 @@
-const botconfig = require ("./botconfig.json");
+//const botconfig = require ("./botconfig.json"); deprecated and unsafe
 const Discord = require("discord.js");
 const fs = require("fs");
-const prefix = botconfig.prefix;//honestly i don't use this
+//const prefix = botconfig.prefix;//honestly i don't use this
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.bdays = require("./bdays.json");
@@ -265,4 +265,4 @@ bot.on('guildMemberRemove', member => {
 });
     
 
-bot.login(botconfig.token);
+bot.login(process.env.BOT_TOKEN);
