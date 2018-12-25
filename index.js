@@ -24,7 +24,7 @@ bot.on("ready", async () =>{
         }
         //krimis
         if (dd == 25 && mm == 12) {
-            bot.channels.get('465770747223343115').send("https://cdn.discordapp.com/attachments/309439967917113345/395014737538187264/image.png @everyone");
+            bot.channels.get('465770747223343115').send("https://www.youtube.com/watch?v=_Z-Nu351j58 @everyone");
         }
         //bush day
         if (dd == 11 && mm == 9) {
