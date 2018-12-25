@@ -19,6 +19,17 @@ bot.on("ready", async () =>{
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1;//jan 
+        if (dd == 26 && mm == 3) {
+            bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
+        }
+        //krimis
+        if (dd == 25 && mm == 12) {
+            bot.channels.get('465770747223343115').send("https://cdn.discordapp.com/attachments/309439967917113345/395014737538187264/image.png @everyone");
+        }
+        //bush day
+        if (dd == 11 && mm == 9) {
+            bot.channels.get('465770747223343115').send("@everyone never forget");
+        }
         for (var festivity in bot.bdays) {
             //random birthday options
             const options = [
@@ -39,9 +50,6 @@ bot.on("ready", async () =>{
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
                 bot.channels.get('465770747223343115').send(festivity + "'s birthday is tomorrow, are you ready?");
             }
-            if (dd == 26 && mm == 3) {
-                bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
-            }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 //generate random number
                 const randomNum = Math.floor(Math.random() * options.length);
@@ -49,14 +57,6 @@ bot.on("ready", async () =>{
                 const option = options[randomNum];
 
                 bot.channels.get('465770747223343115').send(option);
-            }
-            //krimis
-            if (dd == 25 && mm == 12) {
-                bot.channels.get('465770747223343115').send("merry chrystler @everyone");
-            }
-            //bush day
-            if (dd == 11 && mm == 9) {
-                bot.channels.get('465770747223343115').send("@everyone never forget");
             }
         }
         
