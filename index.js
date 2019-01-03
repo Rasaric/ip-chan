@@ -12,7 +12,7 @@ bot.on("ready", async () =>{
     //game
 	bot.user.setActivity("with my balls");
     //bootup message
-    //bot.channels.get('465770747223343115').send("i'm back bitch");
+    //bot.channels.get('529529045516550145').send("i'm back bitch");
 
     function bdaychecker(){
         //get date, day, month
@@ -20,15 +20,15 @@ bot.on("ready", async () =>{
         var dd = today.getDate();
         var mm = today.getMonth()+1;//jan 
         if (dd == 26 && mm == 3) {
-            bot.channels.get('465770747223343115').send(festivity + " happy birthday daddy UwU");
+            bot.channels.get('529529045516550145').send(festivity + " happy birthday daddy UwU");
         }
         //krimis
         if (dd == 25 && mm == 12) {
-            bot.channels.get('465770747223343115').send("https://www.youtube.com/watch?v=_Z-Nu351j58 @everyone");
+            bot.channels.get('529529045516550145').send("https://www.youtube.com/watch?v=_Z-Nu351j58 @everyone");
         }
         //bush day
         if (dd == 11 && mm == 9) {
-            bot.channels.get('465770747223343115').send("@everyone never forget");
+            bot.channels.get('529529045516550145').send("@everyone never forget");
         }
         for (var festivity in bot.bdays) {
             //random birthday options
@@ -48,7 +48,7 @@ bot.on("ready", async () =>{
                 
             ];
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
-                bot.channels.get('465770747223343115').send(festivity + "'s birthday is tomorrow, are you ready?");
+                bot.channels.get('529529045516550145').send(festivity + "'s birthday is tomorrow, are you ready?");
             }
             else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
                 //generate random number
@@ -56,7 +56,7 @@ bot.on("ready", async () =>{
                 //pick a number and call a birthday greeting
                 const option = options[randomNum];
 
-                bot.channels.get('465770747223343115').send(option);
+                bot.channels.get('529529045516550145').send(option);
             }
         }
         
@@ -201,7 +201,7 @@ bot.on("message", async message => {
         editMsg = message.content.split('%%');
         let msgToSend = editMsg[1];
         //send to main channel
-        bot.channels.get('465770747223343115').send(msgToSend);
+        bot.channels.get('529529045516550145').send(msgToSend);
 
         //check how to send to other channels
     }
@@ -255,13 +255,13 @@ bot.on("message", async message => {
 //user functions
 bot.on('guildMemberAdd', member => {
     if(member == 'Destro Patuit'){
-        bot.channels.get('465770747223343115').send('the lost dog found his way back home, welcome back, dessert')   
+        bot.channels.get('529529045516550145').send('the lost dog found his way back home, welcome back, dessert')   
     } else {
-       bot.channels.get('465770747223343115').send('**' + member.user.username + '** has joined the hellhole, poor soul')
+       bot.channels.get('529529045516550145').send('**' + member.user.username + '** has joined the hellhole, poor soul')
     }
 });
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('465770747223343115').send('**' + member.user.username + "** has died... jk, he just left");
+    bot.channels.get('529529045516550145').send('**' + member.user.username + "** has died... jk, he just left");
 });
     
 
