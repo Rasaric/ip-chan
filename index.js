@@ -246,12 +246,14 @@ bot.on("message", async message => {
 bot.on('guildMemberAdd', member  => {
     if (member.guild.id == IpServerId){
         if(member.id == '164916181252308993'){
-            bot.channels.get(IpMainChannelId).send('the lost dog found his way back home, welcome back, dessert')   
+            bot.channels.get(IpMainChannelId).send('the lost dog found his way back home, welcome back, dessert');
         } else {
-           bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul')
+           bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul');
         }
     }
-
+    else if (member.guild.id == '402241725625532417'){
+        bot.channels.get(IpMainChannelId).send('test succesful, everything is working as it should');
+    }
 });
 bot.on('guildMemberRemove', member => {
     if (member.guild.id == IpServerId){
