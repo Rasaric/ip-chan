@@ -16,9 +16,9 @@ bot.on("ready", async () =>{
 
     function bdaychecker(){
         //get date, day, month
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1;//jan 
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth()+1;//jan 
         if (dd == 26 && mm == 3) {
             bot.channels.get('529529045516550145').send(festivity + " happy birthday daddy UwU");
         }
@@ -30,7 +30,7 @@ bot.on("ready", async () =>{
         if (dd == 11 && mm == 9) {
             bot.channels.get('529529045516550145').send("@everyone never forget");
         }
-        for (var festivity in bot.bdays) {
+        for (let festivity in bot.bdays) {
             //random birthday options
             const options = [
                 "IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS",
@@ -71,27 +71,8 @@ bot.on("message", async message => {
 	if(message.author.bot) return;
     //if message is DM, ignore
 	if(message.channel.type === "dm") return;
-    //get date, day, month
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1;// i cant figure how to make em global because fucker keeps getting undefined or wont update
-    //only for gib date so prolly not important but whatever
 
-    //debug birthdays
-    /*if (message.content.includes('whosit')) {
-        for (var festivity in bot.bdays) {
-            if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
-                message.channel.send (prop + "'s birthday is tomorrow, are you ready?");
-            }
-            else if (bot.bdays[festivity].day == dd && bot.bdays[festivity].mon == mm) {
-                message.channel.send ("IT'S " + prop + "'S BIRTHDAY MOTHERFUCKERS");
-            }
-            else {
-                message.channel.send('nobody, you twat');
-            }
-        }
-    }*/
-    //emoji vars for ease of use
+    //emoji lets for ease of use
     let gunleft = bot.emojis.get("371039866810531861");
     let dai = bot.emojis.get("314877079386718218");
     let gunright = bot.emojis.get("371039882916790272");
@@ -195,9 +176,7 @@ bot.on("message", async message => {
     if (message.content.includes('ayy')) {
         message.channel.send('lmao');    
     }
-    if (message.content.includes('gib date')) {
-        message.channel.send('today is ' + dd + ' of the ' + mm);    
-    }
+
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
@@ -242,15 +221,15 @@ bot.on("message", async message => {
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
-        for (var prop in bot.bdays) {
-            var dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
+        for (let prop in bot.bdays) {
+            let dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
         }
          message.channel.send(dump);
     }
 
     //order 66
     if (message.content.includes(':-IP-Chan Excecute Order 66')) {
-        for (var victim in bot.bdays) {
+        for (let victim in bot.bdays) {
             if (victim == "<@!274720140988252160>") {
                 message.channel.send(victim + " is now the senate");
             }
