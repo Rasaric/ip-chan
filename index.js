@@ -242,15 +242,19 @@ bot.on("message", async message => {
 
 //user functions
 bot.on('guildMemberAdd', member  => {
-    if(member.id == '164916181252308993'){
-        member.guild.channels.get('channelID').send('the lost dog found his way back home, welcome back, dessert')   
-    } else {
-       member.guild.channels.get('channelID').send('**' + member.user.username + '** has joined the hellhole, poor soul')
+    if (member.guild.id == '164916181252308993'){
+        if(member.id == '164916181252308993'){
+            bot.channels.get('529529045516550145').send('the lost dog found his way back home, welcome back, dessert')   
+        } else {
+           bot.channels.get('529529045516550145').send('**' + member.user.username + '** has joined the hellhole, poor soul')
+        }
     }
+
 });
 bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('channelID').send('**' + member.user.username + "** has died... jk, he just left");
-
+    if (member.guild.id == '164916181252308993'){
+        bot.channels.get('529529045516550145').send('**' + member.user.username + "** has died... jk, he just left");
+    }
 });
     
 
