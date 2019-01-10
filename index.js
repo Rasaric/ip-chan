@@ -243,6 +243,8 @@ bot.on("message", async message => {
 });
 
 //user functions
+
+//on adding a member
 bot.on('guildMemberAdd', member  => {
     if (member.guild.id == IpServerId){
         if(member.id == '164916181252308993'){
@@ -251,10 +253,9 @@ bot.on('guildMemberAdd', member  => {
            bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul');
         }
     }
-    else if (member.guild.id == '402241725625532417'){
-        bot.channels.get(IpMainChannelId).send('test succesful, everything is working as it should');
-    }
 });
+
+//on kick
 bot.on('guildMemberRemove', member => {
     if (member.guild.id == IpServerId){
         bot.channels.get(IpMainChannelId).send('**' + member.user.username + "** has died... jk, he just left");
