@@ -112,6 +112,9 @@ bot.on("message", async message => {
     if (message.content.includes('comunismo')) {
         message.channel.send('(☭ ͜ʖ ☭)');
     }
+    if (message.content.includes(':-reset counter')) {
+        message.channel.send("it's been 0 days since this server talked about gay shit");
+    }
     if (message.content.includes('somebody')) {
         message.channel.send('ONCE TOLD ME THE WORLD IS GONNA ROLL ME');
     }
@@ -159,6 +162,9 @@ bot.on("message", async message => {
     }
     if (message.content.includes('justice')) {
         message.channel.send('<@!274718150153732096> i summon thee');
+    }
+    if (message.content.includes('JUSTICE')) {
+        message.channel.send('Behold! <@!274718150153732096> will end your faggotry!');
     }
     if (message.content.includes('trece')) {
         message.channel.send('mientras mas me lo maman mas me crece');
