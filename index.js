@@ -201,9 +201,9 @@ bot.on("message", async message => {
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
-    if (message.content.includes('serverid')) {
+    /*if (message.content.includes('serverid')) {
         message.channel.send(message.guild.id);    
-    }
+    }*/
     //resend message to main channel
     if (message.content.startsWith(':-send')){
         //select what is going to be sent
@@ -263,17 +263,19 @@ bot.on("message", async message => {
 
 //user functions
 bot.on('guildMemberAdd', member => {
-    /*if (guild.id == '274718680603033601'){
+    if (message.guild.id == '274718680603033601'){
         if(member == 'Destro Patuit'){
             bot.channels.get('529529045516550145').send('the lost dog found his way back home, welcome back, dessert')   
         } else {
            bot.channels.get('529529045516550145').send('**' + member.user.username + '** has joined the hellhole, poor soul')
         }
-    }*/
+    }
 
 });
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('529529045516550145').send('**' + member.user.username + "** has died... jk, he just left");
+    if (message.guild.id == '274718680603033601'){
+        bot.channels.get('529529045516550145').send('**' + member.user.username + "** has died... jk, he just left");
+    }
 });
     
 
