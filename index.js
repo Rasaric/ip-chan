@@ -202,7 +202,7 @@ bot.on("message", async message => {
         message.channel.send('shut up you goddamn incel');    
     }
     if (message.content.includes('serverid')) {
-        message.channel.send(guild.id);    
+        message.channel.send(bot.guilds.get("the guild id"););    
     }
     //resend message to main channel
     if (message.content.startsWith(':-send')){
