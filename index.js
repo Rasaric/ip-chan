@@ -200,7 +200,8 @@ bot.on("message", async message => {
             return diceMod;
             message.channel.send('all good here');
         } else {
-            return let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
+            let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
+            return diceType;
         }
         message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
