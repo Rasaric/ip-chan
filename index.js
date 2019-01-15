@@ -188,7 +188,6 @@ bot.on("message", async message => {
         //pass in :-roll 1d20+3
         //split message and get roll
         let dice = message.content.split(' ');//remove command
-        message.channel.send(dice);
         let newDice = dice[1]
         message.channel.send(newDice + 'this should be 2d20+3');
         let diceValues= newDice.split('d');//split 1 d 20+3
@@ -196,8 +195,8 @@ bot.on("message", async message => {
         let diceAmount = diceValues[0]//store amount of dice to roll
         message.channel.send(diceAmount + 'this should be 2');
         let diceTypenMod = diceValues[1]//stores 20+3
-        message.channel.send(diceTypenMod);
-        if (diceTypenmod.contains('+')){
+        message.channel.send(diceTypenMod + 'this should be 20+3');
+        if (diceTypenMod.contains('+')){
             diceTypenMod.split('+');//split 20 + 3
             let diceType = diceTypenMod[0]//stores 20
             let diceMod = diceTypenMod[1]//stores 3
