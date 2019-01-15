@@ -186,18 +186,18 @@ bot.on("message", async message => {
     }
     if (message.content.startsWith(':-roll')) {
         //split message and get roll
-        dice = message.content.split(' ');
-        newDice = dice[1].split('d');
-        diceAmount = newDice[0]
-        diceAmountnMod = newDice[1]
-        diceAmountnMod.split('+');
-        diceType = diceAmountnMod[0]
-        diceMod = diceType[1]
+        let dice = message.content.split(' ');
+        let newDice = dice[1].split('d');
+        let diceAmount = newDice[0]
+        let diceAmountnMod = newDice[1]
+        let diceAmountnMod.split('+');
+        let diceType = diceAmountnMod[0]
+        let diceMod = diceType[1]
 
 
         //generate random number and multiply by diceType
         for (var i = 1;  i < diceAmount; i++) {
-            const diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+            let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
         }
         let diceResult = diceRoll + diceMod
         
