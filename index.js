@@ -192,7 +192,6 @@ bot.on("message", async message => {
         let diceValues= newDice.split('d');//split 1 d 20+3
         let diceAmount = diceValues[0]//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
-        message.channel.send(diceTypenMod + ' this should be 20+3, all good up to here');
 
         var diceType = 0;
         var diceMod = 0;
@@ -204,13 +203,15 @@ bot.on("message", async message => {
                 diceMod = newDiceTypenMod[1]//stores 3
 
                 message.channel.send("if you see this something is not really right");
-
+                return diceType
+                return diceMod
             } else {
                 diceType = diceTypenMod;//if no mod is passed
+                return diceType
             }
         }
-        message.channel.send(diceType + 'this should be 20');
-        message.channel.send(diceMod + 'this should be 3');
+        message.channel.send(diceType + 'this should be 20'); //outputs 0
+        message.channel.send(diceMod + 'this should be 3'); // outputs 0
       
         //generate random number and multiply by diceType
         var diceRoll = 0;
@@ -229,7 +230,7 @@ bot.on("message", async message => {
         } else if (diceResult == 20) {
             message.channel.send('you rolled a nat **' + diceResult + '**, Critical Hit!');
         } else {
-            message.channel.send('you rolled **' +  dice + '** and got **' + diceResult + '**');
+            message.channel.send('you rolled **' +  newDice + '** and got **' + diceResult + '**');
         }
     }
         
