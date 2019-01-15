@@ -214,7 +214,6 @@ bot.on("message", async message => {
         function diceRoller() {
             for (var i = 0;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 diceRoll = diceRoll + Math.floor(Math.random() * diceType);
-                message.channel.send(diceRoll);
             }
         }
         diceRoller();
