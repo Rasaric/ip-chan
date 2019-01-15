@@ -194,8 +194,10 @@ bot.on("message", async message => {
         let diceTypenMod = diceValues[1]//stores 20+3
         if (diceTypenMod.includes('+')){
             diceTypenMod.split('+');//split 20 + 3
-            return diceType = diceTypenMod[0]//stores 20
-            return diceMod = diceTypenMod[1]//stores 3
+            let diceType = diceTypenMod[0]//stores 20
+            let diceMod = diceTypenMod[1]//stores 3
+            return diceType;
+            return diceMod;
             message.channel.send('all good here');
         } else {
             return let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
