@@ -185,27 +185,31 @@ bot.on("message", async message => {
         message.channel.send('shut up you goddamn incel');    
     }
     if (message.content.startsWith(':-roll')) {
+        //pass in :-roll 1d20+3
         //split message and get roll
-        let dice = message.content.split(' ');
-        let newDice = dice[1].split('d');
-        let diceAmount = newDice[0]
-        let diceAmountnMod = newDice[1]
-        diceAmountnMod.split('+');
-        let diceType = diceAmountnMod[0]
-        let diceMod = diceType[1]
+        let dice = message.content.split(' ');//remove command
+        let newDice = dice[1].split('d');//split 1 d 20+3
+        let diceAmount = newDice[0]//store amount of dice to roll
+        let diceTypenMod = newDice[1]//stores 20+3
+        if (diceTypenmod.contains('+')){
+            diceTypenMod.split('+');//split 20 + 3
+            let diceType = diceTypenMod[0]//stores 20
+            let diceMod = diceTypenMod[1]//stores 3
+        } else {
+            let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
+        }
 
 
         //generate random number and multiply by diceType
         function diceRoller() {
-            for (var i = 1;  i < diceAmount; i++) {
+            for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
                 return diceRoll
             }
         }
-        diceRoller();
-        let diceResult = diceRoll + diceMod
+        let diceResult = diceRoll + diceMod//add modifier after rolling
         
-        //pick a number and call a birthday greeting
+        //send results
         if (diceResult == 1){
             message.channel.send('you rolled a nat **' + diceResult + '**, hope the DM takes pity on you.');
         } else if (diceResult == 20) {
