@@ -201,33 +201,36 @@ bot.on("message", async message => {
                 let newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
                 let diceType = newDiceTypenMod[0]//stores 20
                 let diceMod = newDiceTypenMod[1]//stores 3
+                        message.channel.send(diceType + 'this should be 20');
+                        message.channel.send(diceMod + 'this should be 3');
             } else {
                 let diceType = diceTypenMod;//if no mod is passed
             }
         }
-        
-        diceRoller();
-        message.channel.send(diceType + 'this should be 20');
+                message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
+
+        let diceRoll = 0;
+        diceRoller();
+        
         //generate random number and multiply by diceType
-        function diceRoller() {
-            for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
-                let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+
+        for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
+            let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+            let diceResult = diceRoll + diceMod//add modifier after rolling
+            //send results
+            if (diceResult == 1){
+                message.channel.send('you rolled a nat **' + diceResult + '**, hope the DM takes pity on you.');
+            } else if (diceResult == 20) {
+                message.channel.send('you rolled a nat **' + diceResult + '**, Critical Hit!');
+            }
+            else {
+                message.channel.send('you rolled **' +  dice + '** and got **' + diceResult + '**');
             }
         }
 
-        let diceResult = diceRoll + diceMod//add modifier after rolling
         
-        //send results
-        if (diceResult == 1){
-            message.channel.send('you rolled a nat **' + diceResult + '**, hope the DM takes pity on you.');
-        } else if (diceResult == 20) {
-            message.channel.send('you rolled a nat **' + diceResult + '**, Critical Hit!');
-        }
-        else {
-            message.channel.send('you rolled **' +  dice + '** and got **' + diceResult + '**');
-        }
-    }
+        
     /*if (message.content.includes('serverid')) {
         message.channel.send(message.guild.id);    
     }*/
