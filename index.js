@@ -218,7 +218,7 @@ bot.on("message", async message => {
             }
         }
         diceRoller();
-        let diceResult = diceRoll + diceMod+1//add modifier after rolling, might actually get 0
+        let diceResult = Number(diceRoll) + Number(diceMod) + 1//add modifier after rolling, might actually get 0
         
         //send results
         if (diceResult == 1){
