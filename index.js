@@ -195,7 +195,7 @@ bot.on("message", async message => {
 
         let diceType = 0
         let diceMod = 0
-        diceTypeSetter();
+
         return function diceTypeSetter() {
             if (diceTypenMod.includes('+')){
                 let newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
