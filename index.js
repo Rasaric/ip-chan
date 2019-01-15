@@ -6,6 +6,8 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.bdays = require("./bdays.json");
 //all the required shit
+
+//Ids for channel and server
 const IpServerId = '274718680603033601';
 const IpMainChannelId = '529529045516550145';
 
@@ -181,6 +183,33 @@ bot.on("message", async message => {
 
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
+    }
+    if (message.content.startsWith(':-roll')) {
+        //split message and get roll
+        dice = message.content.split(' ');
+        newDice = dice[1].split('d');
+        diceAmount = newDice[0]
+        diceAmountnMod = newDice[1]
+        diceAmountnMod.split('+');
+        diceType = diceAmountnMod[0]
+        diceMod = diceType[1]
+
+
+        //generate random number and multiply by diceType
+        for (var i = 1;  i < diceAmount; i++) {
+            const diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+        }
+        let diceResult = diceRoll + diceMod
+        
+        //pick a number and call a birthday greeting
+        if (diceResult == 1){
+            message.channel.send('you rolled a nat **' + diceResult + '**, hope the DM takes pity on you.');
+        } else if (diceResult == 20) {
+            message.channel.send('you rolled a nat **' + diceResult + '**, Critical Hit!');
+        }
+        else {
+            message.channel.send('you rolled **' +  dice + ' and got **' + diceResult + '**');
+        }
     }
     /*if (message.content.includes('serverid')) {
         message.channel.send(message.guild.id);    
