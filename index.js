@@ -192,6 +192,10 @@ bot.on("message", async message => {
         let diceValues= newDice.split('d');//split 1 d 20+3
         let diceAmount = diceValues[0]//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
+
+        let diceType = 0
+        let diceMod = 0
+
         if (diceTypenMod.includes('+')){
             let newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
             let diceType = newDiceTypenMod[0]//stores 20
