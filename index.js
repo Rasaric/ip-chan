@@ -201,13 +201,15 @@ bot.on("message", async message => {
                 let newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
                 let diceType = newDiceTypenMod[0]//stores 20
                 let diceMod = newDiceTypenMod[1]//stores 3
-                        message.channel.send(diceType + 'this should be 20');
-                        message.channel.send(diceMod + 'this should be 3');
+
+                message.channel.send(diceType + 'this should be 20');
+                message.channel.send(diceMod + 'this should be 3');
+                
             } else {
                 let diceType = diceTypenMod;//if no mod is passed
             }
         }
-        diceTypeSetter();
+        return diceTypeSetter
         message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
 
