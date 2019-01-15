@@ -190,7 +190,7 @@ bot.on("message", async message => {
         let newDice = dice[1].split('d');
         let diceAmount = newDice[0]
         let diceAmountnMod = newDice[1]
-        let diceAmountnMod.split('+');
+        diceAmountnMod.split('+');
         let diceType = diceAmountnMod[0]
         let diceMod = diceType[1]
 
