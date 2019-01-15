@@ -208,15 +208,13 @@ bot.on("message", async message => {
             }
         }
         diceTypeSetter();
-        message.channel.send(diceType + 'this should be 20'); //outputs 0
-        message.channel.send(diceMod + 'this should be 3'); // outputs 0
       
         //generate random number and multiply by diceType
         var diceRoll = 0;
         function diceRoller() {
             for (var i = 0;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 diceRoll = diceRoll + Math.floor(Math.random() * diceType);
-                
+                message.channel.send(diceRoll);
             }
         }
         diceRoller();
