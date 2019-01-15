@@ -190,7 +190,7 @@ bot.on("message", async message => {
         let dice = message.content.split(' ');//remove command
         let newDice = dice[1]
         let diceValues= newDice.split('d');//split 1 d 20+3
-        let diceAmount = diceValues[0]//store amount of dice to roll
+        let diceAmount = number(diceValues[0])//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
 
         let diceType = 0
@@ -199,11 +199,14 @@ bot.on("message", async message => {
         function diceTypeSetter() {
             if (diceTypenMod.includes('+')){
                 let newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
-                let diceType = newDiceTypenMod[0]//stores 20
-                let diceMod = newDiceTypenMod[1]//stores 3
+                let diceType = number(newDiceTypenMod[0])//stores 20
+                let diceMod = number(newDiceTypenMod[1])//stores 3
+
+                message.channel.send(diceType + 'this should be 20');
+                message.channel.send(diceMod + 'this should be 3');
 
             } else {
-                let diceType = diceTypenMod;//if no mod is passed
+                let diceType = number(diceTypenMod);//if no mod is passed
             }
         }
         return diceTypeSetter
