@@ -207,12 +207,11 @@ bot.on("message", async message => {
                 let diceType = diceTypenMod;//if no mod is passed
             }
         }
+        diceTypeSetter();
         message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
 
-        let diceRoll = 0;
-        diceRoller();
-        
+        let diceRoll = 0;        
         //generate random number and multiply by diceType
 
         for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
