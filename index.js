@@ -219,7 +219,7 @@ bot.on("message", async message => {
                 
             }
         }
-        diceRoll();
+        diceRoller();
         let diceResult = diceRoll + diceMod//add modifier after rolling
         
         //send results
