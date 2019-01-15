@@ -196,7 +196,7 @@ bot.on("message", async message => {
         message.channel.send(diceAmount + 'this should be 2');
         let diceTypenMod = diceValues[1]//stores 20+3
         message.channel.send(diceTypenMod + 'this should be 20+3');
-        if (diceTypenMod.contains('+')){
+        if (diceTypenMod.includes('+')){
             diceTypenMod.split('+');//split 20 + 3
             let diceType = diceTypenMod[0]//stores 20
             let diceMod = diceTypenMod[1]//stores 3
