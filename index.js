@@ -193,6 +193,10 @@ bot.on("message", async message => {
         let diceAmount = diceValues[0]//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
         message.channel.send(diceTypenMod + ' this should be 20+3, all good up to here');
+
+        var diceType = 0;
+        var diceMod = 0;
+
         function diceTypeSetter() {
             if (diceTypenMod.includes('+')){
                 newDiceTypenMod = diceTypenMod.split('+');//split 20 + 3
@@ -209,7 +213,7 @@ bot.on("message", async message => {
         message.channel.send(diceMod + 'this should be 3');
       
         //generate random number and multiply by diceType
-
+        var diceRoll = 0;
         function diceRoller() {
             for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 diceRoll = diceRoll + Math.floor(Math.random() * diceType);
