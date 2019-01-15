@@ -189,23 +189,19 @@ bot.on("message", async message => {
         //split message and get roll
         let dice = message.content.split(' ');//remove command
         let newDice = dice[1]
-        message.channel.send(newDice + 'this should be 2d20+3');
         let diceValues= newDice.split('d');//split 1 d 20+3
-        message.channel.send(diceValues + 'this should be 2 then 20+3');
         let diceAmount = diceValues[0]//store amount of dice to roll
-        message.channel.send(diceAmount + 'this should be 2');
         let diceTypenMod = diceValues[1]//stores 20+3
-        message.channel.send(diceTypenMod + 'this should be 20+3');
         if (diceTypenMod.includes('+')){
             diceTypenMod.split('+');//split 20 + 3
-            let diceType = diceTypenMod[0]//stores 20
-            let diceMod = diceTypenMod[1]//stores 3
+            return diceType = diceTypenMod[0]//stores 20
+            return diceMod = diceTypenMod[1]//stores 3
+            message.channel.send('all good here');
         } else {
-            let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
+            return let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
         }
         message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
-
         //generate random number and multiply by diceType
         function diceRoller() {
             for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
