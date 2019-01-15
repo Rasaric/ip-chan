@@ -210,6 +210,7 @@ bot.on("message", async message => {
                 return diceType
             }
         }
+        diceTypeSetter();
         message.channel.send(diceType + 'this should be 20'); //outputs 0
         message.channel.send(diceMod + 'this should be 3'); // outputs 0
       
@@ -221,7 +222,7 @@ bot.on("message", async message => {
                 
             }
         }
-
+        diceRoll();
         let diceResult = diceRoll + diceMod//add modifier after rolling
         
         //send results
