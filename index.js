@@ -192,6 +192,7 @@ bot.on("message", async message => {
         let diceValues= newDice.split('d');//split 1 d 20+3
         let diceAmount = diceValues[0]//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
+        message.channel.send('all good here');
         if (diceTypenMod.includes('+')){
             diceTypenMod.split('+');//split 20 + 3
             let diceType = diceTypenMod[0]//stores 20
@@ -209,7 +210,7 @@ bot.on("message", async message => {
         function diceRoller() {
             for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
-                return diceRoll
+                return diceRoll;
             }
         }
         let diceResult = diceRoll + diceMod//add modifier after rolling
@@ -221,7 +222,7 @@ bot.on("message", async message => {
             message.channel.send('you rolled a nat **' + diceResult + '**, Critical Hit!');
         }
         else {
-            message.channel.send('you rolled **' +  dice + ' and got **' + diceResult + '**');
+            message.channel.send('you rolled **' +  dice + '** and got **' + diceResult + '**');
         }
     }
     /*if (message.content.includes('serverid')) {
