@@ -214,13 +214,13 @@ bot.on("message", async message => {
         //generate random number and multiply by diceType
         var diceRoll = 0;
         function diceRoller() {
-            for (var i = 1;  i < diceAmount; i++) {//roll new numbers for amount passed in
+            for (var i = 0;  i < diceAmount; i++) {//roll new numbers for amount passed in
                 diceRoll = diceRoll + Math.floor(Math.random() * diceType);
                 
             }
         }
         diceRoller();
-        let diceResult = diceRoll + diceMod//add modifier after rolling
+        let diceResult = diceRoll + diceMod+1//add modifier after rolling, might actually get 0
         
         //send results
         if (diceResult == 1){
