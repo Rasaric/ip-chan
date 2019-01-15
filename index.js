@@ -196,8 +196,9 @@ bot.on("message", async message => {
 
 
         //generate random number and multiply by diceType
-        let diceRoll = for (var i = 1;  i < diceAmount; i++) {
-            diceRoll + Math.floor(Math.random() * diceType);
+        for (var i = 1;  i < diceAmount; i++) {
+            let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+            return diceRoll
         }
         let diceResult = diceRoll + diceMod
         
