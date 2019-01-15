@@ -207,7 +207,7 @@ bot.on("message", async message => {
                 let diceType = diceTypenMod;//if no mod is passed
             }
         }
-                message.channel.send(diceType + 'this should be 20');
+        message.channel.send(diceType + 'this should be 20');
         message.channel.send(diceMod + 'this should be 3');
 
         let diceRoll = 0;
@@ -228,7 +228,7 @@ bot.on("message", async message => {
                 message.channel.send('you rolled **' +  dice + '** and got **' + diceResult + '**');
             }
         }
-
+    }
         
         
     /*if (message.content.includes('serverid')) {
@@ -288,7 +288,7 @@ bot.on("message", async message => {
                 message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
             }
         }
-    }
+  }
 });
 
 //user functions
