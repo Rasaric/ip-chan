@@ -196,10 +196,13 @@ bot.on("message", async message => {
 
 
         //generate random number and multiply by diceType
-        for (var i = 1;  i < diceAmount; i++) {
-            let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
-            return diceRoll
+        function diceRoller() {
+            for (var i = 1;  i < diceAmount; i++) {
+                let diceRoll = diceRoll + Math.floor(Math.random() * diceType);
+                return diceRoll
+            }
         }
+        diceRoller();
         let diceResult = diceRoll + diceMod
         
         //pick a number and call a birthday greeting
