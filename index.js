@@ -198,7 +198,7 @@ bot.on("message", async message => {
             message.channel.send('all good here');
             let diceType = diceTypenMod[0]//stores 20
             let diceMod = diceTypenMod[1]//stores 3
-            return dice Type;
+            return diceType;
             return diceMod;
         } else {
             let diceType = diceTypenMod//in case no mod is passed in, use value as dicetype
