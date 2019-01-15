@@ -202,12 +202,9 @@ bot.on("message", async message => {
                 diceType = newDiceTypenMod[0]//stores 20
                 diceMod = newDiceTypenMod[1]//stores 3
 
-                message.channel.send("if you see this something is not really right");
-                return diceType
-                return diceMod
             } else {
                 diceType = diceTypenMod;//if no mod is passed
-                return diceType
+
             }
         }
         diceTypeSetter();
