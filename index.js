@@ -80,16 +80,13 @@ bot.on("message", async message => {
     let gunleft = bot.emojis.get("371039866810531861");
     let dai = bot.emojis.get("314877079386718218");
     let gunright = bot.emojis.get("371039882916790272");
-
+    const numsixnine = Math.floor(Math.random() * 69);
 
     //responses and messages
 	if (message.content.includes('duro')) {
         message.channel.send('como mi pito');
     }
     if (message.content.includes('69')) {
-        //generate random number and multiply by 69
-        const numsixnine = Math.floor(Math.random() * 69);
-        //pick a number and call a birthday greeting
         if(numsixnine < 18){
             message.channel.send('( ͡° ͜ʖ ͡°)');
         }
@@ -100,7 +97,7 @@ bot.on("message", async message => {
     if (message.content.includes(':-reset counter')) {
         message.channel.send("it's been 0 days since this server talked about gay shit");
     }
-    if (message.content.includes('somebody')) {
+    if (message.content.includes('SOMEBODY')) {
         message.channel.send('ONCE TOLD ME THE WORLD IS GONNA ROLL ME');
     }
     if (message.content.includes('square up')) {
@@ -112,10 +109,10 @@ bot.on("message", async message => {
     if (message.content.includes('@everyone')) {
         message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'); 
     }
-    if (message.content.includes('gunright')) {
+    (message.content.includes('gunright')) ? {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
-    }
-    else if (message.content.includes('gunleft')) {
+    } :
+     (message.content.includes('gunleft')) ? {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
     if (message.content.includes('owo')) {
@@ -161,14 +158,16 @@ bot.on("message", async message => {
         message.channel.send('marico tu');
     }
     if (message.content.includes(' our')){
-        message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
+        //generate random number and multiply by 69
+        if(numsixnine < 4){
+            message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
+        }
     }
     if (message.content.includes('waifu')){
-        //generate random number and multiply by 69
-        const numsixnine = Math.floor(Math.random() * 69);
-        //pick a number and call a birthday greeting
         if(numsixnine < 18){
             message.channel.send('tu waifu es basura');
+        } else if (numsixnine == 69) {
+            message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
     if (message.content.includes('morning')) {
@@ -181,6 +180,13 @@ bot.on("message", async message => {
         message.channel.send('lmao');    
     }
 
+    if (message.content.startsWith(':-spoilers-start')) {
+        message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376208013469679617/ini.png?width=1443&height=672');    
+    }
+    if (message.content.startsWith(':-spoilers-over')) {
+        message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376207680794263563/endi.png?width=1443&height=672');    
+    }
+
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
@@ -190,7 +196,7 @@ bot.on("message", async message => {
         let dice = message.content.split(' ');//remove command
         let newDice = dice[1]
         let diceValues= newDice.split('d');//split 1 d 20+3
-        let diceAmount = diceValues[0]//store amount of dice to roll
+        let diceAmount = diceValues[0] ? diceValues[0] : 1//store amount of dice to roll
         let diceTypenMod = diceValues[1]//stores 20+3
 
         var diceType = 0;
