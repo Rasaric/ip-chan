@@ -109,9 +109,12 @@ bot.on("message", async message => {
     if (message.content.includes('@everyone')) {
         message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'); 
     }
-    (message.content.includes('gunright')) ? (message.channel.send(gunleft + " " + dai + " "+ gunright)) : (
-        (message.content.includes('gunleft')) ? (message.channel.send(gunleft + " " + dai + " "+ gunright)
-    ))
+    if (message.content.includes('gunright')) {
+        message.channel.send(gunleft + " " + dai + " "+ gunright);
+    }
+    else if (message.content.includes('gunleft')) {
+        message.channel.send(gunleft + " " + dai + " "+ gunright);
+    }
     if (message.content.includes('owo')) {
         message.channel.send('*notices bulge*');
     }
