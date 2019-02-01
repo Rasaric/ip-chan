@@ -329,16 +329,10 @@ bot.on("message", async message => {
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
-        let botIcon = bot.user.displayAvatarURL;
-        let botembed = new Discord.Richembed()
-        .setDescription("IP's Birthdays'")
-        .setColor('#e7dcbf')
-        .setThumbnail(botIcon)
-
         for (let prop in bot.bdays) {
-            .addField(prop + "'s bday", " is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon)
+            let dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
         }
-        return message.channel.send('botembed');
+         message.channel.send(dump);
     }
 
     //order 66
