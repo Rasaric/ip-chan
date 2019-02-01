@@ -124,7 +124,7 @@ bot.on("message", async message => {
     if (message.content.includes('play despacito')) {
         message.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
     }
-    if (message.content==('standing')) {
+    if (message.content==('STANDING')) {
         message.channel.send('ON THE EDGE');
     }
     if (message.content==('F')) {
@@ -193,6 +193,10 @@ bot.on("message", async message => {
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
+    if (message.content==(':-help')) {
+        message.channel.send('**Add Birthday: **  :-bday -day- -month- -@name-' '**Get individual Birthday: ** :-bget -@name' '**Get all the birthdays: ** :-ball' '**Dude, Spoilers!:** :-spoilers-start' '**Ok its safe now, spoilers are over:** :-spoilers-over' '**HELP PEOPLE ARE BEING GAY: ** i dunno, at mike?' '**HELP PEOPLE ARE BEING REALLY FUCKING GAY: ** :-reset counter' '**I WANNA PUNCH THE GOBLIN: ** :-roll 1d20+2' '**Excecute order 66: ** its a secret to everyone' "*i do a lot of other stuff, you'll just have to figure it out*");
+    }
+
     if (message.author.id === '274719053808009216') {//if hector posts a message
         if(numsixnine < 6){
             const hectorOptions = [
