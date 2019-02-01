@@ -124,7 +124,7 @@ bot.on("message", async message => {
     if (message.content.includes('play despacito')) {
         message.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
     }
-    if (message.content.includes('standing')) {
+    if (message.content==('standing')) {
         message.channel.send('ON THE EDGE');
     }
     if (message.content==('F')) {
@@ -166,12 +166,15 @@ bot.on("message", async message => {
     if (message.content.includes('waifu')){
         if(numsixnine < 18){
             message.channel.send('tu waifu es basura');
-        } else if (numsixnine == 69) {
+        } else if (numsixnine > 60) {
             message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
     if (message.content.includes('morning')) {
         message.channel.send('hola pendejos');    
+    }
+    if (message.content.includes('retarded')) {
+        message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');    
     }
     if (message.content.includes('Morning')) {
         message.channel.send('sup');    
@@ -190,6 +193,32 @@ bot.on("message", async message => {
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
+    if (message.author.id === '274720140988252160'/*'274719053808009216'*/) {//if hector posts a message
+        if(numsixnine > 6){
+            const hectorOptions = [
+                        'onii-chan!',
+                        '***ONII-CHAN!***',
+                        '**ONII-CHAN!**',
+                        'onii-chan, are you going to sleep with me tonight? umu',
+                        'onii-chan, my bed is cold',
+                        'how was work, onii-chan?',
+                        'can i sleep in your lap, onii-chan?',
+                        'suck my dick onii-chan, you know you like it',
+                        'onii-chan! did you bring candy for me?',
+                        'pat my head, onii-chan',
+                        'slap my ass, onii-chan',
+                        'onii-chan, why are you stripping me?',
+                        '*onii-chan* >:T',
+                        'eh? onii-chan, why are you not wearing pants?'
+                    ];
+            //generate random number
+            const randomNum = Math.floor(Math.random() * hectorOptions.length);
+            //pick a number and embarass hector
+            const oniiChan = hectorOptions[randomNum];
+            message.channel.send(oniiChan);
+        }
+    }
+
     if (message.content.startsWith(':-roll')) {
         //pass in :-roll 1d20+3
         //split message and get roll
