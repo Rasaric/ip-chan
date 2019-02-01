@@ -193,8 +193,8 @@ bot.on("message", async message => {
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
-    if (message.author.id === '274720140988252160'/*'274719053808009216'*/) {//if hector posts a message
-        if(numsixnine > 6){
+    if (message.author.id === '274719053808009216') {//if hector posts a message
+        if(numsixnine < 6){
             const hectorOptions = [
                         'onii-chan!',
                         '***ONII-CHAN!***',
