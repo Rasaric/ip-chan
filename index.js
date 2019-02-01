@@ -209,7 +209,7 @@ bot.on("message", async message => {
         .addField('I WANNA PUNCH THE GOBLIN:' , ':-roll 1d20+2')
         .addField('Excecute order 66:**' , 'its a secret to everyone')
         .addField("*i do a lot of other stuff, you'll just have to figure it out*", ':P')
-        return message.channel.send('botembed');
+        return message.channel.send(botembed);
     }
 
 
