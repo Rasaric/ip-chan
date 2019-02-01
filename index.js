@@ -195,7 +195,7 @@ bot.on("message", async message => {
     }
     if (message.content==(':-help')) {
         let botIcon = bot.user.displayAvatarURL;
-        let botembed = new Discord.Richembed()
+        let botembed = new Discord.RichEmbed()
         .setDescription("IP-Chan's command")
         .setColor('#e7dcbf')
         .setThumbnail(botIcon)
