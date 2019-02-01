@@ -194,8 +194,27 @@ bot.on("message", async message => {
         message.channel.send('shut up you goddamn incel');    
     }
     if (message.content==(':-help')) {
-        message.channel.send('**Add Birthday: **  :-bday -day- -month- -@name-' '**Get individual Birthday: ** :-bget -@name' '**Get all the birthdays: ** :-ball' '**Dude, Spoilers!:** :-spoilers-start' '**Ok its safe now, spoilers are over:** :-spoilers-over' '**HELP PEOPLE ARE BEING GAY: ** i dunno, at mike?' '**HELP PEOPLE ARE BEING REALLY FUCKING GAY: ** :-reset counter' '**I WANNA PUNCH THE GOBLIN: ** :-roll 1d20+2' '**Excecute order 66: ** its a secret to everyone' "*i do a lot of other stuff, you'll just have to figure it out*");
+        let botIcon = bot.user.displayAvatarURL;
+        let botembed = new Discord.Richembed()
+        .setDescription("IP-Chan's command")
+        .setColor('#e7dcbf')
+        .setThumbnail(botIcon)
+        .addField('Add Birthday: ' , ':-bday day month @name')
+        .addField('Get individual Birthday: ', ' :-bget @name' )
+        .addField('Get all the birthdays: ' , ':-ball')
+        .addField('Dude, Spoilers!:' , ':-spoilers-start')
+        .addField('Ok its safe now, spoilers are over:', ':-spoilers-over')
+        .addField('HELP PEOPLE ARE BEING GAY:' , 'i dunno, call mike?')
+        .addField('HELP PEOPLE ARE BEING REALLY FUCKING GAY: ' , ':-reset counter')
+        .addField('I WANNA PUNCH THE GOBLIN:' , ':-roll 1d20+2')
+        .addField('Excecute order 66:**' , 'its a secret to everyone')
+        .addField("*i do a lot of other stuff, you'll just have to figure it out*", '')
+        return message.channel.send('botembed');
     }
+
+
+
+
 
     if (message.author.id === '274719053808009216') {//if hector posts a message
         if(numsixnine < 6){
@@ -310,10 +329,16 @@ bot.on("message", async message => {
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
+        let botIcon = bot.user.displayAvatarURL;
+        let botembed = new Discord.Richembed()
+        .setDescription("IP's Birthdays'")
+        .setColor('#e7dcbf')
+        .setThumbnail(botIcon)
+
         for (let prop in bot.bdays) {
-            let dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
+            .addField(prop + "'s bday", " is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon)
         }
-         message.channel.send(dump);
+        return message.channel.send('botembed');
     }
 
     //order 66
