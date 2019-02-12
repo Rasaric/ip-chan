@@ -193,6 +193,23 @@ bot.on("message", async message => {
     if (message.content.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
+
+    if (message.content.includes(':-kill')) {
+        //select what is going to be sent
+        killMsg = message.content.split(' ');
+        let victim = killMsg[1];
+    
+        const killChoices = [
+            " was shoved in <@" + message.author.id + "> 's trunk, 10 days later someone noticed the trunk smelled really bad and now we are here"
+        ];
+        //generate random number
+        const randomNum = Math.floor(Math.random() * killChoices.length);
+        //pick a number and embarass hector
+        const fatality = killChoices[randomNum];
+        message.channel.send(victim + fatality);
+    }
+
+
     if (message.content==(':-help')) {
         let botIcon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
@@ -207,6 +224,7 @@ bot.on("message", async message => {
         .addField('HELP PEOPLE ARE BEING GAY:' , 'i dunno, call mike?')
         .addField('HELP PEOPLE ARE BEING REALLY FUCKING GAY: ' , ':-reset counter')
         .addField('I WANNA PUNCH THE GOBLIN:' , ':-roll 1d20+2')
+        .addField('someone looked at me funny' , ':-kill that mofo')
         .addField('Excecute order 66:' , 'its a secret to everyone')
         .addField("*i do a lot of other stuff, you'll just have to figure it out*", ':P')
         return message.channel.send(botembed);
@@ -220,6 +238,10 @@ bot.on("message", async message => {
         if(numsixnine < 3){
             const hectorOptions = [
                         'onii-chan!',
+                        'welcome home onii-chan, would you like dinner, bath, or me?'
+                        'yamete onii-chan!!~',
+                        'onii-chan, why are you holding a brush?',
+                        'heil onii-chan',
                         '***ONII-CHAN!***',
                         '**ONII-CHAN!**',
                         'onii-chan, are you going to sleep with me tonight? umu',
