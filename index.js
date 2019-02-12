@@ -80,14 +80,14 @@ bot.on("message", async message => {
     let gunleft = bot.emojis.get("371039866810531861");
     let dai = bot.emojis.get("314877079386718218");
     let gunright = bot.emojis.get("371039882916790272");
-    const numsixnine = Math.floor(Math.random() * 69);
+    const numsixnine = Math.floor(Math.random() * 6969);
 
     //responses and messages
 	if (message.content.includes('duro')) {
         message.channel.send('como mi pito');
     }
     if (message.content.includes('69')) {
-        if(numsixnine < 18){
+        if(numsixnine < 1800){
             message.channel.send('( ͡° ͜ʖ ͡°)');
         }
     }
@@ -159,14 +159,14 @@ bot.on("message", async message => {
     }
     if (message.content.includes(' our')){
         //generate random number and multiply by 69
-        if(numsixnine < 4){
+        if(numsixnine < 400){
             message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
         }
     }
     if (message.content.includes('waifu')){
-        if(numsixnine < 18){
+        if(numsixnine < 1800){
             message.channel.send('tu waifu es basura');
-        } else if (numsixnine > 60) {
+        } else if (numsixnine > 696) {
             message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
@@ -258,7 +258,7 @@ bot.on("message", async message => {
             ];
             //generate random number
             const randomNum = Math.floor(Math.random() * killChoices.length);
-            //pick a number and embarass hector
+            //pick a number and KILL
             const fatality = killChoices[randomNum];
             message.channel.send(victim + fatality);
         }
@@ -289,7 +289,7 @@ bot.on("message", async message => {
 
 
     if (message.author.id === '274719053808009216') {//if hector posts a message
-        if(numsixnine < 3){
+        if(numsixnine < 69){
             const hectorOptions = [
                         'onii-chan!',
                         'welcome home onii-chan, would you like dinner, bath, or... me?',
