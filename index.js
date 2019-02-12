@@ -409,8 +409,8 @@ bot.on("message", async message => {
     
     //dump all bdays
     if (message.content.startsWith(':-ball')){
-        for (let prop in bot.bdays) {
-            let dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
+        for (var prop in bot.bdays) {
+            var dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
         }
          message.channel.send(dump);
     }
