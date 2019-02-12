@@ -238,7 +238,7 @@ bot.on("message", async message => {
         if(numsixnine < 3){
             const hectorOptions = [
                         'onii-chan!',
-                        'welcome home onii-chan, would you like dinner, bath, or me?'
+                        'welcome home onii-chan, would you like dinner, bath, or me?',
                         'yamete onii-chan!!~',
                         'onii-chan, why are you holding a brush?',
                         'heil onii-chan',
