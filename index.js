@@ -209,12 +209,12 @@ bot.on("message", async message => {
                 ' said "what could go wrong?" before everything went wrong',
                 ' got shot in the nuts, stabbed in the kidney, then commited suicide',
                 ' is getting buttfucked by lathi in hell, or heaven, depending how you look at it',
-                " was shoved in <@" + message.author.id + "> 's trunk, 10 days later someone noticed the trunk smelled really bad and now we are here"
+                " was shoved in <@" + message.author.id + "> 's trunk, 10 days later someone noticed the trunk smelled really bad and now we are here",
                 ' was stabbed once, the pussy died from that, what a faggot',
                 ' spontaneously combusted',
                 " 's loli colection was found by the CIA, he resisted",
-                ' tried to understand my code'
-                ' stared into the void'
+                ' tried to understand my code',
+                ' stared into the void',
                 ' rolled very shitty stats and lived the rest of his life in a farm, instead of killing dragons like the cool kids',
                 " got a 9-5 job with terrible pay doing what he thought he wanted, he didn't",
                 " died 5 years ago, <@" + message.author.id + "> , you have to let go",
