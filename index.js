@@ -166,7 +166,7 @@ bot.on("message", async message => {
     if (message.content.includes('waifu')){
         if(numsixnine < 1800){
             message.channel.send('tu waifu es basura');
-        } else if (numsixnine > 696) {
+        } else if (numsixnine < 696) {
             message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
