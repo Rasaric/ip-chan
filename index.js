@@ -94,6 +94,60 @@ bot.on("message", async message => {
     if (message.content.includes('comunismo')) {
         message.channel.send('(☭ ͜ʖ ☭)');
     }
+    if (message.content.includes('*pats*')) {
+        const patReact = [
+            '(≧∇≦)/',
+            '☆*: .｡. o(≧▽≦)o .｡.:*☆',
+            '(((o(*ﾟ▽ﾟ*)o)))',
+            'ヽ(*⌒∇⌒*)ﾉ',
+            'ヽ(＾Д＾)ﾉ',
+            'o(≧∇≦o)',
+            '(((＼（＠v＠）／)))',
+            '(((o(*ﾟ▽ﾟ*)o)))',
+            '✖‿✖',
+            '(ﾉ´ヮ´)ﾉ*: ･ﾟ',
+            '✧ ─=≡Σ((( つ•̀ω•́)つ',
+            '( ✧Д✧) YES!!',
+            '(๑˃̵　ᴗ　˂̵)و',
+            '(*°∀°)=3',
+            '(●♡∀♡)',
+            '(♥_♥)',
+            '≧﹏≦',
+            '（｡>‿‿<｡ ）',
+            '(〃 ω 〃)',
+            '(/ω＼)',
+            '(^///^)',
+            '（*/∇＼*）ｷｬ',
+            '(*´∀`*)えへへ',
+            '（˶′◡‵˶）',
+            'ﾟ.+:｡(〃ω〃)ﾟ.+:｡ ｷｬｧ♪',
+            '(〃▽〃)ﾎﾟｯ',
+            '(//∇//(//∇//(//∇//) ﾃﾚﾃﾚ',
+            '(/∇＼*)…Reaaaally?',
+            '･:*:･(*/////∇/////*)･:*:･',
+            'Oh you~☆(*´∀｀)σ)))))*3ﾟ),･´.､',
+            '(つω･*)o(〃・ω・〃)o',
+            '・:*:・(●´Д｀●)・:*:・',
+            '(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄',
+            '( ͡°⁄ ⁄ ͜⁄ ⁄ʖ⁄ ⁄ ͡°)',
+            '( ͡☉⁄ ⁄ ͜⁄ ͜ʖ̫⁄ ⁄ ͡☉)',
+            '‧⁺( ᵒ̴̶̷̥́ ◡ ᵒ̴̶̷̣̥̀ )⁺‧',
+            '(*ﾉωﾉ)ｷｬｰ',
+            '(つ∀<●)ﾟ+.ｷｬｧ♪',
+            'モジ(((ＵωＵ｀ *)(* ´ＵωＵ)))モジ',
+            'ﾄﾞｷﾄﾞｷ(ﾟ∀ﾟ*)(*ﾟ∀ﾟ)ﾄﾞｷﾄﾞｷ',
+            'もじ(´pq｀*)三(*´pq｀)もじ',
+            '(∩ﾟ∀｀∩)ｷｬ―!!!!',
+            'ｷｬｯ♪o((〃∇〃o))((o〃∇〃))oｷｬｯ♪',
+        ];
+        //generate random number
+        const randomNum = Math.floor(Math.random() * patReact.length);
+        //pick a number and KILL
+        const homete = patReact[randomNum];
+        message.channel.send(homete);
+     
+    
+    }
     if (message.content.includes(':-reset counter')) {
         message.channel.send("it's been 0 days since this server talked about gay shit");
     }
