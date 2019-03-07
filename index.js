@@ -241,7 +241,9 @@ bot.on("message", async message => {
         message.channel.send('shut up you goddamn incel');    
     }
     if (msg.includes(':-emote')) {
-        https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg
+        let emote = msg.replace(':-emote ','')
+        if (emote == 'pikachu') {
+            message.content.send('https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg');
     }
 
 
@@ -249,7 +251,7 @@ bot.on("message", async message => {
 
     if (msg.includes(':-kill')) {
         //select what is going to be sent
-        let victim = msg.replace(':-kill','')
+        let victim = msg.replace(':-kill ','')
         if (victim == '<@!274720140988252160>'){
             message.channel.send('https://www.youtube.com/watch?v=ARJ8cAGm6JE'); 
         } else if (victim == 'gunsnek') {
