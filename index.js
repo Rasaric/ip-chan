@@ -71,8 +71,6 @@ bot.on("ready", async () =>{
 
 //message functions
 bot.on("message", async message => {
-    //message to lowercase
-    let msgLower = toLowerCase(message.content);
     //if autor is a bot, ignore
 	if(message.author.bot) return;
     //if message is DM, ignore
@@ -85,18 +83,18 @@ bot.on("message", async message => {
     const numsixnine = Math.floor(Math.random() * 6969);
 
     //responses and messages
-	if (msgLower.contains('duro')) {
+	if (message.toLowerCase().includes('duro')) {
         message.channel.send('como mi pito');
     }
-    if (msgLower.contains('69')) {
+    if (message.toLowerCase().includes('69')) {
         if(numsixnine < 1800){
             message.channel.send('( ͡° ͜ʖ ͡°)');
         }
     }
-    if (msgLower.contains('comunismo')) {
+    if (message.toLowerCase().includes('comunismo')) {
         message.channel.send('(☭ ͜ʖ ☭)');
     }
-    if (msgLower.contains('*pats*')) {
+    if (message.toLowerCase().includes('*pats*')) {
         const patReact = [
             '(≧∇≦)/',
             '☆*: .｡. o(≧▽≦)o .｡.:*☆',
@@ -150,103 +148,110 @@ bot.on("message", async message => {
      
     
     }
-    if (msgLower.contains(':-reset counter')) {
+    if (message.toLowerCase().includes(':-reset counter')) {
         message.channel.send("it's been 0 days since this server talked about gay shit");
     }
-    if (msgLower.contains('SOMEBODY')) {
+    if (message.toLowerCase().includes('SOMEBODY')) {
         message.channel.send('ONCE TOLD ME THE WORLD IS GONNA ROLL ME');
     }
-    if (msgLower.contains('square up')) {
+    if (message.toLowerCase().includes('square up')) {
         message.channel.send("(ง'̀-'́)ง");
     }
-    if (msgLower.contains('good bot')) {
+    if (message.toLowerCase().includes('good bot')) {
         message.channel.send('(´꒳`)');
     }
-    if (msgLower.contains('@everyone')) {
+    if (message.toLowerCase().includes('@everyone')) {
         message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'); 
     }
-    if (msgLower.contains('gunright')) {
+    if (message.toLowerCase().includes('gunright')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
-    else if (msgLower.contains('gunleft')) {
+    else if (message.toLowerCase().includes('gunleft')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
-    if (msgLower.contains('owo')) {
+    if (message.toLowerCase().includes('owo')) {
         message.channel.send('*notices bulge*');
     }
-    if (msgLower.contains('nice')) {
+    if (message.toLowerCase().includes('nice')) {
         message.channel.send('nice');
     }
-    if (msgLower.contains('play despacito')) {
+    if (message.toLowerCase().includes('play despacito')) {
         message.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
     }
-    if (msgLower.contains('STANDING')) {
+    if (message.content==('STANDING')) {
         message.channel.send('ON THE EDGE');
     }
-    if (msgLower.contains('f')) {
+    if (message.content==('F')) {
+        message.channel.send('F');
+    }
+    if (message.content==('f')) {
         message.channel.send('f');
     }
-    if (msgLower.contains('big guy')) {
+    if (message.toLowerCase().includes('big guy')) {
         message.channel.send('for you');
     }
-    if (msgLower.contains('no u')) {
+    if (message.content==('no u')) {
         message.channel.send('no, w');
     }
-    if (msgLower.contains('mamalo')) {
+    if (message.toLowerCase().includes('mamalo')) {
         message.channel.send('eso es lo que tu quisieras, no?');
     }
-    if (msgLower.contains('justice')) {
+    if (message.toLowerCase().includes('justice')) {
+        message.channel.send('<@!274718150153732096> i summon thee');
+    }
+    if (message.toLowerCase().includes('JUSTICE')) {
         message.channel.send('Behold! <@!274718150153732096> will end your faggotry!');
     }
-    if (msgLower.contains('trece')) {
+    if (message.toLowerCase().includes('trece')) {
         message.channel.send('mientras mas me lo maman mas me crece');
     }
-    if (msgLower.contains('cinco')) {
+    if (message.toLowerCase().includes('cinco')) {
         message.channel.send('por el culo te lo inco');    
     }
-    if (msgLower.contains('marico')){
+    if (message.toLowerCase().includes('marico')){
         message.channel.send('marico tu');
     }
-    if (msgLower.contains(' our')){
+    if (message.toLowerCase().includes(' our')){
         //generate random number and multiply by 69
         if(numsixnine < 400){
             message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
         }
     }
-    if (msgLower.contains('waifu')){
+    if (message.toLowerCase().includes('waifu')){
         if(numsixnine < 1800){
             message.channel.send('tu waifu es basura');
         } else if (numsixnine < 696) {
             message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
-    if (msgLower.contains('morning')) {
+    if (message.toLowerCase().includes('morning')) {
         message.channel.send('hola pendejos');    
     }
-    if (msgLower.contains('retarded')) {
+    if (message.toLowerCase().includes('retarded')) {
         message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');    
     }
-    if (msgLower.contains('Morning')) {
+    if (message.toLowerCase().includes('Morning')) {
         message.channel.send('sup');    
     }
-    if (msgLower.contains('ayy')) {
+    if (message.toLowerCase().includes('ayy')) {
         message.channel.send('lmao');    
     }
 
-    if (msgLower.startsWith(':-spoilers-start')) {
+    if (message.content.startsWith(':-spoilers-start')) {
         message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376208013469679617/ini.png?width=1443&height=672');    
     }
-    if (msgLower.startsWith(':-spoilers-over')) {
+    if (message.content.startsWith(':-spoilers-over')) {
         message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376207680794263563/endi.png?width=1443&height=672');    
     }
 
-    if (msgLower.contains('Kimetsu no Yaiba')) {
+    if (message.toLowerCase().includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
 
-    if (msgLower.contains(':-kill')) {
+    if (message.toLowerCase().includes(':-kill')) {
         //select what is going to be sent
-        let victim = message.content..replace(':-kill','');;
+        killMsg = message.content.split(' ');
+        let victim = killMsg[1];
         if (victim == '<@!274720140988252160>'){
             message.channel.send('https://www.youtube.com/watch?v=ARJ8cAGm6JE');  
         }else {
@@ -313,7 +318,7 @@ bot.on("message", async message => {
         }
     }
 
-    if (msgLower.content==(':-help')) {
+    if (message.content==(':-help')) {
         let botIcon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
         .setDescription("IP-Chan's command")
@@ -371,7 +376,7 @@ bot.on("message", async message => {
         }
     }
 
-    if (msgLower.startsWith(':-roll')) {
+    if (message.content.startsWith(':-roll')) {
         //pass in :-roll 1d20+3
         //split message and get roll
         let dice = message.content.split(' ');//remove command
@@ -417,11 +422,11 @@ bot.on("message", async message => {
     }
         
         
-    /*if (msgLower.contains('serverid')) {
+    /*if (message.toLowerCase().includes('serverid')) {
         message.channel.send(message.guild.id);    
     }*/
     //resend message to main channel
-    if (msgLower.startsWith(':-send')){
+    if (message.content.startsWith(':-send')){
         //select what is going to be sent
         editMsg = message.content.split('%%');
         let msgToSend = editMsg[1];
@@ -432,7 +437,7 @@ bot.on("message", async message => {
     }
 
     //record bday
-    if (msgLower.startsWith(':-bday')){
+    if (message.content.startsWith(':-bday')){
     	bday = message.content.split(' ');
     	let day = bday[1];
         let mon = bday[2];
@@ -450,14 +455,14 @@ bot.on("message", async message => {
     }
 
     //get bday of tagged person
-    if (msgLower.startsWith(':-bget')){
+    if (message.content.startsWith(':-bget')){
         editget = message.content.split(' ');
         let whom = editget[1]
         message.channel.send (whom + "'s bday is the " + bot.bdays[whom].day + "/" + bot.bdays[whom].mon)
     }
     
     //dump all bdays
-    if (msgLower.startsWith(':-ball')){
+    if (message.content.startsWith(':-ball')){
         for (var prop in bot.bdays) {
             var dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
         }
@@ -465,7 +470,7 @@ bot.on("message", async message => {
     }
 
     //order 66
-    if (msgLower.contains(':-IP-Chan Excecute Order 66')) {
+    if (message.toLowerCase().includes(':-IP-Chan Excecute Order 66')) {
         for (let victim in bot.bdays) {
             if (victim == "<@!274720140988252160>") {
                 message.channel.send(victim + " is now the senate");
