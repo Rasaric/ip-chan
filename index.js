@@ -243,7 +243,19 @@ bot.on("message", async message => {
     if (msg.includes(':-emote')) {
         let emote = msg.replace(':-emote ','')
         if (emote == 'pikachu') {
-            message.content.send('https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg');
+            message.channel.send('https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg');
+        }
+        if (emote == 'thonk') {
+            message.channel.send('https://ih0.redbubble.net/image.430805439.9038/ap,550x550,12x12,1,transparent,t.u1.png');
+        }
+        if (emote == 'deus vult') {
+            message.channel.send('https://i.ytimg.com/vi/IZYGTzfzXvw/maxresdefault.jpg')
+        }
+        if (emote == 'triggered') {
+            message.channel.send('https://ih0.redbubble.net/image.240417923.8805/pp,550x550.u6.jpg')
+        }
+        if (emote == 'cancer') {
+            message.channel.send('https://i.redd.it/hqx7okmi64c11.gif')
         }
     }
 
