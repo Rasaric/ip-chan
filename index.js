@@ -513,9 +513,9 @@ bot.on("message", async message => {
     }
 
     //order 66
-    if (msg.includes(':-IP-Chan Excecute Order 66')) {
+    if (msg.includes(':-ip-chan excecute order 66')) {
         for (let victim in bot.bdays) {
-            if (victim == "<@!274720140988252160>") {
+            if (victim == "<@!"+ message.author.id  +">") {
                 message.channel.send(victim + " is now the senate");
             }
             else {
