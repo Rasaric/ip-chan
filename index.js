@@ -24,7 +24,7 @@ bot.on("ready", async () =>{
         let dd = today.getDate();
         let mm = today.getMonth()+1;//jan 
         if (dd == 26 && mm == 3) {
-            bot.channels.get(IpMainChannelId).send(festivity + " happy birthday daddy UwU");
+            bot.channels.get(IpMainChannelId).send("Happy birthday daddy UwU");
         }
         //krimis
         if (dd == 25 && mm == 12) {
@@ -246,7 +246,7 @@ bot.on("message", async message => {
             message.channel.send('https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg');
         }
         if (emote == 'thonk') {
-            message.channel.send('https://ih0.redbubble.net/image.430805439.9038/ap,550x550,12x12,1,transparent,t.u1.png');
+            message.channel.send('hhttps://ih0.redbubble.net/image.503679252.9654/flat,550x550,075,f.jpg');
         }
         if (emote == 'deus vult') {
             message.channel.send('https://i.ytimg.com/vi/IZYGTzfzXvw/maxresdefault.jpg')
@@ -257,6 +257,31 @@ bot.on("message", async message => {
         if (emote == 'cancer') {
             message.channel.send('https://i.redd.it/hqx7okmi64c11.gif')
         }
+        if (emote == 'doot') {
+            message.channel.send('https://i.imgur.com/IT3hMY4.gif')
+        }
+        if (emote == 'thanos') {
+            message.channel.send('https://i.imgur.com/S0Lm4kX.mp4')
+        }
+        if (emote == 'megulewd') {
+            message.channel.send('https://discordemoji.com/assets/emoji/LewdMegumin.png')
+        }
+        if (emote == 'mugu') {
+            message.channel.send('https://discordemoji.com/assets/emoji/Disabled_Megumin.png')
+        }
+        if (emote == 'birb') {
+            message.channel.send('https://discordemoji.com/assets/emoji/BirdUpvote.gif')
+        }
+        if (emote == 'perish') {
+            message.channel.send('https://discordemoji.com/assets/emoji/5142_then_perish.png')
+        }
+        if (emote == 'triple gay') {
+            message.channel.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIa6Lm31QewuxbuRp9Uu6mxI6jLl4pGlrVTF-boqO3Gg7vdTYa')
+        }
+        if (emote == 'triple gay') {
+            message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/023/459/angrydognoises.jpg')
+        }
+        
     }
 
 
@@ -297,7 +322,7 @@ bot.on("message", async message => {
                 ' got his car stuck between two rail crossings. He saw a train coming and decided to save his car by stopping the train. Sadly, he was not Superman.',
                 ' thought could walk on water. He decided to practice it at home in his bath tub. He slipped, he fell, he crashed.',
                 " had sex, with a praying mantis, got eaten afterwards... doesn't matter had sex?",
-                " got cum in their eye, tripped the stairs because they could'nt see",
+                " got cum in their eye, tripped the stairs because they couldn't see",
                 ' hung themselves with a smileyface tie',
                 ' was falsly accused of rape in a matriarchal society',
                 ' gave up and became hollow',
@@ -350,6 +375,7 @@ bot.on("message", async message => {
         .addField('HELP PEOPLE ARE BEING REALLY FUCKING GAY: ' , ':-reset counter')
         .addField('I WANNA PUNCH THE GOBLIN:' , ':-roll 1d20+2')
         .addField('someone looked at me funny' , ':-kill that mofo')
+        .addField('we have too many emotes' , 'how about some more with :-emote')
         .addField('Excecute order 66:' , 'its a secret to everyone')
         .addField("*i do a lot of other stuff, you'll just have to figure it out*", ':P')
         return message.channel.send(botembed);
