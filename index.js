@@ -230,8 +230,8 @@ bot.on("message", async message => {
         message.channel.send('lmao');    
     }
     if (msg.includes('180063200459358208')) {
-        message.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png')
-
+        message.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png');
+    }
     if (msg.startsWith(':-spoilers-start')) {
         message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376208013469679617/ini.png?width=1443&height=672');    
     }
