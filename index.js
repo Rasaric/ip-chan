@@ -229,6 +229,8 @@ bot.on("message", async message => {
     if (msg.includes('ayy')) {
         message.channel.send('lmao');    
     }
+    if (msg.includes('180063200459358208')) {
+        message.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png')
 
     if (msg.startsWith(':-spoilers-start')) {
         message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376208013469679617/ini.png?width=1443&height=672');    
@@ -278,8 +280,11 @@ bot.on("message", async message => {
         if (emote == 'triple gay') {
             message.channel.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIa6Lm31QewuxbuRp9Uu6mxI6jLl4pGlrVTF-boqO3Gg7vdTYa')
         }
-        if (emote == 'triple gay') {
+        if (emote == 'angry dog') {
             message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/023/459/angrydognoises.jpg')
+        }
+        if (emote == 'eyes') {
+            message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif')
         }
         
     }
@@ -513,7 +518,7 @@ bot.on("message", async message => {
     }
 
     //order 66
-    if (msg.includes(':-ip-chan excecute order 66')) {
+    if (msg.includes(':-ip-chan execute order 66')) {
         for (let victim in bot.bdays) {
             if (victim == "<@!"+ message.author.id  +">") {
                 message.channel.send(victim + " is now the senate");
