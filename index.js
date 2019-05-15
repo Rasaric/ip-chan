@@ -233,7 +233,7 @@ bot.on("message", async message => {
         message.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png');
     }
     if (msg.includes('sociedad')) {
-        message.channel.send("some text", {
+        message.channel.send("Bottom text", {
             files: ["./images/society.jpg"]
         });
     }
