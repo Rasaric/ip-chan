@@ -251,20 +251,80 @@ bot.on("message", async message => {
     if (msg.includes('Kimetsu no Yaiba')) {
         message.channel.send('shut up you goddamn incel');    
     }
+    /*emotes*/
+
+    if (msg.includes(':yukaritank:')) {
+        message.channel.send('<:yukaritank:579044358993477645>');    
+    } 
+    if (msg.includes(':wat:')) {
+        message.channel.send('<:wat:579044348407185442>');    
+    } 
+    if (msg.includes(':thinkkill:')) {
+        message.channel.send('<:thinkkill:579044370863489035>');    
+    } 
+    if (msg.includes(':saitamaok:')) {
+        message.channel.send('<:saitamaok:579044347782365185>');    
+    } 
+    if (msg.includes(':monika:')) {
+        message.channel.send('<:monika:579044347874508814>');    
+    } 
+    if (msg.includes(':wheberga:')) {
+        message.channel.send('<:kheberga:579044366111211521>');    
+    } 
+    if (msg.includes(':gitgud:')) {
+        message.channel.send('<:gitgud:579044342547873822>');    
+    } 
+    if (msg.includes(':fooku:')) {
+        message.channel.send('<:fooku:579044342338158595>');    
+    } 
+    if (msg.includes(':daishrug:')) {
+        message.channel.send('<:daishrug:579044340975009825>');    
+    }
+
+    if (msg.includes(':triplegay:')) {
+        message.channel.send('<:triplegay:579056046136492032>');    
+    } 
+    if (msg.includes(':thonk:')) {
+        message.channel.send('<:thonk:579056068525686785>');    
+    } 
+    if (msg.includes(':perish:')) {
+        message.channel.send('<:perish:579056039047987205>');    
+    } 
+    if (msg.includes(':mugu:')) {
+        message.channel.send('<:mugu:579056046342144029>');    
+    } 
+    if (msg.includes(':megulewd:')) {
+        message.channel.send('<:megulewd:579056050725191681>');    
+    } 
+    if (msg.includes(':deusvult2:')) {
+        message.channel.send('<:deusvult2:579056076909969418>');    
+    } 
+    if (msg.includes(':angrydognoises:')) {
+        message.channel.send('<:angrydognoises:579056065388478477>');    
+    }
+    if (smg.includes(':shake-eyes:')) {
+        message.channel.send('<a:eyesshaking:579056083897679872>');    
+    }
+    if (smg.includes(':birb:')) {
+        message.channel.send('<a:birb:579056044207243267>')
+    }
+    if (smg.includes(':cancer-dance:')) {
+        message.channel.send('<a:dans:579060538970079242>')
+    }
+    if (smg.includes(':doot:')) {
+        message.channel.send('<a:doot:579060538924072976>')
+    }
+    if (smg.includes(':thanos:')) {
+        message.channel.send('<a:thanos:579065066062610451>')
+    
+
+    if (msg==(':-emote help')) {
+        message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :wheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:deusvult2:579056076909969418> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n  *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451>'
+            );
+    }
     if (msg.includes(':-emote')) {
         let emote = msg.replace(':-emote ','')
-        if (emote == 'pikachu') {
-            message.channel.send('https://as.com/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg');
-        }
-        if (emote == 'thonk') {
-            message.channel.send('hhttps://ih0.redbubble.net/image.503679252.9654/flat,550x550,075,f.jpg');
-        }
-        if (emote == 'deus vult') {
-            message.channel.send('https://i.ytimg.com/vi/IZYGTzfzXvw/maxresdefault.jpg')
-        }
-        if (emote == 'triggered') {
-            message.channel.send('https://ih0.redbubble.net/image.240417923.8805/pp,550x550.u6.jpg')
-        }
+       
         if (emote == 'cancer') {
             message.channel.send('https://i.redd.it/hqx7okmi64c11.gif')
         }
@@ -296,6 +356,7 @@ bot.on("message", async message => {
             message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif')
         }
         
+    }')
     }
 
 
