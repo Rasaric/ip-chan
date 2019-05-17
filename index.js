@@ -302,58 +302,57 @@ bot.on("message", async message => {
     if (msg.includes(':angrydognoises:')) {
         message.channel.send('<:angrydognoises:579056065388478477>');    
     }
-    if (smg.includes(':shake-eyes:')) {
+    if (msg.includes(':shake-eyes:')) {
         message.channel.send('<a:eyesshaking:579056083897679872>');    
     }
-    if (smg.includes(':birb:')) {
-        message.channel.send('<a:birb:579056044207243267>')
+    if (msg.includes(':birb:')) {
+        message.channel.send('<a:birb:579056044207243267>');
     }
-    if (smg.includes(':cancer-dance:')) {
-        message.channel.send('<a:dans:579060538970079242>')
+    if (msg.includes(':cancer-dance:')) {
+        message.channel.send('<a:dans:579060538970079242>');
     }
-    if (smg.includes(':doot:')) {
-        message.channel.send('<a:doot:579060538924072976>')
+    if (msg.includes(':doot:')) {
+        message.channel.send('<a:doot:579060538924072976>');
     }
-    if (smg.includes(':thanos:')) {
-        message.channel.send('<a:thanos:579065066062610451>')
-    
+    if (msg.includes(':thanos:')) {
+        message.channel.send('<a:thanos:579065066062610451>');
+    }
 
     if (msg==(':-emote help')) {
-        message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :wheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:deusvult2:579056076909969418> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n  *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451>'
-            );
+        message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :wheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:deusvult2:579056076909969418> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n  *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451>');
     }
     if (msg.includes(':-emote')) {
-        let emote = msg.replace(':-emote ','')
+        let emote = msg.replace(':-emote ','');
        
         if (emote == 'cancer') {
-            message.channel.send('https://i.redd.it/hqx7okmi64c11.gif')
+            message.channel.send('https://i.redd.it/hqx7okmi64c11.gif');
         }
         if (emote == 'doot') {
-            message.channel.send('https://i.imgur.com/IT3hMY4.gif')
+            message.channel.send('https://i.imgur.com/IT3hMY4.gif');
         }
         if (emote == 'thanos') {
-            message.channel.send('https://i.imgur.com/S0Lm4kX.mp4')
+            message.channel.send('https://i.imgur.com/S0Lm4kX.mp4');
         }
         if (emote == 'megulewd') {
-            message.channel.send('https://discordemoji.com/assets/emoji/LewdMegumin.png')
+            message.channel.send('https://discordemoji.com/assets/emoji/LewdMegumin.png');
         }
         if (emote == 'mugu') {
-            message.channel.send('https://discordemoji.com/assets/emoji/Disabled_Megumin.png')
+            message.channel.send('https://discordemoji.com/assets/emoji/Disabled_Megumin.png');
         }
         if (emote == 'birb') {
-            message.channel.send('https://discordemoji.com/assets/emoji/BirdUpvote.gif')
+            message.channel.send('https://discordemoji.com/assets/emoji/BirdUpvote.gif');
         }
         if (emote == 'perish') {
-            message.channel.send('https://discordemoji.com/assets/emoji/5142_then_perish.png')
+            message.channel.send('https://discordemoji.com/assets/emoji/5142_then_perish.png');
         }
         if (emote == 'triple gay') {
-            message.channel.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIa6Lm31QewuxbuRp9Uu6mxI6jLl4pGlrVTF-boqO3Gg7vdTYa')
+            message.channel.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIa6Lm31QewuxbuRp9Uu6mxI6jLl4pGlrVTF-boqO3Gg7vdTYa');
         }
         if (emote == 'angry dog') {
-            message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/023/459/angrydognoises.jpg')
+            message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/023/459/angrydognoises.jpg');
         }
         if (emote == 'eyes') {
-            message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif')
+            message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif');
         }
     }
 
@@ -448,7 +447,7 @@ bot.on("message", async message => {
         .addField('HELP PEOPLE ARE BEING REALLY FUCKING GAY: ' , ':-reset counter')
         .addField('I WANNA PUNCH THE GOBLIN:' , ':-roll 1d20+2')
         .addField('someone looked at me funny' , ':-kill that mofo')
-        .addField('we have too many emotes' , 'how about some more with :-emote')
+        .addField('we have too many emotes' , 'how about some more with :-emote help')
         .addField('Excecute order 66:' , 'its a secret to everyone')
         .addField("*i do a lot of other stuff, you'll just have to figure it out*", ':P')
         return message.channel.send(botembed);
