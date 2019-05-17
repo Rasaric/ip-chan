@@ -355,8 +355,6 @@ bot.on("message", async message => {
         if (emote == 'eyes') {
             message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif')
         }
-        
-    }')
     }
 
 
