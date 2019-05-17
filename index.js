@@ -82,11 +82,15 @@ bot.on("message", async message => {
     let gunleft = bot.emojis.get("371039866810531861");
     let dai = bot.emojis.get("314877079386718218");
     let gunright = bot.emojis.get("371039882916790272");
+    let angery = bot.emojis.get("578764570034962442");
     const numsixnine = Math.floor(Math.random() * 6969);
 
     //responses and messages
 	if (msg.includes('duro')) {
         message.channel.send('como mi pito');
+    }
+    if (msg.includes('astolfo')) {
+        message.channel.send(angery)
     }
     if (msg.includes('69')) {
         if(numsixnine < 1800){
