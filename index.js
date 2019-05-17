@@ -90,7 +90,7 @@ bot.on("message", async message => {
         message.channel.send('como mi pito');
     }
     if (msg.includes('astolfo')) {
-        message.channel.send(:angry:);
+        message.channel.send(":angry:");
     }
     if (msg.includes('69')) {
         if(numsixnine < 1800){
