@@ -89,8 +89,8 @@ bot.on("message", async message => {
 	if (msg.includes('duro')) {
         message.channel.send('como mi pito');
     }
-    if (msg.includes('astolfo')) {
-        message.channel.send(angery);
+    if (msg.includes('578764570034962442')) {
+        message.channel.send(msg);
     }
     if (msg.includes('69')) {
         if(numsixnine < 1800){
