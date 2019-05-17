@@ -268,7 +268,7 @@ bot.on("message", async message => {
     if (msg.includes(':monika:')) {
         message.channel.send('<:monika:579044347874508814>');    
     } 
-    if (msg.includes(':wheberga:')) {
+    if (msg.includes(':kheberga:')) {
         message.channel.send('<:kheberga:579044366111211521>');    
     } 
     if (msg.includes(':gitgud:')) {
@@ -319,7 +319,7 @@ bot.on("message", async message => {
     }
 
     if (msg==(':-emote help')) {
-        message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :wheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:megulewd:579056050725191681> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n  *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451>');
+        message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :kheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:megulewd:579056050725191681> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n  *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451>');
     }
     if (msg.includes(':-emote')) {
         let emote = msg.replace(':-emote ','');
