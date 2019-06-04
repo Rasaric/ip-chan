@@ -383,8 +383,13 @@ bot.on("message", async message => {
                 ' was found guily of gay and executed by <@' + message.author.id + '>',
                 " choked on <@" + message.author.id + "> 's dick while trying to suck it",
                 ' died as he lived, unremarkably',
+                " 's brain stopped working due to lack of use",
+                " 's premium membership has ended, to renew your membership please insert your credit card number and the three numbers in the back",
                 ' shouted the N word in detroit',
+                ' burned in divine light pouring from the open heavens as the gods delivered final judgement',
+                ' died. this is so sad can we hit 20 likes?',
                 ' said "what could go wrong?" before everything went wrong',
+                ' worked with cipher and got a bomf up their ass',
                 ' got shot in the nuts, stabbed in the kidney, then commited suicide',
                 ' is getting buttfucked by lathi in hell, or heaven, depending how you look at it',
                 " was shoved in <@" + message.author.id + "> 's trunk, 10 days later someone noticed the trunk smelled really bad and now we are here",
@@ -398,7 +403,7 @@ bot.on("message", async message => {
                 " died 5 years ago, <@" + message.author.id + "> , you have to let go",
                 " was crushed by marto's fat fucking ass",
                 ' considered suicide, then got ran over by a car',
-                ' traveled back in time and accidentally killed their younger self',
+                ' traveled back in time and \'accidentally\' killed their younger self',
                 ' cut off his head to prove that he was macho',
                 ' wanted to get a liposuction but didn’t have money to do it. did it at home with a vacuum cleaner and constantly had to take pain killers because of the pain. then died of an overdose',
                 ' got his car stuck between two rail crossings. He saw a train coming and decided to save his car by stopping the train. Sadly, he was not Superman.',
@@ -419,6 +424,10 @@ bot.on("message", async message => {
                 ' was killed by kindness. a machete with "kindness" written on the side',
                 " tried to fuck hector's sister.",
                 ' was snapped by thanos',
+                " went up Thanos' butt, discovered the tensile strength of a colon is quite significant, actually",
+                " thought the bleeding was insignificant. turns out, it wasn't",
+                " drank the dumb bitch juice",
+                " was blown up by a creeper",
                 ' was cleansed from this holy land, thank the lord',
                 ' was a heretic and executed as such',
                 ' fell asleep and never woke up',
@@ -468,19 +477,41 @@ bot.on("message", async message => {
 
 
     if (message.author.id === '274719053808009216') {//if hector posts a message
-        if(numsixnine < 69){
+        if(msg.contains('teeth')) {
+            message.channel.send(" ", {
+            files: ["egg.png"]
+        });   
+        } else if(numsixnine < 69){
             const hectorOptions = [
                         'onii-chan!',
                         'welcome home onii-chan, would you like dinner, bath, or... me?',
                         'yamete onii-chan!!~',
                         'onii-chan, why are you holding a brush?',
                         'heil onii-chan',
+                        'onii-chan, the new toys arrived! wanna help me test them? :3',
+                        ':3',
+                        "it's my turn on top, onii-chan",
+                        'why do you spend so much time with these faggots when you could fuck me instead',
                         '***ONII-CHAN!***',
                         '**ONII-CHAN!**',
+                        {
+                            files: ["headpats.jpg"]
+                        },
+                        'no chromo',
+                        'no homo',
+                        'ALL OF THE HOMO',
+                        'ONII-CHAN! i had a nightmare, can i sleep with you?',
+                        'pet me',
+                        '*pet me*',
+                        '**PET ME**',
+                        '***PET ME***',
+                        'gib head pats',
+                        'square up, niggy',
+                        'onii-chan, i need my head pats onii-chan',
                         'onii-chan, are you going to sleep with me tonight? umu',
                         'onii-chan, my bed is cold',
                         'how was work, onii-chan?',
-                        'can i sleep in your lap, onii-chan?',
+                        'can i sleep on your lap, onii-chan?',
                         'suck my dick onii-chan, you know you like it',
                         'onii-chan! did you bring candy for me?',
                         'pat my head, onii-chan',
@@ -497,7 +528,8 @@ bot.on("message", async message => {
             const randomNum = Math.floor(Math.random() * hectorOptions.length);
             //pick a number and embarass hector
             const oniiChan = hectorOptions[randomNum];
-            message.channel.send(oniiChan);
+                message.channel.send(oniiChan);
+            }
         }
     }
 
