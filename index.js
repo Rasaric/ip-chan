@@ -494,14 +494,12 @@ bot.on("message", async message => {
                         'why do you spend so much time with these faggots when you could fuck me instead',
                         '***ONII-CHAN!***',
                         '**ONII-CHAN!**',
-                        {
-                            files: ["headpats.jpg"]
-                        },
                         'no chromo',
                         'no homo',
                         'ALL OF THE HOMO',
                         'ONII-CHAN! i had a nightmare, can i sleep with you?',
                         'pet me',
+                        'that pic',
                         '*pet me*',
                         '**PET ME**',
                         '***PET ME***',
@@ -528,6 +526,9 @@ bot.on("message", async message => {
             const randomNum = Math.floor(Math.random() * hectorOptions.length);
             //pick a number and embarass hector
             const oniiChan = hectorOptions[randomNum];
+            if (oniiChan == 'that pic') {
+                message.channel.send("", ,)
+            } else {
                 message.channel.send(oniiChan);
             }
         }
