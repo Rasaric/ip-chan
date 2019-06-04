@@ -477,7 +477,7 @@ bot.on("message", async message => {
 
 
     if (message.author.id === '274719053808009216') {//if hector posts a message
-        if(msg.contains('teeth')) {
+        if(msg.includes('teeth')) {
             message.channel.send(" ", {
             files: ["egg.png"]
         });   
