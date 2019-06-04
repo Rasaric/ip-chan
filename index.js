@@ -527,7 +527,9 @@ bot.on("message", async message => {
             //pick a number and embarass hector
             const oniiChan = hectorOptions[randomNum];
             if (oniiChan == 'that pic') {
-                message.channel.send("", ,)
+                message.channel.send("",{
+                    files: ["headpats.jpg"]
+                })
             } else {
                 message.channel.send(oniiChan);
             }
