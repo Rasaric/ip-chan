@@ -228,7 +228,10 @@ bot.on("message", async message => {
         message.channel.send('hola pendejos');    
     }
     if (msg.includes('retarded')) {
-        message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');    
+        if(numsixnine < 1800){
+            message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');
+        } else if (numsixnine < 696) {
+            message.channel.send("you laugh, but i'm the one with a college degree");
     }
     if (msg.includes('ayy')) {
         message.channel.send('lmao');    
