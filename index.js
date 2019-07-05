@@ -653,6 +653,8 @@ bot.on('guildMemberAdd', member  => {
     if (member.guild.id == IpServerId){
         if(member.id == '164916181252308993'){
             bot.channels.get(IpMainChannelId).send('the lost dog found his way back home, welcome back, dessert');
+        } else if(member.id == '265625238300000258'){
+            bot.channels.get(IpMainChannelId).send('the gay never ends, the princess is back at it again');
         } else {
            bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul');
         }
@@ -662,7 +664,11 @@ bot.on('guildMemberAdd', member  => {
 //on kick
 bot.on('guildMemberRemove', member => {
     if (member.guild.id == IpServerId){
-        bot.channels.get(IpMainChannelId).send('**' + member.user.username + "** has died... jk, he just left");
+        if(member.id == '265625238300000258'){
+            bot.channels.get(IpMainChannelId).send('pengu left, again. what did you do this time, faggots?');
+        } else {
+            bot.channels.get(IpMainChannelId).send('**' + member.user.username + "** has died... jk, he just left");
+        }
     }
 });
     
