@@ -14,7 +14,7 @@ const IpMainChannelId = '529529045516550145';
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
     //game
-	bot.user.setActivity("with my balls");
+	bot.user.setActivity("with your balls");
     //bootup message
     //bot.channels.get(IpMainChannelId).send("i'm back bitch");
 
@@ -646,14 +646,20 @@ bot.on("message", async message => {
     }
 
     //order 66
+
     if (msg.includes(':-ip-chan execute order 66')) {
-        for (let victim in bot.bdays) {
-            if (victim == "<@!"+ message.author.id  +">") {
-                message.channel.send(victim + " is now the senate");
+        if (message.author.id === '274719053808009216') {
+            for (let victim in bot.bdays) {
+                if (victim == "<@!"+ message.author.id  +">") {
+                    message.channel.send(victim + " is now the senate");
+                }
+                else {
+                    message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
+                }
             }
-            else {
-                message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-            }
+        }
+        else {
+            message.channel.send("not yet, senator");
         }
     }
 });
@@ -668,7 +674,9 @@ bot.on('guildMemberAdd', member  => {
         } else if(member.id == '265625238300000258'){
             bot.channels.get(IpMainChannelId).send('the gay never ends, the princess is back at it again');
         } else {
-           bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul');
+           bot.channels.get(IpMainChannelId).send('**' + member.user.username + '** has joined the hellhole, poor soul', {
+            files: ["./images/welcome.png"]
+        });
         }
     }
 });
@@ -677,7 +685,7 @@ bot.on('guildMemberAdd', member  => {
 bot.on('guildMemberRemove', member => {
     if (member.guild.id == IpServerId){
         if(member.id == '265625238300000258'){
-            bot.channels.get(IpMainChannelId).send('pengu left, again. what did you do this time, faggots?');
+            bot.channels.get(IpMainChannelId).send('pengu left, again. not big surprise');
         } else {
             bot.channels.get(IpMainChannelId).send('**' + member.user.username + "** has died... jk, he just left");
         }
