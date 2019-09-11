@@ -28,11 +28,11 @@ bot.on("ready", async () =>{
         }
         //krimis
         if (dd == 25 && mm == 12) {
-            bot.channels.get(IpMainChannelId).send("https://www.youtube.com/watch?v=_Z-Nu351j58 @everyone");
+            bot.channels.get(IpMainChannelId).send("https://www.youtube.com/watch?v=_Z-Nu351j58 "+ "@everyone");
         }
         //bush day
         if (dd == 11 && mm == 9) {
-            bot.channels.get(IpMainChannelId).send("@everyone never forget");
+            bot.channels.get(IpMainChannelId).send("@everyone"+" never forget");
         }
         for (let festivity in bot.bdays) {
             //random birthday options
