@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 //const prefix = botconfig.prefix;//honestly i don't use this
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client();
 
 bot.bdays = require("./bdays.json");
 //all the required shit
