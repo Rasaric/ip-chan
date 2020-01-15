@@ -10,7 +10,7 @@ bot.bdays = require("./bdays.json");
 //Ids for channel and server
 const IpServerId = '274718680603033601';
 const IpMainChannelId = '666860578928721930';
-const IpFaggtoLandId = '660324785078796308'
+const IpFaggotLandId = '660324785078796308'
 
 bot.on("ready", async () =>{
 	console.log(`${bot.user.username} is online!`);
@@ -617,9 +617,9 @@ bot.on("message", async message => {
         editMsg = message.content.split('%%');
         let msgToSend = editMsg[1];
 				let channelToSend = editMsg[2];
-				if (channelToSend = 'fgt') {
+				if (channelToSend == 'fgt') {
 					//send to faggotland
-					bot.channels.get(IpFaggtoLandId).send(msgToSend);
+					bot.channels.get(IpFaggotLandId).send(msgToSend);
 				} else {
 	        //send to main channel
 	        bot.channels.get(IpMainChannelId).send(msgToSend);
