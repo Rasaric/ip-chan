@@ -406,7 +406,7 @@ bot.on("message", async message => {
 					const randomNum = Math.floor(Math.random() * bot.kinky.actions.length);
 					//pick a number and call a kink
 					if (i == randomNum) {
-						const action = bot.kinky.actions[i];
+						const action = actions;
 					}
 				}
 				for (var i = 0; i < bot.kinky.variables.length; i++) {
@@ -414,7 +414,7 @@ bot.on("message", async message => {
 					const randomNum = Math.floor(Math.random() * bot.kinky.variables.length);
 					//pick a number and call a kink
 					if (i == randomNum) {
-						const variable = bot.kinky.variables[i];
+						const variable = variales;
 					}
 				}
 				if (person2 == true) {
