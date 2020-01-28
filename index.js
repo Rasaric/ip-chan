@@ -537,7 +537,7 @@ bot.on("message", async message => {
             message.channel.send(" ", {
             files: ["egg.png"]
         });
-				 else if (msg.includes('sister')) {
+			} else if (msg.includes('sister')) {
 					 if(numsixnine < 4500){
  							message.channel.send("",{
  									files: ["headpats.jpg"]
@@ -562,7 +562,6 @@ bot.on("message", async message => {
                         'ALL OF THE HOMO',
                         'ONII-CHAN! i had a nightmare, can i sleep with you?',
                         'pet me',
-                        'that pic',
                         '*pet me*',
                         '**PET ME**',
                         '***PET ME***',
