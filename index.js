@@ -400,10 +400,13 @@ bot.on("message", async message => {
         //select what is going to be sent
         let people = message.content.split(' ')
         person1=people[1];
-				for (action in bot.kinky.actions) {
+				for (var i = 0; i < bot.kinky.actions.length; i++) {
+    			var actions = bot.kinky.actions[i];
 					const randomNum = Math.floor(Math.random() * bot.kinky.actions.length);
 					//pick a number and call a kink
-					const action = bot.kinky.actions[randomNum];
+					if (i == randomNum) {
+						const action = bot.kinky.actions[randomNum];
+					}
 				}
 				for (variable in bot.kinky.variables) {
 					const randomNum = Math.floor(Math.random() * bot.kinky.variables.length);
