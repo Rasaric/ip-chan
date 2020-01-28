@@ -399,7 +399,7 @@ bot.on("message", async message => {
 		if (msg.includes(':-porn')) {
         //select what is going to be sent
         let people = message.content.split(' ')
-        people[1]=person1;
+        person1=people[1];
 				for (action in bot.kinks.actions) {
 					const randomNum = Math.floor(Math.random() * bot.kinks.actions.length);
 					//pick a number and call a kink
@@ -411,8 +411,8 @@ bot.on("message", async message => {
 					const variable = bot.kinks.variables[randomNum];
 				}
 				if (people[2]==true) {
-					people[2]=person2;
-						message.channel.send( person1 + action + person2 + varaible );
+					person2=people[2];
+						message.channel.send( person1 + action + person2 + variable );
 				} else {
 					message.channel.send( person1 + " stayed home and masturbated all day");
 				}
