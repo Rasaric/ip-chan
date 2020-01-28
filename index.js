@@ -400,21 +400,24 @@ bot.on("message", async message => {
         //select what is going to be sent
         let people = message.content.split(' ')
         person1=people[1];
+				person2=people[2];
 				for (var i = 0; i < bot.kinky.actions.length; i++) {
     			var actions = bot.kinky.actions[i];
 					const randomNum = Math.floor(Math.random() * bot.kinky.actions.length);
 					//pick a number and call a kink
 					if (i == randomNum) {
-						const action = bot.kinky.actions[randomNum];
+						const action = bot.kinky.actions[i];
 					}
 				}
-				for (variable in bot.kinky.variables) {
+				for (var i = 0; i < bot.kinky.variables.length; i++) {
+    			var variables = bot.kinky.variables[i];
 					const randomNum = Math.floor(Math.random() * bot.kinky.variables.length);
 					//pick a number and call a kink
-					const variable = bot.kinky.variables[randomNum];
+					if (i == randomNum) {
+						const variable = bot.kinky.variables[i];
+					}
 				}
-				if (people[2]==true) {
-					person2=people[2];
+				if (person2 == true) {
 						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
 				} else {
 					message.channel.send( person1 + " stayed home and masturbated all day");
