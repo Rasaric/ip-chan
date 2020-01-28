@@ -5,6 +5,7 @@ const fs = require("fs");
 const bot = new Discord.Client();
 
 bot.bdays = require("./bdays.json");
+bot.kinky = require("./kinkbase.json");
 //all the required shit
 
 //Ids for channel and server
@@ -50,6 +51,7 @@ bot.on("ready", async () =>{
                 "one year closer to death, " + festivity + ", happy birthday",
                 festivity + "leveled up! happy birthday!",
                 festivity + " looks older, get better soon!",
+								festivity + "https://youtu.be/vdVnnMOTe3Q",
 
             ];
             if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
@@ -176,7 +178,7 @@ bot.on("message", async message => {
     else if (msg.includes('gunleft')) {
         message.channel.send(gunleft + " " + dai + " "+ gunright);
     }
-    if (msg.includes('owo')) {
+    if (msg==('owo')) {
         message.channel.send('*notices bulge*');
     }
     if (msg.includes('nice')) {
@@ -189,7 +191,7 @@ bot.on("message", async message => {
         message.channel.send('ON THE EDGE');
     }
     if (msg==('f')) {
-        message.channel.send('f');
+        message.channel.send('F');
     }
     if (msg.includes('big guy')) {
         message.channel.send('for you');
@@ -212,7 +214,7 @@ bot.on("message", async message => {
     if (msg.includes('marico')){
         message.channel.send('marico tu');
     }
-    if (msg.includes(' our')){
+    if (msg==('our')){
         //generate random number and multiply by 69
         if(numsixnine < 400){
             message.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
@@ -221,17 +223,17 @@ bot.on("message", async message => {
     if (msg.includes('waifu')){
         if(numsixnine < 2400){
             message.channel.send('tu waifu es basura');
-        } else if (numsixnine < 696) {
+        } else if (numsixnine > 5000) {
             message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
         }
     }
-    if (msg.includes('morning')) {
+    if (msg==('morning')) {
         message.channel.send('hola pendejos');
     }
     if (msg.includes('retarded')) {
         if(numsixnine < 1800) {
             message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');
-        } else if(numsixnine < 696) {
+        } else if(numsixnine > 5000) {
             message.channel.send("you laugh, but i'm the one with a college degree");
         }
     }
@@ -393,8 +395,31 @@ bot.on("message", async message => {
     }
 
 
+		//pron prompt---------------------------------------------------
+		if (msg.includes(':-porn')) {
+        //select what is going to be sent
+        let people = message.content.split(' ')
+        people[1]=person1;
+				for (action in bot.kinks.actions) {
+					const randomNum = Math.floor(Math.random() * bot.kinks.actions.length);
+					//pick a number and call a kink
+					const action = bot.kinks.actions[randomNum];
+				}
+				for (variable in bot.kinks.variables) {
+					const randomNum = Math.floor(Math.random() * bot.kinks.variables.length);
+					//pick a number and call a kink
+					const variable = bot.kinks.variables[randomNum];
+				}
+				if (people[2]==true) {
+					people[2]=person2;
+						message.channel.send( person1 + action + person2 + varaible );
+				} else {
+					message.channel.send( person1 + " stayed home and masturbated all day");
+				}
 
 
+
+		//kill prompt--------------------------------------
     if (msg.includes(':-kill')) {
         //select what is going to be sent
         let victim = msg.replace(':-kill ','');
@@ -467,7 +492,12 @@ bot.on("message", async message => {
                 ' had 1 hp when a fly landed on them',
                 ' snek ran out of ideas so you get a free pass this one time',
                 ' dropped the soap',
-                " was killed by <@" + message.author.id + ">"
+                " was killed by <@" + message.author.id + ">",
+								" contracted the big gay",
+								" bought a house in residential china, unsurprisingly, it fell down",
+								" contracted the seasonal deadly virus",
+								" fapped too hard, dick fell off",
+								" commited <:lathi:338366959517302785>"
             ];
             //generate random number
             const randomNum = Math.floor(Math.random() * killChoices.length);
@@ -507,6 +537,12 @@ bot.on("message", async message => {
             message.channel.send(" ", {
             files: ["egg.png"]
         });
+				 else if (msg.includes('sister')) {
+					 if(numsixnine < 4500){
+ 							message.channel.send("",{
+ 									files: ["headpats.jpg"]
+ 							})
+						}
         } else if(numsixnine < 69){
             const hectorOptions = [
                         'onii-chan!',
@@ -521,6 +557,7 @@ bot.on("message", async message => {
                         '***ONII-CHAN!***',
                         '**ONII-CHAN!**',
                         'no chromo',
+												'wanna watch some demon slyer with me onii-chan?',
                         'no homo',
                         'ALL OF THE HOMO',
                         'ONII-CHAN! i had a nightmare, can i sleep with you?',
@@ -552,13 +589,8 @@ bot.on("message", async message => {
             const randomNum = Math.floor(Math.random() * hectorOptions.length);
             //pick a number and embarass hector
             const oniiChan = hectorOptions[randomNum];
-            if (oniiChan == 'that pic') {
-                message.channel.send("",{
-                    files: ["headpats.jpg"]
-                })
-            } else {
-                message.channel.send(oniiChan);
-            }
+            message.channel.send(oniiChan);
+
         }
     }
 
