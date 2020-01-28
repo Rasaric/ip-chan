@@ -399,25 +399,25 @@ bot.on("message", async message => {
 		if (msg.includes(':-porn')) {
         //select what is going to be sent
         let people = message.content.split(' ')
+
         person1=people[1];
 				person2=people[2];
-				for (var i = 0; i < bot.kinky.actions.length; i++) {
-    			var actions = bot.kinky.actions[i];
-					const randomNum = Math.floor(Math.random() * bot.kinky.actions.length);
+				actions=bot.kinky.actions;
+				variables=bot.kinky.variables;
+
+				for (action in actions) {
+					const randomNum = Math.floor(Math.random() actions.length);
 					//pick a number and call a kink
-					if (i == randomNum) {
-						const action = actions;
-					}
+					const action = actions[randomNum];
 				}
-				for (var i = 0; i < bot.kinky.variables.length; i++) {
-    			var variables = bot.kinky.variables[i];
-					const randomNum = Math.floor(Math.random() * bot.kinky.variables.length);
+
+				for (variable in variables) {
+					const randomNum = Math.floor(Math.random() * variables.length);
 					//pick a number and call a kink
-					if (i == randomNum) {
-						const variable = variables;
-					}
+					const variable = variables[randomNum];
 				}
-				if (person2 == true) {
+
+				if (people[2]==true) {
 						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
 				} else {
 					message.channel.send( person1 + " stayed home and masturbated all day");
