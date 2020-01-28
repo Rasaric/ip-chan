@@ -415,6 +415,10 @@ bot.on("message", async message => {
 						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
 				} else {
 					message.channel.send( person1 + " stayed home and masturbated all day");
+					message.channel.send( action );
+					message.channel.send( person2 );
+					message.channel.send( variable2 );
+
 				}
 
 		}
