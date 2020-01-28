@@ -406,7 +406,7 @@ bot.on("message", async message => {
 				variables=bot.kinky.variables;
 
 				for (action in actions) {
-					const randomNum = Math.floor(Math.random() actions.length);
+					const randomNum = Math.floor(Math.random() * actions.length);
 					//pick a number and call a kink
 					const action = actions[randomNum];
 				}
