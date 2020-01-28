@@ -417,7 +417,7 @@ bot.on("message", async message => {
 					message.channel.send( person1 + " stayed home and masturbated all day");
 				}
 
-
+		}
 
 		//kill prompt--------------------------------------
     if (msg.includes(':-kill')) {
@@ -534,14 +534,14 @@ bot.on("message", async message => {
 
     if (message.author.id === '274719053808009216') {//if hector posts a message
         if(msg.includes('teeth')) {
-            message.channel.send(" ", {
+            message.channel.send("", {
             files: ["egg.png"]
         });
 			} else if (msg.includes('sister')) {
 					 if(numsixnine < 4500){
  							message.channel.send("",{
  									files: ["headpats.jpg"]
- 							})
+ 							});
 						}
         } else if(numsixnine < 69){
             const hectorOptions = [
