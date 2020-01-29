@@ -39,7 +39,7 @@ bot.on("ready", async () =>{
 		}
 		for (let festivity in bot.bdays) {
 			//random birthday options
-			const options = bot.bdaymsg.mesasges;
+			const options = bot.bdaymsg.messages;
 
 			if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
 				bot.channels.get(IpMainChannelId).send(festivity + "'s birthday is tomorrow, are you ready?");
