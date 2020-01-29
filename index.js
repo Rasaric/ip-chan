@@ -11,6 +11,7 @@ bot.bdaymsgs = require("./bdaymsgs.json")
 
 //Ids for channel and server
 const IpServerId = '274718680603033601';
+const TestchannelID = '652639923530104852';
 const IpMainChannelId = '666860578928721930';
 const IpFaggotLandId = '660324785078796308'
 
@@ -51,7 +52,8 @@ bot.on("ready", async () =>{
 				const option = options[randomNum];
 				option.replace('festivity', festivity)
 
-				bot.channels.get(IpMainChannelId).send(option);
+				//bot.channels.get(IpMainChannelId).send(option);
+				bot.channels.get(TestchannelID).send(option);
 			}
 		}
 
@@ -79,17 +81,7 @@ bot.on("message", async message => {
 	const numsixnine = Math.floor(Math.random() * 6969);
 
 
-	//bdaytesting
-	if (msg.includes('bdaytest')) {
-		//generate random number
-		bdaychecker();
-		const randomNum = Math.floor(Math.random() * options.length);
-		//pick a number and call a birthday greeting
-		const option = options[randomNum];
-		option.replace('festivity', festivity)
 
-			message.channel.send(option);
-	}
 	//responses and messages
 	if (msg.includes('duro')) {
 		message.channel.send('como mi pito');
