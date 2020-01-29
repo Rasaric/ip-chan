@@ -6,6 +6,7 @@ const bot = new Discord.Client();
 
 bot.bdays = require("./bdays.json");
 bot.kinky = require("./kinkbase.json");
+bot.bdaymsgs = require("./bdaymsgs.json")
 //all the required shit
 
 //Ids for channel and server
@@ -38,22 +39,8 @@ bot.on("ready", async () =>{
 		}
 		for (let festivity in bot.bdays) {
 			//random birthday options
-			const options = [
-				"IT'S " + festivity + "'S BIRTHDAY MOTHERFUCKERS",
-				"BRING " + festivity + " SOME CAKE, IT'S BIRTHDAY TIME",
-				festivity + " came out the pussy today, happy b-day!",
-				"BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY " + festivity + " BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY BIRTHDAY",
-				"happy birthday to " + festivity + " but what's another year when you are immortal and will never die",
-				"happy birthday" + festivity + ", im not gonna suck your dick",
-				"this birthday message was picked specially for you, " + festivity + ", happy birthday",
-				"hap " + festivity,
-				"enjoy your bday, " + festivity + ", enjoy it while it lasts",
-				"one year closer to death, " + festivity + ", happy birthday",
-				festivity + "leveled up! happy birthday!",
-				festivity + " looks older, get better soon!",
-				festivity + "https://youtu.be/vdVnnMOTe3Q",
+			const options = bot.bdaymsg.mesasges;
 
-			];
 			if (bot.bdays[festivity].day-1 == dd && bot.bdays[festivity].mon == mm) {
 				bot.channels.get(IpMainChannelId).send(festivity + "'s birthday is tomorrow, are you ready?");
 			}
@@ -86,6 +73,8 @@ bot.on("message", async message => {
 	let dai = bot.emojis.get("314877079386718218");
 	let gunright = bot.emojis.get("371039882916790272");
 	let angery = bot.emojis.get("578768207528329217");
+
+	//random chance generator for most stuffs
 	const numsixnine = Math.floor(Math.random() * 6969);
 
 	//responses and messages
