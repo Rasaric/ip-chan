@@ -7,6 +7,7 @@ const bot = new Discord.Client();
 bot.bdays = require("./bdays.json");
 bot.kinky = require("./kinkbase.json");
 bot.bdaymsgs = require("./bdaymsgs.json")
+bot.pats = require("./pats.json")
 //all the required shit
 
 //Ids for channel and server
@@ -97,51 +98,7 @@ bot.on("message", async message => {
 		message.channel.send('(☭ ͜ʖ ☭)');
 	}
 	if (msg.includes('*pats*')) {
-		const patReact = [
-			'(≧∇≦)/',
-			'☆*: .｡. o(≧▽≦)o .｡.:*☆',
-			'(((o(*ﾟ▽ﾟ*)o)))',
-			'ヽ(*⌒∇⌒*)ﾉ',
-			'ヽ(＾Д＾)ﾉ',
-			'o(≧∇≦o)',
-			'(((＼（＠v＠）／)))',
-			'(((o(*ﾟ▽ﾟ*)o)))',
-			'✖‿✖',
-			'(ﾉ´ヮ´)ﾉ*: ･ﾟ',
-			'✧ ─=≡Σ((( つ•̀ω•́)つ',
-			'( ✧Д✧) YES!!',
-			'(๑˃̵　ᴗ　˂̵)و',
-			'(*°∀°)=3',
-			'(●♡∀♡)',
-			'(♥_♥)',
-			'≧﹏≦',
-			'（｡>‿‿<｡ ）',
-			'(〃 ω 〃)',
-			'(/ω＼)',
-			'(^///^)',
-				'（*/∇＼*）ｷｬ',
-				'(*´∀`*)えへへ',
-				'（˶′◡‵˶）',
-				'ﾟ.+:｡(〃ω〃)ﾟ.+:｡ ｷｬｧ♪',
-				'(〃▽〃)ﾎﾟｯ',
-				'(//∇//(//∇//(//∇//) ﾃﾚﾃﾚ',
-					'(/∇＼*)…Reaaaally?',
-					'･:*:･(*/////∇/////*)･:*:･',
-						'Oh you~☆(*´∀｀)σ)))))*3ﾟ),･´.､',
-						'(つω･*)o(〃・ω・〃)o',
-						'・:*:・(●´Д｀●)・:*:・',
-						'(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄',
-						'( ͡°⁄ ⁄ ͜⁄ ⁄ʖ⁄ ⁄ ͡°)',
-						'( ͡☉⁄ ⁄ ͜⁄ ͜ʖ̫⁄ ⁄ ͡☉)',
-						'‧⁺( ᵒ̴̶̷̥́ ◡ ᵒ̴̶̷̣̥̀ )⁺‧',
-						'(*ﾉωﾉ)ｷｬｰ',
-						'(つ∀<●)ﾟ+.ｷｬｧ♪',
-						'モジ(((ＵωＵ｀ *)(* ´ＵωＵ)))モジ',
-						'ﾄﾞｷﾄﾞｷ(ﾟ∀ﾟ*)(*ﾟ∀ﾟ)ﾄﾞｷﾄﾞｷ',
-						'もじ(´pq｀ * )三( * ´pq｀)もじ',
-						'(∩ﾟ∀｀∩)ｷｬ―!!!!',
-						'ｷｬｯ♪o((〃∇〃o))((o〃∇〃))oｷｬｯ♪',
-					];
+		const patReact = bot.pats.pats;
 					//generate random number
 					const randomNum = Math.floor(Math.random() * patReact.length);
 					//pick a number and KILL
