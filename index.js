@@ -413,14 +413,10 @@ bot.on("message", async message => {
 			  //pick a number and call a kink
 			  const variable = variables[randomVariab];
 
-				if (person2 == true) {
-						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
-				} else {
+				if (person2 == undefined) {
 					message.channel.send( person1 + " stayed home and masturbated all day");
-					message.channel.send( action + " is an action");
-					message.channel.send( person2 + " stayed home and masturbated all day");
-					message.channel.send( variable + " is a variable");
-
+				} else {
+					message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
 				}
 
 		}
