@@ -405,13 +405,13 @@ bot.on("message", async message => {
 				actions=bot.kinky.actions;
 				variables=bot.kinky.variables;
 
-			  const randomNum = Math.floor(Math.random() * actions.length);
+			  const randomAction = Math.floor(Math.random() * actions.length);
 			  //pick a number and call a kink
-			  const action = actions[randomNum];
+			  const action = actions[randomAction];
 
-			  const randomNum = Math.floor(Math.random() * variables.length);
+			  const randomVariab = Math.floor(Math.random() * variables.length);
 			  //pick a number and call a kink
-			  const variable = variables[randomNum];
+			  const variable = variables[randomVariab];
 
 				if (person2 == true) {
 						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
