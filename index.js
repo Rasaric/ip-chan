@@ -50,10 +50,10 @@ bot.on("ready", async () =>{
 				const randomNum = Math.floor(Math.random() * options.length);
 				//pick a number and call a birthday greeting
 				const option = options[randomNum];
-				option.replace('festivity', festivity)
+				optionMod=option.replace('festivity', festivity)
 
 				//bot.channels.get(IpMainChannelId).send(option);
-				bot.channels.get(TestchannelID).send(option);
+				bot.channels.get(TestchannelID).send(optionMod);
 			}
 		}
 
