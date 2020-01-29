@@ -384,7 +384,7 @@ bot.on("message", async message => {
 			const randomNum = Math.floor(Math.random() * killChoices.length);
 			//pick a number and KILL
 			const fatality = killChoices[randomNum];
-			fatalityMod = fatality.replace('@message.author.id', @message.author.id)
+			fatalityMod = fatality.replace('message.author.id', message.author.id)
 			message.channel.send(victim + fatalityMod);
 		}
 	}
