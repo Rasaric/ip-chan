@@ -52,8 +52,7 @@ bot.on("ready", async () =>{
 				const option = options[randomNum];
 				optionMod=option.replace('festivity', festivity)
 
-				//bot.channels.get(IpMainChannelId).send(option);
-				bot.channels.get(TestchannelID).send(optionMod);
+				bot.channels.get(IpMainChannelId).send(option);
 			}
 		}
 
