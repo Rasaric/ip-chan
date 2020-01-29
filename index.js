@@ -533,7 +533,7 @@ bot.on("message", async message => {
 
 
 				if (message.author.id === '137631119536291841') {//if joe posts a message
-					if(numsixnine < 4500){
+					if(numsixnine < 2000){
 						message.channel.send('<a:m200dab:652640091411578890>');
 					}
 				}
