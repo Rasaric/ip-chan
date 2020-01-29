@@ -49,6 +49,7 @@ bot.on("ready", async () =>{
 				const randomNum = Math.floor(Math.random() * options.length);
 				//pick a number and call a birthday greeting
 				const option = options[randomNum];
+				option.replace('festivity', festivity)
 
 				bot.channels.get(IpMainChannelId).send(option);
 			}
@@ -77,6 +78,18 @@ bot.on("message", async message => {
 	//random chance generator for most stuffs
 	const numsixnine = Math.floor(Math.random() * 6969);
 
+
+	//bdaytesting
+	if (msg.includes('bdaytest')) {
+		//generate random number
+		bdaychecker();
+		const randomNum = Math.floor(Math.random() * options.length);
+		//pick a number and call a birthday greeting
+		const option = options[randomNum];
+		option.replace('festivity', festivity)
+
+			message.channel.send(option);
+	}
 	//responses and messages
 	if (msg.includes('duro')) {
 		message.channel.send('como mi pito');
