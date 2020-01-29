@@ -405,19 +405,15 @@ bot.on("message", async message => {
 				actions=bot.kinky.actions;
 				variables=bot.kinky.variables;
 
-				for (action in actions) {
-					const randomNum = Math.floor(Math.random() * actions.length);
-					//pick a number and call a kink
-					const action = actions[randomNum];
-				}
+			  const randomNum = Math.floor(Math.random() * actions.length);
+			  //pick a number and call a kink
+			  const action = actions[randomNum];
 
-				for (variable in variables) {
-					const randomNum = Math.floor(Math.random() * variables.length);
-					//pick a number and call a kink
-					const variable = variables[randomNum];
-				}
+			  const randomNum = Math.floor(Math.random() * variables.length);
+			  //pick a number and call a kink
+			  const variable = variables[randomNum];
 
-				if (people[2]==true) {
+				if (person2 == true) {
 						message.channel.send( person1 +" "+ action +" "+ person2 +" "+ variable );
 				} else {
 					message.channel.send( person1 + " stayed home and masturbated all day");
