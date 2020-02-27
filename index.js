@@ -313,8 +313,8 @@ let emotes = bot.emotes.emotes
 
 	if (msg==(':-emote help')) {
 			for (var i = 0; i <= emotes.length; i++) {
-				let useEmote = emotes[i].split(:)
-				message.channel.send(':'+ usEmote + ': ' + emotes[i]);
+				let useEmote = emotes[i].split(':')
+				message.channel.send(':'+ usEmote[1] + ': ' + emotes[i]);
 			}
 	}
 
