@@ -312,8 +312,9 @@ bot.on("message", async message => {
 
 	if (msg==(':-emote help')) {
 		var emotes = bot.emotes.options;
-		for (var i = 0; i <= emotes.length; i++) {
-			let useEmote = emotes[5].split(':')
+		var i = 0
+		for (i; i <= emotes.length; i++) {
+			let useEmote = emotes[i].split(':')
 			var emoteDump = ':'+ useEmote[1] + ': ' + emotes[i] + '\n';
 		}
 		message.channel.send(emoteDump);
