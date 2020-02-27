@@ -65,7 +65,7 @@ bot.on("ready", async () =>{
 	setInterval(bdaychecker ,21550000);//thrice a day
 });
 
-//message functions
+//message functions------------------------------------------------------------
 bot.on("message", async message => {
 	//message to lowercase
 	msg = message.content.toLowerCase();
@@ -80,12 +80,12 @@ bot.on("message", async message => {
 	let gunright = bot.emojis.get("371039882916790272");
 	let angery = bot.emojis.get("578768207528329217");
 
-	//random chance generator for most stuffs
+	//random chance generator for most stuffs-------------------------------------
 	const numsixnine = Math.floor(Math.random() * 6969);
 
 
 
-	//responses and messages
+	//responses and messages -----------------------------------------------------
 	if (msg.includes('duro')) {
 		message.channel.send('como mi pito');
 	}
@@ -207,121 +207,39 @@ bot.on("message", async message => {
 		});
 	}
 	if (msg.startsWith(':-spoilers-start')) {
-		message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376208013469679617/ini.png?width=1443&height=672');
+		message.channel.send("", {
+			files: ["./images/ini.jpg"]
+		});
 	}
 	if (msg.startsWith(':-spoilers-over')) {
-		message.channel.send('https://media.discordapp.net/attachments/363517961907994626/376207680794263563/endi.png?width=1443&height=672');
+		message.channel.send("", {
+			files: ["./images/endi.jpg"]
+		});
 	}
 
 	if (msg.includes('Kimetsu no Yaiba')) {
 		message.channel.send('shut up you goddamn incel');
 	}
-	/*emotes*/
 
-	if (msg.includes(':yukaritank:')) {
-		message.channel.send('<:yukaritank:579044358993477645>');
-	}
-	if (msg.includes(':wat:')) {
-		message.channel.send('<:wat:579044348407185442>');
-	}
-	if (msg.includes(':thinkkill:')) {
-		message.channel.send('<:thinkkill:579044370863489035>');
-	}
-	if (msg.includes(':saitamaok:')) {
-		message.channel.send('<:saitamaok:579044347782365185>');
-	}
-	if (msg.includes(':monika:')) {
-		message.channel.send('<:monika:579044347874508814>');
-	}
-	if (msg.includes(':kheberga:')) {
-		message.channel.send('<:kheberga:579044366111211521>');
-	}
-	if (msg.includes(':gitgud:')) {
-		message.channel.send('<:gitgud:579044342547873822>');
-	}
-	if (msg.includes(':fooku:')) {
-		message.channel.send('<:fooku:579044342338158595>');
-	}
-	if (msg.includes(':daishrug:')) {
-		message.channel.send('<:daishrug:579044340975009825>');
-	}
-	if (msg.includes(':letaxdab:')) {
-		message.channel.send('<:letaxdab:597785038553219126>');
-	}
-	if (msg.includes(':aniki:')) {
-		message.channel.send('<:aniki:597783744232816651>');
-	}
-	if (msg.includes(':anikiwoke:')) {
-		message.channel.send('<:anikiwoke:597783762142494730>');
-	}
-	if (msg.includes(':disturbed:')) {
-		message.channel.send('<:disturbed:597788836474388490>');
-	}
+	//Emotes ----------------------------------------------------------------------
 
-	if (msg.includes(':triplegay:')) {
-		message.channel.send('<:triplegay:579056046136492032>');
-	}
-	if (msg.includes(':thonk:')) {
-		message.channel.send('<:thonk:579056068525686785>');
-	}
-	if (msg.includes(':perish:')) {
-		message.channel.send('<:perish:579056039047987205>');
-	}
-	if (msg.includes(':mugu:')) {
-		message.channel.send('<:mugu:579056046342144029>');
-	}
-	if (msg.includes(':megulewd:')) {
-		message.channel.send('<:megulewd:579056050725191681>');
-	}
-	if (msg.includes(':deusvult2:')) {
-		message.channel.send('<:deusvult2:579056076909969418>');
-	}
-	if (msg.includes(':angrydognoises:')) {
-		message.channel.send('<:angrydognoises:579056065388478477>');
-	}
-	if (msg.includes(':angrydognoises:')) {
-		message.channel.send('<:sleepo:682617058764390476>');
-	}
-	//animated emotes
-	if (msg.includes(':shake-eyes:')) {
-		message.channel.send('<a:eyesshaking:579056083897679872>');
-	}
-	if (msg.includes(':birb:')) {
-		message.channel.send('<a:birb:579056044207243267>');
-	}
-	if (msg.includes(':cancer-dance:')) {
-		message.channel.send('<a:dans:579060538970079242>');
-	}
-	if (msg.includes(':doot:')) {
-		message.channel.send('<a:doot:579060538924072976>');
-	}
-	if (msg.includes(':thanos:')) {
-		message.channel.send('<a:thanos:579065066062610451>');
-	}
-	if (msg.includes(':wooloo:')) {
-		message.channel.send('<a:wooloo:646050643542409266>');
-	}
-	if (msg.includes(':wooloofst:')) {
-		message.channel.send('<a:wooloofst:646050642959269927>');
-	}
-	if (msg.includes(':m200dab:')) {
-		message.channel.send('<a:m200dab:652640091411578890>');
-	}
 	var emotes = bot.emotes.options;
 	var i = 0;
 	emoteDump = "";
-	/*emotes*/
-if (msg.includes(':')) {
-}
+
+	if (msg.endsWith(':')) {
+		for ((i=0; i < emotes.length; i++) {
+			let useEmote = emotes[i].split(':');
+			if (message.content == useEmote[2]) {
+				message.channel.send(emotes[i]);
+			}
+		}
+	}
 
 	if (msg==(':-emote help')) {
-		var emotes = bot.emotes.options;
-		var i = 0;
-		emoteDump = "";
 		for (i=0; i < emotes.length; i++) {
-			let useEmote = emotes[i].split(':')
+			let useEmote = emotes[i].split(':');
 			emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[i] + ' \n';
-			message.channel.send(i);
 		}
 		message.channel.send(emoteDump);
 	}
@@ -329,7 +247,7 @@ if (msg.includes(':')) {
 
 
 
-	//pron prompt---------------------------------------------------
+	//pron prompt-----------------------------------------------------------------
 	if (msg.includes(':-porn')) {
 		//select what is going to be sent
 		let people = message.content.split(' ')
@@ -551,7 +469,7 @@ if (msg.includes(':-ip-chan execute order 66')) {
 bot.on('guildMemberAdd', member  => {
 	if (member.guild.id == IpServerId){
 		if(member.id == '164916181252308993'){
-			bot.channels.get(IpMainChannelId).send('the lost dog found his way back home, welcome back, dessert');
+			bot.channels.get(IpMainChannelId).send('the lost dog found his way back home, again. welcome back, dessert');
 		} else if(member.id == '265625238300000258'){
 			bot.channels.get(IpMainChannelId).send('the gay never ends, the princess is back at it again');
 		} else {
@@ -567,6 +485,8 @@ bot.on('guildMemberRemove', member => {
 	if (member.guild.id == IpServerId){
 		if(member.id == '265625238300000258'){
 			bot.channels.get(IpMainChannelId).send('pengu left, again. not big surprise');
+		} if(member.id == '164916181252308993'){
+			bot.channels.get(IpMainChannelId).send('Dessert ventured into a new world... outside. wonder how long that will last.');
 		} else {
 			bot.channels.get(IpMainChannelId).send('**' + member.user.username + "** has died... jk, he just left");
 		}
