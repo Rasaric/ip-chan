@@ -221,11 +221,9 @@ bot.on("message", async message => {
 
 
 	if (msg==(':-emote help')) {
-		message.channel.send(
 			for (var i = 0, i <= bot.emotes.length, i++) {
 				message.channel.send(bot.emotes.emotes[i])
 			}
-		)
 	}
 
 
