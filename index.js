@@ -310,7 +310,7 @@ bot.on("message", async message => {
 
 	/*emotes*/
 
-let emotes = bot.emotes.emotes
+var emotes = bot.emotes.emotes;
 
 	if (msg==(':-emote help')) {
 			for (var i = 0; i <= emotes.length; i++) {
