@@ -318,12 +318,12 @@ if (msg.includes(':')) {
 		var emotes = bot.emotes.options;
 		var i = 0;
 		emoteDump = "";
-		for (i=0; i <= emotes.length; i++) {
-			let useEmote = emotes[9].split(':')
-			emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[9] + ' \n';
+		for (i=0; i < emotes.length; i++) {
+			let useEmote = emotes[i].split(':')
+			emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[i] + ' \n';
+			message.channel.send(i);
 		}
 		message.channel.send(emoteDump);
-		message.channel.send(emotes.length);
 	}
 
 
