@@ -315,7 +315,7 @@ bot.on("message", async message => {
 		var i = 0;
 		for (i; i <= emotes.length; i++) {
 			let useEmote = emotes[7].split(':')
-			var emoteDump += ':'+ useEmote[1] + ': ' + emotes[7] + ' \n';
+			var emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[7] + ' \n';
 		}
 		message.channel.send(emoteDump);
 	}
