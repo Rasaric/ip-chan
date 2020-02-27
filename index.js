@@ -10,6 +10,7 @@ bot.bdaymsgs = require("./bdaymsgs.json");
 bot.pats = require("./pats.json");
 bot.kill = require("./kills.json");
 bot.hector = require("./hector.json");
+bot.emotes = require("./emotes.json");
 //all the required shit
 
 //Ids for channel and server
@@ -314,7 +315,7 @@ let emotes = bot.emotes.emotes
 	if (msg==(':-emote help')) {
 			for (var i = 0; i <= emotes.length; i++) {
 				let useEmote = emotes[i].split(':')
-				var emoteDump = ':'+ usEmote[1] + ': ' + emotes[i];
+				var emoteDump = ':'+ usEmote[1] + ': ' + emotes[i] + '\n';
 			}
 			message.channel.send(emoteDump);
 	}
