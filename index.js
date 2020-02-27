@@ -310,11 +310,11 @@ bot.on("message", async message => {
 
 	/*emotes*/
 
-var emotes = bot.emotes.emotes;
+var emotes = bot.emotes;
 
 	if (msg==(':-emote help')) {
 			for (var i = 0; i <= emotes.length; i++) {
-				let useEmote = emotes[i].split(':')
+				let useEmote = emotes.options[i].split(':')
 				var emoteDump = ':'+ useEmote[1] + ': ' + emotes[i] + '\n';
 			}
 			message.channel.send(emoteDump);
@@ -373,7 +373,7 @@ var emotes = bot.emotes.emotes;
 	if (msg==(':-help')) {
 		let botIcon = bot.user.displayAvatarURL;
 		let botembed = new Discord.RichEmbed()
-		.setDescription("IP-Chan's command")
+		.setDescription("IP-Chan's commands")
 		.setColor('#e7dcbf')
 		.setThumbnail(botIcon)
 		.addField('Add Birthday: ' , ':-bday day month @name')
