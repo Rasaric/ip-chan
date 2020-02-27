@@ -228,7 +228,7 @@ bot.on("message", async message => {
 	emoteDump = "";
 
 	if (msg.endsWith(':')) {
-		for ((i=0; i < emotes.length; i++) {
+		for (i=0; i < emotes.length; i++) {
 			let useEmote = emotes[i].split(':');
 			if (message.content == useEmote[2]) {
 				message.channel.send(emotes[i]);
