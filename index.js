@@ -10,6 +10,7 @@ bot.bdaymsgs = require("./bdaymsgs.json");
 bot.pats = require("./pats.json");
 bot.kill = require("./kills.json");
 bot.hector = require("./hector.json");
+bot.emotes = require("./emotes.json");
 //all the required shit
 
 //Ids for channel and server
@@ -217,128 +218,14 @@ bot.on("message", async message => {
 	}
 	/*emotes*/
 
-	if (msg.includes(':yukaritank:')) {
-		message.channel.send('<:yukaritank:579044358993477645>');
-	}
-	if (msg.includes(':wat:')) {
-		message.channel.send('<:wat:579044348407185442>');
-	}
-	if (msg.includes(':thinkkill:')) {
-		message.channel.send('<:thinkkill:579044370863489035>');
-	}
-	if (msg.includes(':saitamaok:')) {
-		message.channel.send('<:saitamaok:579044347782365185>');
-	}
-	if (msg.includes(':monika:')) {
-		message.channel.send('<:monika:579044347874508814>');
-	}
-	if (msg.includes(':kheberga:')) {
-		message.channel.send('<:kheberga:579044366111211521>');
-	}
-	if (msg.includes(':gitgud:')) {
-		message.channel.send('<:gitgud:579044342547873822>');
-	}
-	if (msg.includes(':fooku:')) {
-		message.channel.send('<:fooku:579044342338158595>');
-	}
-	if (msg.includes(':daishrug:')) {
-		message.channel.send('<:daishrug:579044340975009825>');
-	}
-	if (msg.includes(':letaxdab:')) {
-		message.channel.send('<:letaxdab:597785038553219126>');
-	}
-	if (msg.includes(':aniki:')) {
-		message.channel.send('<:aniki:597783744232816651>');
-	}
-	if (msg.includes(':anikiwoke:')) {
-		message.channel.send('<:anikiwoke:597783762142494730>');
-	}
-	if (msg.includes(':disturbed:')) {
-		message.channel.send('<:disturbed:597788836474388490>');
-	}
 
-	if (msg.includes(':triplegay:')) {
-		message.channel.send('<:triplegay:579056046136492032>');
-	}
-	if (msg.includes(':thonk:')) {
-		message.channel.send('<:thonk:579056068525686785>');
-	}
-	if (msg.includes(':perish:')) {
-		message.channel.send('<:perish:579056039047987205>');
-	}
-	if (msg.includes(':mugu:')) {
-		message.channel.send('<:mugu:579056046342144029>');
-	}
-	if (msg.includes(':megulewd:')) {
-		message.channel.send('<:megulewd:579056050725191681>');
-	}
-	if (msg.includes(':deusvult2:')) {
-		message.channel.send('<:deusvult2:579056076909969418>');
-	}
-	if (msg.includes(':angrydognoises:')) {
-		message.channel.send('<:angrydognoises:579056065388478477>');
-	}
-	if (msg.includes(':shake-eyes:')) {
-		message.channel.send('<a:eyesshaking:579056083897679872>');
-	}
-	if (msg.includes(':birb:')) {
-		message.channel.send('<a:birb:579056044207243267>');
-	}
-	if (msg.includes(':cancer-dance:')) {
-		message.channel.send('<a:dans:579060538970079242>');
-	}
-	if (msg.includes(':doot:')) {
-		message.channel.send('<a:doot:579060538924072976>');
-	}
-	if (msg.includes(':thanos:')) {
-		message.channel.send('<a:thanos:579065066062610451>');
-	}
-	if (msg.includes(':wooloo:')) {
-		message.channel.send('<a:wooloo:646050643542409266>');
-	}
-	if (msg.includes(':wooloofst:')) {
-		message.channel.send('<a:wooloofst:646050642959269927>');
-	}
-	if (msg.includes(':m200dab:')) {
-		message.channel.send('<a:m200dab:652640091411578890>');
-	}
 
 	if (msg==(':-emote help')) {
-		message.channel.send(':yukaritank: <:yukaritank:579044358993477645> \n :wat: <:wat:579044348407185442> \n  :thinkkill: <:thinkkill:579044370863489035> \n :saitamaok: <:saitamaok:579044347782365185> \n :monika: <:monika:579044347874508814> \n :kheberga: <:kheberga:579044366111211521> \n :gitgud: <:gitgud:579044342547873822> \n :fooku: <:fooku:579044342338158595> \n :daishrug: <:daishrug:579044340975009825> \n :triplegay: <:triplegay:579056046136492032> \n :thonk: <:thonk:579056068525686785> \n :perish: <:perish:579056039047987205> \n :mugu: <:mugu:579056046342144029> \n :megulewd: <:megulewd:579056050725191681> \n :deusvult2: <:deusvult2:579056076909969418> \n :angrydognoises: <:angrydognoises:579056065388478477> \n :letaxdab: <:letaxdab:597785038553219126> \n :aniki: <:aniki:597783744232816651> \n :anikiwoke: <:anikiwoke:597783762142494730> \n :disturbed: <:disturbed:597788836474388490> \n *animated emotes:* \n :cancer-dance: <a:dans:579060538970079242> --this one is my favorite \n :doot: <a:doot:579060538924072976> \n :birb: <a:birb:579056044207243267> \n :shake-eyes: <a:eyesshaking:579056083897679872> \n :thanos: <a:thanos:579065066062610451> \n <a:wooloo:646050643542409266> \n <a:wooloofst:646050642959269927> \n :m200dab: <a:m200dab:652640091411578890>');
-	}
-	if (msg.includes(':-emote')) {
-		let emote = msg.replace(':-emote ','');
-
-		if (emote == 'cancer') {
-			message.channel.send('https://i.redd.it/hqx7okmi64c11.gif');
-		}
-		if (emote == 'doot') {
-			message.channel.send('https://i.imgur.com/IT3hMY4.gif');
-		}
-		if (emote == 'thanos') {
-			message.channel.send('https://i.imgur.com/S0Lm4kX.mp4');
-		}
-		if (emote == 'megulewd') {
-			message.channel.send('https://discordemoji.com/assets/emoji/LewdMegumin.png');
-		}
-		if (emote == 'mugu') {
-			message.channel.send('https://discordemoji.com/assets/emoji/Disabled_Megumin.png');
-		}
-		if (emote == 'birb') {
-			message.channel.send('https://discordemoji.com/assets/emoji/BirdUpvote.gif');
-		}
-		if (emote == 'perish') {
-			message.channel.send('https://discordemoji.com/assets/emoji/5142_then_perish.png');
-		}
-		if (emote == 'triple gay') {
-			message.channel.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIa6Lm31QewuxbuRp9Uu6mxI6jLl4pGlrVTF-boqO3Gg7vdTYa');
-		}
-		if (emote == 'angry dog') {
-			message.channel.send('https://i.kym-cdn.com/entries/icons/original/000/023/459/angrydognoises.jpg');
-		}
-		if (emote == 'eyes') {
-			message.channel.send('https://discordemoji.com/assets/emoji/eyesshaking.gif');
-		}
+		message.channel.send(
+			for (var i = 0, i <= bot.emotes.length, i++) {
+				message.channel.send(bot.emotes.emotes[i])
+			}
+		)
 	}
 
 
