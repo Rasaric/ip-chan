@@ -307,17 +307,23 @@ bot.on("message", async message => {
 	if (msg.includes(':m200dab:')) {
 		message.channel.send('<a:m200dab:652640091411578890>');
 	}
-
+	var emotes = bot.emotes.options;
+	var i = 0;
+	emoteDump = "";
 	/*emotes*/
+if (msg.includes(':')) {
+}
 
 	if (msg==(':-emote help')) {
 		var emotes = bot.emotes.options;
 		var i = 0;
-		for (i; i <= emotes.length; i++) {
-			let useEmote = emotes[7].split(':')
-			var emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[7] + ' \n';
+		emoteDump = "";
+		for (i=0; i <= emotes.length; i++) {
+			let useEmote = emotes[9].split(':')
+			emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[9] + ' \n';
 		}
 		message.channel.send(emoteDump);
+		message.channel.send(emotes.length);
 	}
 
 
