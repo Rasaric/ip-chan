@@ -171,7 +171,7 @@ bot.on("message", async message => {
 	if (msg.includes('waifu')){
 		if(numsixnine < 2400){
 			message.channel.send('tu waifu es basura');
-		} else if (numsixnine > 5000) {
+		} else if (numsixnine > 6000) {
 			message.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
 		}
 	}
@@ -181,7 +181,7 @@ bot.on("message", async message => {
 	if (msg.includes('retarded')) {
 		if(numsixnine < 1800) {
 			message.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');
-		} else if(numsixnine > 5000) {
+		} else if(numsixnine > 6000) {
 			message.channel.send("you laugh, but i'm the one with a college degree");
 		}
 	}
@@ -221,31 +221,21 @@ bot.on("message", async message => {
 		message.channel.send('shut up you goddamn incel');
 	}
 
+
 	//Emotes ----------------------------------------------------------------------
 
-	var emotes = bot.emotes.options;
-	var i = 0;
-	emoteDump = "";
-
 	if (msg.endsWith(':')) {
-		for (i=0; i < emotes.length; i++) {
-			let useEmote = emotes[i].split(':');
-			if (message.content == useEmote[2]) {
-				message.channel.send(emotes[i]);
-			}
+		toSend = msg.replace(':', '');
+		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
+		if sendEmote {
+			message.channel.send(sendEmote);
 		}
 	}
 
 	if (msg==(':-emote help')) {
-		for (i=0; i < emotes.length; i++) {
-			let useEmote = emotes[i].split(':');
-			emoteDump = emoteDump + ':'+ useEmote[1] + ': ' + emotes[i] + ' \n';
-		}
-		message.channel.send(emoteDump);
+		let emojiList = bot.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+	message.channel.send(emojiList);
 	}
-
-
-
 
 	//pron prompt-----------------------------------------------------------------
 	if (msg.includes(':-porn')) {
