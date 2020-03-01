@@ -85,7 +85,7 @@ bot.on("message", async message => {
 
 
 	//responses and messages -----------------------------------------------------
-	if (msg.includes('duro')) {
+	if (msg==('duro')) {
 		message.channel.send('como mi pito');
 	}
 	if (msg.includes('astolfo')) {
@@ -103,7 +103,7 @@ bot.on("message", async message => {
 		const patReact = bot.pats.pats;
 		//generate random number
 		const randomNum = Math.floor(Math.random() * patReact.length);
-		//pick a number and KILL
+		//pick a number and pat
 		const homete = patReact[randomNum];
 		message.channel.send(homete);
 	}
@@ -222,7 +222,7 @@ bot.on("message", async message => {
 
 
 	//Emotes ----------------------------------------------------------------------
- let vault = '579043380332331030'
+	let vault = '579043380332331030'
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
 		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
@@ -232,8 +232,8 @@ bot.on("message", async message => {
 	}
 
 	if (message.content === "listemojis") {
-	   const emojiList = vault.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
-	   message.channel.send(emojiList);
+		const emojiList = vault.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+		message.channel.send(emojiList);
 	}
 
 	//pron prompt-----------------------------------------------------------------
@@ -263,15 +263,11 @@ bot.on("message", async message => {
 	}
 
 	//kill prompt--------------------------------------
-	if (msg.includes(':-kill')) {
+	funtion killPrompt(){
 		//select what is going to be sent
 		let victim = msg.replace(':-kill ','');
 		if (victim == '<@!274720140988252160>'){
 			message.channel.send('https://www.youtube.com/watch?v=ARJ8cAGm6JE');
-		} else if (victim == 'gunsnek') {
-			message.channel.send("i can't kill my daddy UmU");
-		} else if (victim == 'murder spagurder') {
-			message.channel.send("who?");
 		}else {
 			const killChoices = bot.kill.options;
 			//generate random number
@@ -282,6 +278,7 @@ bot.on("message", async message => {
 			message.channel.send(victim + fatalityMod);
 		}
 	}
+	if (msg.includes(':-kill')) {killPrompt(msg)}
 
 	if (msg==(':-help')) {
 		let botIcon = bot.user.displayAvatarURL;
@@ -437,7 +434,10 @@ if (msg.startsWith(':-ball')){
 
 if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274720140988252160') {
-		let guildNames = bot.users.map(u=> `${u.username}#${u.discriminator}`).join(" was executed \n");
+		let guildNames = bot.users.map(u=> `${u.username}`)
+			if (member.guild.id == IpServerId){
+				guildNames.join(" was executed \n");
+			}
 		message.channel.send(guildNames);
 	}
 	else {
