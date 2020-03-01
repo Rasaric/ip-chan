@@ -222,7 +222,7 @@ bot.on("message", async message => {
 
 
 	//Emotes ----------------------------------------------------------------------
-	let vault = '579043380332331030'
+	let vault = bot.guilds.get('579043380332331030');
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
 		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
@@ -443,17 +443,18 @@ if (msg.includes(':-ip-chan execute order 66')) {
 	let order = [];
 	if (message.author.id === '274720140988252160') {
 		ipServer = bot.guilds.get(IpServerId)
-		ipServer.members.forEach(member => message.channel.send(member.user.username));
-		let guildNames = ipServer.members.map(u=> `<@!${u.id}>`).join('\n');
+		ipServer.members.forEach(
+			member => if (member.includes(164916181252308993)) {
+			 order.push(member + 'is now the Senate \n');
+		} else {
+			let victim = member
+			 order.push(killPrompt(victim) + "\n");
+		});
+		//let guildNames = ipServer.members.map(u=> `<@!${u.id}>`).join('\n');
 		message.channel.send(guildNames);
-		for (member in guildNames) {
-			if (member.includes(164916181252308993)) {
-				 order.push(member + 'is now the Senate \n');
-			} else {
-				let victim = member
-				 order.push(killPrompt(victim) + "\n");
-			}
-		}
+		// for (member in guildNames) {
+		//
+		// }
 
 		message.channel.send(order.join(), { split: true });
 	}
