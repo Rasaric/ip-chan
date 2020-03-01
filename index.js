@@ -444,9 +444,9 @@ if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274720140988252160') {
 
 		let order = [];
-		let guildNames = ipServer.members.map(u=> `<@!${u.id}>`);
-
 		let ipServer = bot.guilds.get(IpServerId)
+
+		let guildNames = ipServer.members.map(u=> `<@!${u.id}>`);
 
 		guildNames.forEach(function(member){
 
