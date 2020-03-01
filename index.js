@@ -437,7 +437,7 @@ if (msg.startsWith(':-ball')){
 	message.channel.send(dump.join(', \n'), { split: true });
 }
 
-//order 66
+//order 66 --------------------------------------------------------------------------
 
 if (msg.includes(':-ip-chan execute order 66')) {
 
@@ -450,8 +450,8 @@ if (msg.includes(':-ip-chan execute order 66')) {
 
 		guildNames.forEach(function(member){
 
-			if (member.includes(164916181252308993)) {
-				order.push(member + ' is now the Senate \n');
+			if (member.includes('164916181252308993')) {
+				order.push('**' + member + ' is now the Senate** \n');
 			} else {
 				let victim = member
 				order.push(killPrompt(victim) + "\n");
