@@ -274,12 +274,14 @@ bot.on("message", async message => {
 			//pick a number and KILL
 			const fatality = killChoices[randomNum];
 			fatalityMod = fatality.replace('message.author.id', message.author.id)
-			message.channel.send(victim + fatalityMod);
+			var killMsg = victim + fatalityMod;
+			return killMsg
 		}
 	}
 	if (msg.includes(':-kill')) {
 		let victim = msg.replace(':-kill ','');
 		killPrompt(victim);
+		message.channel.send(killMsg);
 	}
 
 	if (msg==(':-help')) {
@@ -388,6 +390,8 @@ if (msg.startsWith(':-send')){
 	editMsg = message.content.split('%%');
 	let msgToSend = editMsg[1];
 	let channelToSend = editMsg[2];
+
+	//expected input: :-send%%message%%channel
 	if (channelToSend == 'fgt') {
 		//send to faggotland
 		bot.channels.get(IpFaggotLandId).send(msgToSend);
@@ -426,28 +430,30 @@ if (msg.startsWith(':-bget')){
 
 //dump all bdays
 if (msg.startsWith(':-ball')){
+	var dump = [];
 	for (var prop in bot.bdays) {
-		var dump = dump + prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon + ", ";
+		dump.push(prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon);
 	}
-	message.channel.send(dump);
+	message.channel.send(dump.join(', \n'));
 }
 
 //order 66
 
 if (msg.includes(':-ip-chan execute order 66')) {
-	let order = "";
+	let order = [];
 	if (message.author.id === '274720140988252160') {
-		let guildNames = bot.users.map(u=> `'@'#${u.username}#${u.discriminator}`);
+		let guildNames = bot.users.map(u=> `'@'#${u.username}#${u.discriminator}`).join('\n');
+		messAGE.channel.send(guildNames);
 		for (member in guildNames) {
 			if (member == 'Rasaric') {
-				 order = order + member + 'is now the Senate \n'
+				 order.push(member + 'is now the Senate \n');
 			} else {
 				let victim = member
-				 order = order + killPrompt(victim) + "\n";
+				 order.push(killPrompt(victim) + "\n");
 			}
 		}
 
-		message.channel.send(order);
+		message.channel.send(order.join());
 	}
 	else {
 		message.channel.send("not yet, senator");
