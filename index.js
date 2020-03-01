@@ -263,9 +263,8 @@ bot.on("message", async message => {
 	}
 
 	//kill prompt--------------------------------------
-	function killPrompt(){
+	function killPrompt(victim){
 		//select what is going to be sent
-		let victim = msg.replace(':-kill ','');
 		if (victim == '<@!274720140988252160>'){
 			message.channel.send('https://www.youtube.com/watch?v=ARJ8cAGm6JE');
 		}else {
@@ -278,7 +277,10 @@ bot.on("message", async message => {
 			message.channel.send(victim + fatalityMod);
 		}
 	}
-	if (msg.includes(':-kill')) {killPrompt(msg)}
+	if (msg.includes(':-kill')) {
+		let victim = msg.replace(':-kill ','');
+		killPrompt(victim);
+	}
 
 	if (msg==(':-help')) {
 		let botIcon = bot.user.displayAvatarURL;
@@ -434,11 +436,15 @@ if (msg.startsWith(':-ball')){
 
 if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274720140988252160') {
-		let guildNames = bot.users.map(u=> `${u.username}`)
-			if (member.guild.id == IpServerId){
-				guildNames.join(" was executed \n");
+		let guildNames = bot.users.map(u=> `${u.username}`);
+		for (member in guildNames) {
+			if (member == 'Rasaric') {
+				order = 'member is now the Senate'
 			}
-		message.channel.send(guildNames);
+			order = order + killPrompt(victim == member);
+		}
+
+		message.channel.send(order);
 	}
 	else {
 		message.channel.send("not yet, senator");
