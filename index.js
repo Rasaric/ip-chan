@@ -436,7 +436,7 @@ if (msg.startsWith(':-ball')){
 //order 66
 
 if (msg.includes(':-ip-chan execute order 66')) {
-	if (message.author.id === '274719053808009216') {
+	if (message.author.id === '274720140988252160') {
 		const guildNames = client.guilds.map(g => g.name).join("was executed \n")
 	}
 	else {
