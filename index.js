@@ -440,23 +440,24 @@ if (msg.startsWith(':-ball')){
 //order 66
 
 if (msg.includes(':-ip-chan execute order 66')) {
-	let order = [];
+
 	if (message.author.id === '274720140988252160') {
-		ipServer = bot.guilds.get(IpServerId)
-		ipServer.members.forEach(function(member) {
+
+		let order = [];
+		let guildNames = ipServer.members.map(u=> `<@!${u.id}>`);
+
+		let ipServer = bot.guilds.get(IpServerId)
+
+		 guildNames.forEach {
 			if (member.includes(164916181252308993)) {
-				order.push(member + 'is now the Senate \n');
+				order.push(member + ' is now the Senate \n');
 			} else {
 				let victim = member
 				order.push(killPrompt(victim) + "\n");
 			}
-		});
-		//let guildNames = ipServer.members.map(u=> `<@!${u.id}>`).join('\n');
-		message.channel.send(guildNames);
-		// for (member in guildNames) {
-		//
-		// }
+		}
 
+		message.channel.send(guildNames.join('\n'));
 		message.channel.send(order.join(), { split: true });
 	}
 	else {
