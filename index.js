@@ -443,12 +443,13 @@ if (msg.includes(':-ip-chan execute order 66')) {
 	let order = [];
 	if (message.author.id === '274720140988252160') {
 		ipServer = bot.guilds.get(IpServerId)
-		ipServer.members.forEach(
-			member => if (member.includes(164916181252308993)) {
-			 order.push(member + 'is now the Senate \n');
-		} else {
-			let victim = member
-			 order.push(killPrompt(victim) + "\n");
+		ipServer.members.forEach(function(element) {
+			if (member.includes(164916181252308993)) {
+				order.push(member + 'is now the Senate \n');
+			} else {
+				let victim = member
+				order.push(killPrompt(victim) + "\n");
+			}
 		});
 		//let guildNames = ipServer.members.map(u=> `<@!${u.id}>`).join('\n');
 		message.channel.send(guildNames);
