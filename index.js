@@ -444,7 +444,7 @@ if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274720140988252160') {
 
 		let order = [];
-		let ipServer = bot.guilds.get(IpServerId)
+		let ipServer = bot.guilds.get(IpServerId);
 
 		let guildNames = ipServer.members.map(u=> `<@!${u.id}>`);
 
@@ -457,8 +457,6 @@ if (msg.includes(':-ip-chan execute order 66')) {
 				order.push(killPrompt(victim) + "\n");
 			}
 		});
-
-		message.channel.send(guildNames.join('\n'));
 		message.channel.send(order.join(), { split: true });
 	}
 	else {
