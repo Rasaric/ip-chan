@@ -190,7 +190,7 @@ bot.on("message", async message => {
 	if (msg.includes('180063200459358208')) {
 		message.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png');
 	}
-	if (msg.includes('sociedad'||'society')) {
+	if (msg.includes('sociedad')||('society')) {
 		message.channel.send("Bottom text", {
 			files: ["./images/society.jpg"]
 		});
