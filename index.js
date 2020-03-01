@@ -90,7 +90,7 @@ bot.on("message", async message => {
 		message.channel.send('como mi pito');
 	}
 	if (msg.includes('astolfo')) {
-		message.channel.send(":angry:");
+		message.react(😠);
 	}
 	if (msg.includes('69')) {
 		if(numsixnine < 1800){
@@ -223,7 +223,7 @@ bot.on("message", async message => {
 
 
 	//Emotes ----------------------------------------------------------------------
-
+ let vault = '579043380332331030'
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
 		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
@@ -233,7 +233,7 @@ bot.on("message", async message => {
 	}
 
 	if (message.content === "listemojis") {
-	   const emojiList = message.guild.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+	   const emojiList = vault.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
 	   message.channel.send(emojiList);
 	}
 
@@ -438,14 +438,7 @@ if (msg.startsWith(':-ball')){
 
 if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274719053808009216') {
-		for (let victim in bot.bdays) {
-			if (victim == "<@!"+ message.author.id  +">") {
-				message.channel.send(victim + " is now the senate");
-			}
-			else {
-				message.channel.send("*IP-Chan kills " + victim + " so violently it happens off-screen*");
-			}
-		}
+		const guildNames = client.guilds.map(g => g.name).join("was executed \n")
 	}
 	else {
 		message.channel.send("not yet, senator");
