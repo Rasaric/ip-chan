@@ -208,12 +208,12 @@ bot.on("message", async message => {
 	}
 	if (msg.startsWith(':-spoilers-start')) {
 		message.channel.send("", {
-			files: ["./images/ini.jpg"]
+			files: ["./images/ini.png"]
 		});
 	}
 	if (msg.startsWith(':-spoilers-over')) {
 		message.channel.send("", {
-			files: ["./images/endi.jpg"]
+			files: ["./images/endi.png"]
 		});
 	}
 
@@ -227,7 +227,7 @@ bot.on("message", async message => {
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
 		message.channel.send(toSend);
-		let sendEmote = bot.emojis.find(emoji => emoji.name === "birb");
+		let sendEmote = bot.emojis.find("birb");
 		if (sendEmote !== undefined) {
 			message.channel.send(sendEmote);
 		}
