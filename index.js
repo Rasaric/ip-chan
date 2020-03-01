@@ -439,9 +439,10 @@ if (msg.includes(':-ip-chan execute order 66')) {
 		let guildNames = bot.users.map(u=> `${u.username}`);
 		for (member in guildNames) {
 			if (member == 'Rasaric') {
-				order = 'member is now the Senate'
+				let order = order + member + 'is now the Senate \n'
+			} else {
+				let order = order + killPrompt(victim == member) + "\n";
 			}
-			order = order + killPrompt(victim == member);
 		}
 
 		message.channel.send(order);
