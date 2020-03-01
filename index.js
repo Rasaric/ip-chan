@@ -226,16 +226,15 @@ bot.on("message", async message => {
 
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
-		message.channel.send(toSend);
 		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
 		if (sendEmote !== undefined) {
 			message.channel.send(sendEmote.toString());
 		}
 	}
 
-	if (msg==(':-emote help')) {
-		let emojiList = bot.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
-	message.channel.send(emojiList);
+	if (message.content === "listemojis") {
+	   const emojiList = message.guild.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+	   message.channel.send(emojiList);
 	}
 
 	//pron prompt-----------------------------------------------------------------
