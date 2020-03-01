@@ -263,7 +263,7 @@ bot.on("message", async message => {
 	}
 
 	//kill prompt--------------------------------------
-	funtion killPrompt(){
+	function killPrompt(){
 		//select what is going to be sent
 		let victim = msg.replace(':-kill ','');
 		if (victim == '<@!274720140988252160>'){
