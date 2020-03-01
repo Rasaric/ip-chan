@@ -233,7 +233,7 @@ bot.on("message", async message => {
 
 	if (message.content === "listemojis") {
 		const emojiList = vault.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
-		message.channel.send(emojiList);
+		message.channel.send(emojiList, { split: true });
 	}
 
 	//pron prompt-----------------------------------------------------------------
@@ -434,7 +434,7 @@ if (msg.startsWith(':-ball')){
 	for (var prop in bot.bdays) {
 		dump.push(prop + "'s bday is the " + bot.bdays[prop].day + "/" + bot.bdays[prop].mon);
 	}
-	message.channel.send(dump.join(', \n'));
+	message.channel.send(dump.join(', \n'), { split: true });
 }
 
 //order 66
@@ -455,7 +455,7 @@ if (msg.includes(':-ip-chan execute order 66')) {
 			}
 		}
 
-		message.channel.send(order.join());
+		message.channel.send(order.join(), { split: true });
 	}
 	else {
 		message.channel.send("not yet, senator");
