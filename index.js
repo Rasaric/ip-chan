@@ -442,7 +442,8 @@ if (msg.includes(':-ip-chan execute order 66')) {
 			if (member == 'Rasaric') {
 				 order = order + member + 'is now the Senate \n'
 			} else {
-				 order = order + killPrompt(victim == member) + "\n";
+				let victim = member
+				 order = order + killPrompt(victim) + "\n";
 			}
 		}
 
