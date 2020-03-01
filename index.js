@@ -450,7 +450,7 @@ if (msg.includes(':-ip-chan execute order 66')) {
 
 		guildNames.forEach(function(member){
 
-			if (member.includes('164916181252308993')) {
+			if (member.includes('274720140988252160')) {
 				order.push('**' + member + ' is now the Senate** \n');
 			} else {
 				let victim = member
