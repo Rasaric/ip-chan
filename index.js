@@ -435,13 +435,14 @@ if (msg.startsWith(':-ball')){
 //order 66
 
 if (msg.includes(':-ip-chan execute order 66')) {
+	let order = "";
 	if (message.author.id === '274720140988252160') {
 		let guildNames = bot.users.map(u=> `${u.username}`);
 		for (member in guildNames) {
 			if (member == 'Rasaric') {
-				let order = order + member + 'is now the Senate \n'
+				 order = order + member + 'is now the Senate \n'
 			} else {
-				let order = order + killPrompt(victim == member) + "\n";
+				 order = order + killPrompt(victim == member) + "\n";
 			}
 		}
 
