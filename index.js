@@ -227,7 +227,7 @@ bot.on("message", async message => {
 	if (msg.endsWith(':')) {
 		toSend = msg.replace(/:/g, '');
 		message.channel.send(toSend);
-		let sendEmote = bot.emojis.find(emoji => emoji.name === toSend);
+		let sendEmote = bot.emojis.find(emoji => emoji.name === "birb");
 		if (sendEmote !== undefined) {
 			message.channel.send(sendEmote);
 		}
