@@ -437,9 +437,8 @@ if (msg.startsWith(':-ball')){
 
 if (msg.includes(':-ip-chan execute order 66')) {
 	if (message.author.id === '274720140988252160') {
-		const guildNames = bot.guilds.map(g => g.name).join("was executed \n");
+		let guildNames = bot.users.map(u=> `${u.username}#${u.discriminator}`).join(" was executed \n");
 		message.channel.send(guildNames);
-		me
 	}
 	else {
 		message.channel.send("not yet, senator");
