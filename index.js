@@ -231,7 +231,7 @@ bot.on("message", async message => {
 		}
 	}
 
-	if (message.content === "listemojis") {
+	if (message.content === ":-emote help") {
 		const emojiList = vault.emojis.map((e) => e + ' | ' +e.name).join('\n');
 		message.channel.send(emojiList, { split: true });
 	}
