@@ -10,7 +10,6 @@ bot.bdaymsgs = require("./bdaymsgs.json");
 bot.pats = require("./pats.json");
 bot.kill = require("./kills.json");
 bot.hector = require("./hector.json");
-bot.emotes = require("./emotes.json");
 //all the required shit
 
 //Ids for channel and server
