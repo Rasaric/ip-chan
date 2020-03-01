@@ -232,7 +232,7 @@ bot.on("message", async message => {
 	}
 
 	if (message.content === "listemojis") {
-		const emojiList = vault.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+		const emojiList = vault.emojis.map((e) => e + ' | ' +e.name).join('\n');
 		message.channel.send(emojiList, { split: true });
 	}
 
@@ -443,7 +443,7 @@ if (msg.includes(':-ip-chan execute order 66')) {
 	let order = [];
 	if (message.author.id === '274720140988252160') {
 		ipServer = bot.guilds.get(IpServerId)
-		ipServer.members.forEach(function(element) {
+		ipServer.members.forEach(function(member) {
 			if (member.includes(164916181252308993)) {
 				order.push(member + 'is now the Senate \n');
 			} else {
