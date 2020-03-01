@@ -458,8 +458,6 @@ if (msg.includes(':-ip-chan execute order 66')) {
 			}
 		});
 
-		}
-
 		message.channel.send(guildNames.join('\n'));
 		message.channel.send(order.join(), { split: true });
 	}
