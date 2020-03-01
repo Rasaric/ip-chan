@@ -442,7 +442,7 @@ if (msg.startsWith(':-ball')){
 if (msg.includes(':-ip-chan execute order 66')) {
 	let order = [];
 	if (message.author.id === '274720140988252160') {
-		let guildNames = bot.users.map(u=> `'@'#${u.username}#${u.discriminator}`).join('\n');
+		let guildNames = guild.users.map(u=> `<@!${u.id}>`).join('\n');
 		message.channel.send(guildNames);
 		for (member in guildNames) {
 			if (member == 'Rasaric') {
