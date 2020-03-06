@@ -9,7 +9,7 @@ Response function
 //required ---------------------------------------------------------------------
 const writeBday = require('./writeBday');
 const bDayGetter = require('./bDayGetter');
-const bDayAll = require('./bDayall');
+const bDayAll = require('./bDayAll');
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
