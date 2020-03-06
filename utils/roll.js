@@ -54,7 +54,7 @@ function diceRoll(x){
   if (diceRoll == 1){
    x.channel.send('you rolled a nat **1**, hope the DM takes pity on you. (your result is ' + diceResult + ')');
  } else if (diceRoll == diceType) {
-   x.channel.send('you rolled a nat **' + diceRoll + '**, Critical Hit! (your result is ' + diceResult + ')';
+   x.channel.send('you rolled a nat **' + diceRoll + '**, Critical Hit! (your result is ' + diceResult + ')');
   } else {
    x.channel.send('you rolled **' +  newDice + '** and got **' + diceResult + '**');
   }
