@@ -32,9 +32,9 @@ function responses (x, y){
 
 
   //emoji lets for ease of use--------------------------------------------------
-  let gunleft = z.emojis.get("371039866810531861");
-  let dai = z.emojis.get("314877079386718218");
-  let gunright = z.emojis.get("371039882916790272");
+  let gunleft = y.emojis.get("371039866810531861");
+  let dai = y.emojis.get("314877079386718218");
+  let gunright = y.emojis.get("371039882916790272");
 
   /****************************************************************************/
   /*outside functions---------------------------------------------------------*/

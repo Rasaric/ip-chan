@@ -47,7 +47,7 @@ bot.on("message", async message => {
 /*******************************************************************************/
 
 //responses and messages -------------------------------------------------------
-		responses(message, numsixnine, bot);
+		responses(message, bot);
 });
 
 bot.login(process.env.BOT_TOKEN);
