@@ -30,9 +30,10 @@ function helpFunc(x, y){
   .addField('someone looked at me funny' , ':-kill that mofo')
   .addField('we have too many emotes' , 'how about some more with :-emote help')
   .addField('Excecute order 66:' , 'its a secret to everyone')
+  .addField("i want to write a fanfic but i need ideas", ':-porn <person> <person>')
   .addField('i want to show you my love and appreciation', 'tell me im a good bot (˃̵ᴗ˂̵)')
   .addField("*i do a lot of other stuff, you'll just have to figure it out*", ':P')
-  .addField("*i want to write a fanfic but i need ideas*", ':-porn <person> <person>');
+
   return x.channel.send(botembed);
 }
 
