@@ -54,7 +54,6 @@ function responses (x, y){
   if (msg.includes(':-porn')){pornPrompt(x)};
 
   //kill prompt-----------------------------------------------------------------
-
   if (msg.includes(':-kill')){
     let victim = msg.replace(':-kill ','');
     let singleKillMsg = killPrompt(x, victim);
@@ -66,6 +65,7 @@ function responses (x, y){
 
   //if hector posts a message---------------------------------------------------
   if (x.author.id === '274719053808009216'){hectorFunc(x, numsixnine)}
+
   //Dice roll-------------------------------------------------------------------
   if (msg.startsWith(':-roll')){diceRoll(x)};
 

@@ -12,21 +12,25 @@ bdaymsgs = require("../JSON/bdaymsgs.json");
 id = require('../JSON/id.json');
 
 function bDayChecker(x) {
-  //get date, day, month
+  //get date, day, month--------------------------------------------------------
   let today = new Date();
   let dd = today.getDate();
   let mm = today.getMonth()+1;//jan
+  /*Special dates**************************************************************/
+  //snek bday
   if (dd == 26 && mm == 3) {
     x.channels.get(id.IpMainChannelId).send("Happy birthday daddy UwU");
   }
-  //krimis
+
+  //krimis----------------------------------------------------------------------
   if (dd == 25 && mm == 12) {
     x.channels.get(id.IpMainChannelId).send("https://www.youtube.com/watch?v=_Z-Nu351j58 "+ "@everyone");
   }
-  //bush day
+  //bush day--------------------------------------------------------------------
   if (dd == 11 && mm == 9) {
     x.channels.get(id.IpMainChannelId).send("@everyone"+" never forget");
   }
+  
   for (let festivity in bdays) {
     //random birthday options
     const options = bdaymsgs.messages;
