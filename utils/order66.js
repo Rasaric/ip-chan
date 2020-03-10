@@ -25,15 +25,15 @@ function order66(x, y){
 
 			//make snek the senate----------------------------------------------------
 			if (member.includes('274720140988252160')) {
-				order.unshift('**' + member + ' is now the Senate** \n');
+				order.unshift('**' + member + ' is now the Senate**');
 			} else {
 				let victim = member
-				order.push(killPrompt(x, victim) + "\n");
+				order.push(killPrompt(x, victim));
 			}
 		});
 
 		//concat all members as a single message------------------------------------
-		x.channel.send(order.join(), { split: true });
+		x.channel.send(order.join(', \n'), { split: true });
 	}
 	else {
 		x.channel.send("not yet, senator");

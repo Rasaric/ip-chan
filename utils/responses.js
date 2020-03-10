@@ -7,6 +7,7 @@ Response function
 *******************************************************************************/
 
 //required ---------------------------------------------------------------------
+const Discord = require("discord.js");
 const writeBday = require('./writeBday');
 const bDayGetter = require('./bDayGetter');
 const bDayAll = require('./bDayAll');
@@ -21,6 +22,7 @@ const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
 const joeFunc = require('./joeFunc');
+//const waifuGen = require('./waifuGen');
 
 //function start----------------------------------------------------------------
 function responses (x, y){
@@ -65,22 +67,32 @@ function responses (x, y){
   if (msg===(':-ip-chan execute order 66')){order66(x, y)};
 
   //if hector posts a message---------------------------------------------------
-  if (x.author.id === '274719053808009216'){hectorFunc(x, numsixnine)}
+  if (x.author.id==='274719053808009216'){hectorFunc(x, numsixnine)}
   //Dice roll-------------------------------------------------------------------
   if (msg.startsWith(':-roll')){diceRoll(x)};
 
   //Help------------------------------------------------------------------------
-  if (msg==(':-help')){helpFunc(x, y)};
+  if (msg===(':-help')){helpFunc(x, y)};
 
   //Send------------------------------------------------------------------------
   if (msg.startsWith(':-send')){sendFunc(x, y)}
 
   //if joe posts a message------------------------------------------------------
-  if (x.author.id === '137631119536291841'){joeFunc(x, numsixnine)}
+  if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
+
+  //waifu Generator-------------------------------------------------------------
+  // if (msg.startsWith(':-waifu')){
+  //   waifuGen(x);
+  // }
 
   /****************************************************************************/
   //general responses ----------------------------------------------------------
-  if ( msg==(':-avatar')){x.channel.send(message.author.avatarURL);}
+  if (msg===':-avatar') {
+        let embed = new Discord.RichEmbed()
+        .setImage(x.author.avatarURL)
+        .setColor('#275BF0')
+        x.channel.send(embed)
+    }
 
   if (msg===('duro')){
     x.channel.send('como mi pito');
@@ -138,7 +150,7 @@ function responses (x, y){
   if (msg.includes('mamalo')){
     x.channel.send('eso es lo que tu quisieras, no?');
   }
-  if (msg==('justice')){
+  if (msg===('justice')){
     x.channel.send('Behold! <@!274718150153732096> will end your faggotry!');
   }
   if (msg.includes('trece')){
