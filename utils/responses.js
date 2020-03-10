@@ -56,7 +56,6 @@ function responses (x, y){
   if (msg.includes(':-porn')){pornPrompt(x)};
 
   //kill prompt-----------------------------------------------------------------
-
   if (msg.includes(':-kill')){
     let victim = msg.replace(':-kill ','');
     let singleKillMsg = killPrompt(x, victim);
@@ -67,7 +66,12 @@ function responses (x, y){
   if (msg===(':-ip-chan execute order 66')){order66(x, y)};
 
   //if hector posts a message---------------------------------------------------
+<<<<<<< HEAD
   if (x.author.id==='274719053808009216'){hectorFunc(x, numsixnine)}
+=======
+  if (x.author.id === '274719053808009216'){hectorFunc(x, numsixnine)}
+
+>>>>>>> d8c78681b5e8def1f9d4b45c12d00cde3b608c5c
   //Dice roll-------------------------------------------------------------------
   if (msg.startsWith(':-roll')){diceRoll(x)};
 
