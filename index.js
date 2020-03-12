@@ -1,7 +1,7 @@
 //all the required shit---------------------------------------------------------
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-//var waifus = [];
+var waifus = [];
 
 //birthday functions------------------------------------------------------------
 const bDayChecker = require('./utils/bDayChecker');
