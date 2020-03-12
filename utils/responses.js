@@ -25,7 +25,8 @@ const joeFunc = require('./joeFunc');
 //const waifuGen = require('./waifuGen');
 
 //function start----------------------------------------------------------------
-function responses (x, y){
+//x=messages, y=bot, w=waifus---------------------------------------------------
+function responses (x, y, w){
   //change message to lower case------------------------------------------------
   let msg =x.content.toLowerCase();
 
@@ -53,10 +54,10 @@ function responses (x, y){
   if (msg===(":-emote help")){emoteHelp(x, y)};
 
   //pron prompt-----------------------------------------------------------------
-  if (msg.includes(':-porn')){pornPrompt(x)};
+  if (msg.startsWith(':-porn')){pornPrompt(x)};
 
   //kill prompt-----------------------------------------------------------------
-  if (msg.includes(':-kill')){
+  if (msg.startsWith(':-kill')){
     let victim = msg.replace(':-kill ','');
     let singleKillMsg = killPrompt(x, victim);
     x.channel.send(singleKillMsg)
@@ -79,9 +80,9 @@ function responses (x, y){
   //if joe posts a message------------------------------------------------------
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
-  //waifu Generator-------------------------------------------------------------
+  //waifu functions-------------------------------------------------------------
   // if (msg.startsWith(':-waifu')){
-  //   waifuGen(x);
+  //   waifuGen(x, w);
   // }
 
   /****************************************************************************/

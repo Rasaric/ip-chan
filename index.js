@@ -1,6 +1,7 @@
 //all the required shit---------------------------------------------------------
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+//var waifus = [];
 
 //birthday functions------------------------------------------------------------
 const bDayChecker = require('./utils/bDayChecker');
@@ -11,6 +12,9 @@ const responses = require('./utils/responses');
 // user functions---------------------------------------------------------------
 const userJoin = require('./utils/userJoin');
 const userLeave = require('./utils/userKick');
+
+//waifuLoader-------------------------------------------------------------------
+//const waifuLoad = require('./utils/waifuLoad');
 
 // When the bot boots up -------------------------------------------------------
 bot.on("ready", async () =>{
@@ -24,6 +28,9 @@ bot.on("ready", async () =>{
 
 	bDayChecker(bot);
 	setInterval(bDayChecker ,21550000);//thrice a day
+
+	//load waifu------------------------------------------------------------------
+	waifuLoad(waifus);
 });
 
 //on user add/remove------------------------------------------------------------
@@ -34,20 +41,20 @@ bot.on('guildMemberRemove', member => {
 	userLeave(bot, member);
 });
 
-//message functions------------------------------------------------------------
+//message functions-------------------------------------------------------------
 bot.on("message", async message => {
 	//if autor is a bot, ignore
 	if(message.author.bot) return;
 	//if message is DM, ignore
 	if(message.channel.type === "dm") return;
 
-/*******************************************************************************/
+/******************************************************************************/
 	//for testing only------------------------------------------------------------
 	//if(message.guild.id == '274718680603033601') return;
-/*******************************************************************************/
+/******************************************************************************/
 
 //responses and messages -------------------------------------------------------
-		responses(message, bot);
+		responses(message, bot, waifus);
 });
 
 bot.login(process.env.BOT_TOKEN);
