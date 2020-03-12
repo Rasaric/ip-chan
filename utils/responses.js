@@ -170,7 +170,7 @@ function responses (x, y, w){
   if (msg.includes('waifu')){
     if(numsixnine < 2400){
       x.channel.send('tu waifu es basura');
-    } else if (y > 6000){
+    } else if (numsixnine > 6000){
       x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
     }
   }
@@ -180,7 +180,7 @@ function responses (x, y, w){
   if (msg.includes('retarded')){
     if(numsixnine < 1800){
       x.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');
-    } else if(y > 6000){
+    } else if(numsixnine > 6000){
       x.channel.send("you laugh, but i'm the one with a college degree");
     }
   }
