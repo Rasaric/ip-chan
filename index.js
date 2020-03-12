@@ -30,7 +30,7 @@ bot.on("ready", async () =>{
 	setInterval(bDayChecker ,21550000);//thrice a day
 
 	//load waifu------------------------------------------------------------------
-	waifuLoad(waifus);
+	//waifuLoad(waifus);
 });
 
 //on user add/remove------------------------------------------------------------
