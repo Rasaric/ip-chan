@@ -133,7 +133,7 @@ function responses (x, y, w){
     x.channel.send('nice');
   }
   if (msg.includes('play despacito')){
-    x.channel.send('https://www.youtube.com/watch?v=qcUk0x7NsJI');
+    x.channel.send('https://www.youtube.com/watch?v=fJP1duVKn7Q');
   }
   if (msg===('standing')){
     x.channel.send('ON THE EDGE');
