@@ -101,7 +101,7 @@ function responses (x, y, w){
     x.react('😠');
   }
   if (msg.includes('69')){
-    if(y < 1800){
+    if(numsixnine < 1800){
       x.channel.send('( ͡° ͜ʖ ͡°)');
     }
   }
@@ -163,12 +163,12 @@ function responses (x, y, w){
     x.channel.send('marico tu');
   }
   if (msg===('our')){
-    if(y < 400){
+    if(numsixnine < 400){
       x.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
   }
   if (msg.includes('waifu')){
-    if(y < 2400){
+    if(numsixnine < 2400){
       x.channel.send('tu waifu es basura');
     } else if (y > 6000){
       x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
@@ -178,7 +178,7 @@ function responses (x, y, w){
     x.channel.send('hola pendejos');
   }
   if (msg.includes('retarded')){
-    if(y < 1800){
+    if(numsixnine < 1800){
       x.channel.send('i try my best (´•̥̥̥  ‸ •̥̥̥`)');
     } else if(y > 6000){
       x.channel.send("you laugh, but i'm the one with a college degree");
