@@ -5,7 +5,7 @@ Get Bday
 
 
 *******************************************************************************/
-const birthdays = require("../JSON/bdays.json");
+const birthdays = require("../../JSON/bdays.json");
 
 function bDayGetter(x) {
   editget = x.content.split(' ');

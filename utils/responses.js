@@ -8,9 +8,12 @@ Response function
 
 //required ---------------------------------------------------------------------
 const Discord = require("discord.js");
-const writeBday = require('./writeBday');
-const bDayGetter = require('./bDayGetter');
-const bDayAll = require('./bDayAll');
+
+//bday functions----------------------------------------------------------------
+const writeBday = require('./bday/writeBday');
+const bDayGetter = require('./bday/bDayGetter');
+const bDayAll = require('./bday/bDayAll');
+
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
@@ -22,11 +25,12 @@ const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
 const joeFunc = require('./joeFunc');
-//const waifuGen = require('./waifuGen');
+const waifuGen = require('./waifus/waifuGen');
+const itemShow = require('./waifus/itemShow');
 
 //function start----------------------------------------------------------------
-//x=messages, y=bot, w=waifus---------------------------------------------------
-function responses (x, y, w){
+//x=messages, y=bot, w=waifus i=items-------------------------------------------
+function responses (x, y, w, i){
   //change message to lower case------------------------------------------------
   let msg =x.content.toLowerCase();
 
@@ -81,10 +85,12 @@ function responses (x, y, w){
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
   //waifu functions-------------------------------------------------------------
-  // if (msg.startsWith(':-waifu')){
-  //   waifuGen(x, w);
-  // }
-
+  if (msg.startsWith(':-waifu')){
+    waifuGen(x, y, w, i);
+  }
+  if (msg.startsWith(':-item')){
+    itemShow(x, i);
+  }
   /****************************************************************************/
   //general responses ----------------------------------------------------------
   if (msg===':-avatar') {
@@ -167,13 +173,13 @@ function responses (x, y, w){
       x.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
   }
-  if (msg.includes('waifu')){
-    if(numsixnine < 2400){
-      x.channel.send('tu waifu es basura');
-    } else if (numsixnine > 6000){
-      x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
-    }
-  }
+  // if (msg.includes('waifu')){
+  //   if(numsixnine < 2400){
+  //     x.channel.send('tu waifu es basura');
+  //   } else if (numsixnine > 6000){
+  //     x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
+  //   }
+  // }
   if (msg===('morning')){
     x.channel.send('hola pendejos');
   }

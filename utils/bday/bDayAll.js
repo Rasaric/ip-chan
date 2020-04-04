@@ -5,7 +5,7 @@ dump all bdays
 
 
 *******************************************************************************/
-bdays = require("../JSON/bdays.json");
+bdays = require("../../JSON/bdays.json");
 
 function bDayAll(x) {
 
