@@ -14,14 +14,13 @@ const writeBday = require('./bday/writeBday');
 const bDayGetter = require('./bday/bDayGetter');
 const bDayAll = require('./bday/bDayAll');
 
-<<<<<<< HEAD
+
 const joeFunc = require('./users/joeFunc');
 const dserFunc = require('./users/dserFunc');
 const justiceFunction = require('./users/justice');
 const hectorFunc = require('./users/hector');
 
-=======
->>>>>>> waifu hunger game
+
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
@@ -31,16 +30,12 @@ const order66 = require('./order66');
 const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
-<<<<<<< HEAD
 
+//  waifu hunger game-----------------------------------------------------------
 // const waifuGen = require('./waifus/waifuGen');
 // const itemShow = require('./waifus/itemShow');
 
-=======
-const joeFunc = require('./joeFunc');
-const waifuGen = require('./waifus/waifuGen');
-const itemShow = require('./waifus/itemShow');
->>>>>>> waifu hunger game
+
 
 //function start----------------------------------------------------------------
 //x=messages, y=bot, w=waifus i=items-------------------------------------------
@@ -101,12 +96,9 @@ function responses (x, y, w, i){
   //if joe posts a message------------------------------------------------------
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
-<<<<<<< HEAD
   //if dser posts a message------------------------------------------------------
   if (x.author.id==='164916181252308993'){dserFunc(x, numsixnine)}
 
-=======
->>>>>>> waifu hunger game
   //waifu functions-------------------------------------------------------------
   if (msg.startsWith(':-waifu')){
     waifuGen(x, y, w, i);
