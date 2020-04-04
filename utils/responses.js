@@ -167,13 +167,13 @@ function responses (x, y, w){
       x.channel.send('https://www.youtube.com/watch?v=U06jlgpMtQs');
     }
   }
-  if (msg.includes('waifu')){
-    if(numsixnine < 2400){
-      x.channel.send('tu waifu es basura');
-    } else if (numsixnine > 6000){
-      x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
-    }
-  }
+  // if (msg.includes('waifu')){
+  //   if(numsixnine < 2400){
+  //     x.channel.send('tu waifu es basura');
+  //   } else if (numsixnine > 6000){
+  //     x.channel.send('das some good waifu right there ( ͡° ͜ʖ ͡°)');
+  //   }
+  // }
   if (msg===('morning')){
     x.channel.send('hola pendejos');
   }
