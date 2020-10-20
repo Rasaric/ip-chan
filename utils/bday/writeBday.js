@@ -6,7 +6,7 @@ Record Bday
 
 *******************************************************************************/
 //required----------------------------------------------------------------------
-birthdays = require("../JSON/bdays.json");
+birthdays = require("../../JSON/bdays.json");
 const fs = require("fs");
 
 function writeBday(x) {

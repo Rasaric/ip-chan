@@ -7,15 +7,17 @@ Birthday checker
 *******************************************************************************/
 
 //Bday arrays
-bdays = require("../JSON/bdays.json");
-bdaymsgs = require("../JSON/bdaymsgs.json");
-id = require('../JSON/id.json');
+bdays = require("../../JSON/bdays.json");
+bdaymsgs = require("../../JSON/bdaymsgs.json");
+id = require('../../JSON/id.json');
 
 function bDayChecker(x) {
   //get date, day, month--------------------------------------------------------
-  let today = new Date();
+  var offset = -4;
+  let today = new Date(new Date().getTime() + offset * 3600 * 1000);
   let dd = today.getDate();
   let mm = today.getMonth()+1;//jan
+  
   /*Special dates**************************************************************/
   //snek bday
   if (dd == 26 && mm == 3) {
@@ -30,7 +32,7 @@ function bDayChecker(x) {
   if (dd == 11 && mm == 9) {
     x.channels.get(id.IpMainChannelId).send("@everyone"+" never forget");
   }
-  
+
   for (let festivity in bdays) {
     //random birthday options
     const options = bdaymsgs.messages;

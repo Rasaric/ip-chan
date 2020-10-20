@@ -14,7 +14,7 @@ const userJoin = require('./utils/users/userJoin');
 const userLeave = require('./utils/users/userKick');
 
 //waifuLoader-------------------------------------------------------------------
-const waifuLoad = require('./utils/waifus/waifuLoad');
+//const waifuLoad = require('./utils/waifus/waifuLoad');
 
 // When the bot boots up -------------------------------------------------------
 bot.on("ready", async () =>{

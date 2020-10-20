@@ -26,9 +26,10 @@ const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
 const joeFunc = require('./joeFunc');
 const dserFunc = require('./dserFunc');
-const waifuGen = require('./waifus/waifuGen');
-const itemShow = require('./waifus/itemShow');
 const justiceFunction = require('./justice');
+// const waifuGen = require('./waifus/waifuGen');
+// const itemShow = require('./waifus/itemShow');
+
 
 //function start----------------------------------------------------------------
 //x=messages, y=bot, w=waifus i=items-------------------------------------------
