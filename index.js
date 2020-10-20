@@ -4,17 +4,17 @@ const bot = new Discord.Client();
 var waifus = [];
 
 //birthday functions------------------------------------------------------------
-const bDayChecker = require('./utils/bDayChecker');
+const bDayChecker = require('./utils/bday/bDayChecker');
 
 //responses --------------------------------------------------------------------
 const responses = require('./utils/responses');
 
 // user functions---------------------------------------------------------------
-const userJoin = require('./utils/userJoin');
-const userLeave = require('./utils/userKick');
+const userJoin = require('./utils/users/userJoin');
+const userLeave = require('./utils/users/userKick');
 
 //waifuLoader-------------------------------------------------------------------
-//const waifuLoad = require('./utils/waifuLoad');
+const waifuLoad = require('./utils/waifus/waifuLoad');
 
 // When the bot boots up -------------------------------------------------------
 bot.on("ready", async () =>{
@@ -56,5 +56,4 @@ bot.on("message", async message => {
 //responses and messages -------------------------------------------------------
 		responses(message, bot, waifus);
 });
-
 bot.login(process.env.BOT_TOKEN);

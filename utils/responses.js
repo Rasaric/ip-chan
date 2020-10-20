@@ -8,9 +8,12 @@ Response function
 
 //required ---------------------------------------------------------------------
 const Discord = require("discord.js");
-const writeBday = require('./writeBday');
-const bDayGetter = require('./bDayGetter');
-const bDayAll = require('./bDayAll');
+
+//bday functions----------------------------------------------------------------
+const writeBday = require('./bday/writeBday');
+const bDayGetter = require('./bday/bDayGetter');
+const bDayAll = require('./bday/bDayAll');
+
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
@@ -22,11 +25,14 @@ const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
 const joeFunc = require('./joeFunc');
-//const waifuGen = require('./waifuGen');
+const dserFunc = require('./dserFunc');
+const waifuGen = require('./waifus/waifuGen');
+const itemShow = require('./waifus/itemShow');
+const justiceFunction = require('./justice');
 
 //function start----------------------------------------------------------------
-//x=messages, y=bot, w=waifus---------------------------------------------------
-function responses (x, y, w){
+//x=messages, y=bot, w=waifus i=items-------------------------------------------
+function responses (x, y, w, i){
   //change message to lower case------------------------------------------------
   let msg =x.content.toLowerCase();
 
@@ -48,6 +54,9 @@ function responses (x, y, w){
   if (msg.startsWith(':-ball')){bDayAll(x)}
   //pats------------------------------------------------------------------------
   if (msg.includes('good bot')){patsFunction(x)};
+
+  //justice------------------------------------------------------------------------
+  if (msg.includes('justice') || msg.includes('<@!274718150153732096>')){justiceFunction(x)};
 
   //Emotes ---------------------------------------------------------------------
   if (msg.endsWith(':')){extraEmotes(x, y);};
@@ -80,11 +89,16 @@ function responses (x, y, w){
   //if joe posts a message------------------------------------------------------
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
-  //waifu functions-------------------------------------------------------------
-  // if (msg.startsWith(':-waifu')){
-  //   waifuGen(x, w);
-  // }
+  //if dser posts a message------------------------------------------------------
+  if (x.author.id==='164916181252308993'){dserFunc(x, numsixnine)}
 
+  //waifu functions-------------------------------------------------------------
+  if (msg.startsWith(':-waifu')){
+    waifuGen(x, y, w, i);
+  }
+  if (msg.startsWith(':-item')){
+    itemShow(x, i);
+  }
   /****************************************************************************/
   //general responses ----------------------------------------------------------
   if (msg===':-avatar') {
@@ -150,9 +164,7 @@ function responses (x, y, w){
   if (msg.includes('mamalo')){
     x.channel.send('eso es lo que tu quisieras, no?');
   }
-  if (msg===('justice')){
-    x.channel.send('Behold! <@!274718150153732096> will end your faggotry!');
-  }
+
   if (msg.includes('trece')){
     x.channel.send('mientras mas me lo maman mas me crece');
   }
