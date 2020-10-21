@@ -14,6 +14,10 @@ const writeBday = require('./bday/writeBday');
 const bDayGetter = require('./bday/bDayGetter');
 const bDayAll = require('./bday/bDayAll');
 
+const joeFunc = require('./users/joeFunc');
+const dserFunc = require('./users/dserFunc');
+const justiceFunction = require('./users/justice');
+
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
@@ -24,9 +28,7 @@ const hectorFunc = require('./hector');
 const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
-const joeFunc = require('./joeFunc');
-const dserFunc = require('./dserFunc');
-const justiceFunction = require('./justice');
+
 // const waifuGen = require('./waifus/waifuGen');
 // const itemShow = require('./waifus/itemShow');
 
