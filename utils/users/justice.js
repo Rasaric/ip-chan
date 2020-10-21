@@ -7,7 +7,7 @@ Pats
 *******************************************************************************/
 
 //required----------------------------------------------------------------------
-justice = require("../JSON/justice.json");
+justice = require("../../JSON/justice.json");
 
 function justiceFunction(x) {
   const patReact = justice.justice;
