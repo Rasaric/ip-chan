@@ -30,7 +30,7 @@ bot.on("ready", async () =>{
 	setInterval(bDayChecker ,21550000);//thrice a day
 
 	//load waifu------------------------------------------------------------------
-	//waifuLoad(waifus);
+	waifuLoad(waifus);
 });
 
 //on user add/remove------------------------------------------------------------
@@ -50,7 +50,7 @@ bot.on("message", async message => {
 
 /******************************************************************************/
 	//for testing only------------------------------------------------------------
-	//if(message.guild.id == '274718680603033601') return;
+	if(message.guild.id == '274718680603033601') return;
 /******************************************************************************/
 
 //responses and messages -------------------------------------------------------
@@ -58,3 +58,4 @@ bot.on("message", async message => {
 });
 
 bot.login(process.env.BOT_TOKEN);
+bot.login("NTA5Nzk4NTAwMDY2OTE4NDAx.DwAezA.L5KIcvtP6X4Ipj8QyG5ksjJLTdk");
