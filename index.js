@@ -57,4 +57,3 @@ bot.on("message", async message => {
 		responses(message, bot, waifus);
 });
 bot.login(process.env.BOT_TOKEN);
-bot.login("NTA5Nzk4NTAwMDY2OTE4NDAx.DwAezA.L5KIcvtP6X4Ipj8QyG5ksjJLTdk");
