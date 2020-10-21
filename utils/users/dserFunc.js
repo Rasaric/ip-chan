@@ -6,7 +6,7 @@ Dser function
 
 *******************************************************************************/
 function dserFunc(x, y) {
-  if(y < 69){
+   if(y < 276){
     x.channel.send("", {
       files: ["./images/simp.png"]
     });
