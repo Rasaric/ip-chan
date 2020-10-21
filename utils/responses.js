@@ -14,13 +14,13 @@ const writeBday = require('./bday/writeBday');
 const bDayGetter = require('./bday/bDayGetter');
 const bDayAll = require('./bday/bDayAll');
 
-
+//user functions----------------------------------------------------------------
 const joeFunc = require('./users/joeFunc');
 const dserFunc = require('./users/dserFunc');
 const justiceFunction = require('./users/justice');
 const hectorFunc = require('./users/hector');
 
-
+//others------------------------------------------------------------------------
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
 const emoteHelp = require('./emoteHelp');
@@ -32,10 +32,8 @@ const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');
 
 //  waifu hunger game-----------------------------------------------------------
-// const waifuGen = require('./waifus/waifuGen');
-// const itemShow = require('./waifus/itemShow');
-
-
+ const waifuGen = require('./waifus/waifuGen');
+ const itemShow = require('./waifus/itemShow');
 
 //function start----------------------------------------------------------------
 //x=messages, y=bot, w=waifus i=items-------------------------------------------
