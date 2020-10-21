@@ -57,4 +57,9 @@ bot.on("message", async message => {
 		responses(message, bot, waifus);
 });
 
+if (typeof process.env.BOT_TOKEN  !== "undefined") {
 bot.login(process.env.BOT_TOKEN);
+} else {
+	const botToken = require('./bottoken.json');
+	bot.login(botToken.token);
+}
