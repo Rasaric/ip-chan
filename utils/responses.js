@@ -17,6 +17,7 @@ const bDayAll = require('./bday/bDayAll');
 const joeFunc = require('./users/joeFunc');
 const dserFunc = require('./users/dserFunc');
 const justiceFunction = require('./users/justice');
+const hectorFunc = require('./users/hector');
 
 const patsFunction = require('./pats');
 const extraEmotes = require('./extraEmotes');
@@ -24,7 +25,6 @@ const emoteHelp = require('./emoteHelp');
 const pornPrompt = require('./porn');
 const killPrompt = require('./killPrompt');
 const order66 = require('./order66');
-const hectorFunc = require('./hector');
 const diceRoll = require('./roll');
 const helpFunc = require('./help');
 const sendFunc = require('./sendFunc');

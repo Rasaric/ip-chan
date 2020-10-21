@@ -7,7 +7,7 @@ Hector function
 *******************************************************************************/
 
 //required
-hector = require("../JSON/hector.json");
+hector = require("../../JSON/hector.json");
 
 function hectorFunc(x, y){
   //keywords--------------------------------------------------------------------
