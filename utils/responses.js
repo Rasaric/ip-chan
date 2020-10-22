@@ -92,8 +92,9 @@ function responses (x, y, w, i){
   //if joe posts a message------------------------------------------------------
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
-  //if dser posts a message------------------------------------------------------
-  if (x.author.id==='164916181252308993'){dserFunc(x, numsixnine)}
+  //if dser posts a message-----------------------------------------------------
+
+  if ((x.author.id==='164916181252308993' && numsixnine < 69) || msg.startsWith(":-simp")){dserFunc(x, numsixnine)}
 
   //waifu functions-------------------------------------------------------------
   if (msg.startsWith(':-waifu')){
