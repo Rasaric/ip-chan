@@ -2,6 +2,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 var waifus = [];
+var loot = [];
 
 //birthday functions------------------------------------------------------------
 const bDayChecker = require('./utils/bday/bDayChecker');
@@ -15,6 +16,9 @@ const userLeave = require('./utils/users/userKick');
 
 //waifuLoader-------------------------------------------------------------------
 const waifuLoad = require('./utils/waifus/waifuLoad');
+
+//itemLoader-------------------------------------------------------------------
+const itemLoad = require('./utils/waifus/itemLoad');
 
 // When the bot boots up -------------------------------------------------------
 bot.on("ready", async () =>{
@@ -31,6 +35,7 @@ bot.on("ready", async () =>{
 
 	//load waifu------------------------------------------------------------------
 	waifuLoad(waifus);
+	itemLoad(loot);
 });
 
 //on user add/remove------------------------------------------------------------
@@ -50,11 +55,11 @@ bot.on("message", async message => {
 
 /******************************************************************************/
 	//for testing only------------------------------------------------------------
-	if(message.guild.id == '274718680603033601') return;
+	//if(message.guild.id == '274718680603033601') return;
 /******************************************************************************/
 
 //responses and messages -------------------------------------------------------
-		responses(message, bot, waifus);
+		responses(message, bot, waifus, loot);
 });
 
 if (typeof process.env.BOT_TOKEN  !== "undefined") {

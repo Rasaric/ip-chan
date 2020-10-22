@@ -22,7 +22,7 @@ function waifuGen (x, y,  w, i) {
   if (x.content==(':-waifu all')){
     waifuAll(x, w);
 
-    //show existing waifu-------------------------------------------------------
+  //show existing waifu-------------------------------------------------------
   } else if (x.content.startsWith(':-waifu show')){
     waifuShow(x, w);
 
@@ -43,6 +43,7 @@ function waifuGen (x, y,  w, i) {
 
   } else if (x.content.startsWith(':-waifu surrender')){
     waifuSurrender(x, w);
+
   } else if (x.content.startsWith(':-waifu help')){
     waifuHelp(x, y);
 

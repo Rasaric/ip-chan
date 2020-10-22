@@ -17,8 +17,8 @@ function waifuHelp(x, y){
   //set fields------------------------------------------------------------------
   .setDescription("a waifu can")
   .setColor('#e7dcbf')
-  .addField(':-waifu fight [waifu1] vs [waifu2]' , 'you whack oen waifu, not big surprise')
-  .addField(':-waifu lewd [waifu1] vs [waifu2] --ally a waifu so they dont whack, might not last forever')
+  .addField(':-waifu fight [waifu1] vs [waifu2]' , 'you whack one waifu, not big surprise')
+  .addField(':-waifu lewd [waifu1] vs [waifu2]' , 'ally a waifu so they dont whack, might not last forever')
   .addField(':-waifu loot [waifu]' , 'get shit, be stronk, can only hold so much')
   .addField(':-waifu hide [waifu]' , 'perform the stealth croutch and become invisible to the enemy... unless they see you')
   .addField(':-waifu dab [waifu]' , 'do nothing, be a shit')

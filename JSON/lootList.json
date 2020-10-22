@@ -2,7 +2,7 @@
     "loot": [
         {
             "name": "Gun",
-            "url": "https://www.gunbuyer.com/media/catalog/product/cache/small_image/321x321/beff4985b56e3afdbeabfc89641a4582/1/-/1-g3941.png",
+            "url": "https://cdn.discordapp.com/attachments/652639923530104852/768280007738130482/1-g3941.png",
             "combat": 3,
             "hp": 0,
             "dodge": 0,
@@ -419,6 +419,14 @@
             "steath": 0,
             "peception": 0,
             "lewd": 0
+        }, {
+          "name": "Axe",
+        }, {
+          "name": "Whip",
+        }, {
+          "name": "Dildo",
+        }, {
+          "name": "Lego Brick",
         }
     ]
 }
