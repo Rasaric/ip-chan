@@ -419,14 +419,18 @@
             "steath": 0,
             "peception": 0,
             "lewd": 0
-        }, {
-          "name": "Axe",
-        }, {
-          "name": "Whip",
-        }, {
-          "name": "Dildo",
-        }, {
-          "name": "Lego Brick",
+        },
+        {
+          "name": "Axe"
+        },
+        {
+          "name": "Whip"
+        },
+        {
+          "name": "Dildo"
+        },
+        {
+          "name": "Lego Brick"
         }
     ]
 }
