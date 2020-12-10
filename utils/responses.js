@@ -92,8 +92,9 @@ function responses (x, y, w, i){
   //if joe posts a message------------------------------------------------------
   if (x.author.id==='137631119536291841'){joeFunc(x, numsixnine)}
 
-  //if dser posts a message------------------------------------------------------
-  if (x.author.id==='164916181252308993'){dserFunc(x, numsixnine)}
+  //if dser posts a message-----------------------------------------------------
+
+  if ((x.author.id==='164916181252308993' && numsixnine < 69) || msg.startsWith(":-simp")){dserFunc(x, numsixnine)}
 
   //waifu functions-------------------------------------------------------------
   if (msg.startsWith(':-waifu')){
@@ -137,10 +138,7 @@ function responses (x, y, w, i){
   if (msg.includes('@everyone')){
     x.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE');
   }
-  if (msg.includes('gunright')){
-    x.channel.send(gunleft + " " + dai + " "+ gunright);
-  }
-  else if (msg.includes('gunleft')){
+  if (msg.includes('gunright') || msg.includes('gunleft')){
     x.channel.send(gunleft + " " + dai + " "+ gunright);
   }
   if (msg===('owo')){
@@ -205,7 +203,7 @@ function responses (x, y, w, i){
   if (msg.includes('180063200459358208')){
     x.channel.send('https://cdn.discordapp.com/attachments/529529045516550145/578239302127976460/D3-75jZU8AA3zV0.png');
   }
-  if (msg.includes('sociedad')||msg.includes('society')){
+  if (msg.includes('sociedad') || msg.includes('society')){
     x.channel.send("Bottom text", {
       files: ["./images/society.jpg"]
     });

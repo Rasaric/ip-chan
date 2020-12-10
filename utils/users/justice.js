@@ -10,13 +10,13 @@ Pats
 justice = require("../../JSON/justice.json");
 
 function justiceFunction(x) {
-  const patReact = justice.justice;
+  const crimeReact = justice.justice;
 
   //generate random number------------------------------------------------------
-  const randomNum = Math.floor(Math.random() * patReact.length);
+  const randomNum = Math.floor(Math.random() * crimeReact.length);
 
   //pick a number and pat-------------------------------------------------------
-  const smite = patReact[randomNum];
+  const smite = crimeReact[randomNum];
   x.channel.send(smite);
 }
 
