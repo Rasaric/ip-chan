@@ -17,11 +17,15 @@ function bDayChecker(x) {
   let today = new Date(new Date().getTime() + offset * 3600 * 1000);
   let dd = today.getDate();
   let mm = today.getMonth()+1;//jan
-  
+
   /*Special dates**************************************************************/
   //snek bday
   if (dd == 26 && mm == 3) {
     x.channels.get(id.IpMainChannelId).send("Happy birthday daddy UwU");
+  }
+  //ipchan day
+  if (dd == 11 && mm == 12) {
+    x.channels.get(id.IpMainChannelId).send("https://www.youtube.com/watch?v=sKWT6CKSGb0");
   }
 
   //krimis----------------------------------------------------------------------
