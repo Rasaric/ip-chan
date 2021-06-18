@@ -49,13 +49,13 @@ function responses (x, y, w, i){
   let gunright = y.emojis.get("371039882916790272");
 
   //parrots
-  let parrotred = y.emojis.get("855458072344264805");
-  let parrotteal = y.emojis.get("855457828571578388");
-  let parrotgreen = y.emojis.get("855457914117816330");
-  let parrotgray = y.emojis.get("855457944291770458");
-  let parrotblue = y.emojis.get("855458072344264805");
+  let parrotred = y.emojis.get("855456476025061386");
+  let parrotteal = y.emojis.get("855456476154691615");
+  let parrotgreen = y.emojis.get("855456476985294898");
+  let parrotgray = y.emojis.get("855456476360212520");
+  let parrotblue = y.emojis.get("855456477128687676");
 
-  
+
 
   /****************************************************************************/
   /*outside functions---------------------------------------------------------*/
