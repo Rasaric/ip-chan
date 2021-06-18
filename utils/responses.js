@@ -48,6 +48,15 @@ function responses (x, y, w, i){
   let dai = y.emojis.get("314877079386718218");
   let gunright = y.emojis.get("371039882916790272");
 
+  //parrots
+  let parrotred = y.emojis.get("855458072344264805");
+  let parrotteal = y.emojis.get("855457828571578388");
+  let parrotgreen = y.emojis.get("855457914117816330");
+  let parrotgray = y.emojis.get("855457944291770458");
+  let parrotblue = y.emojis.get("855458072344264805");
+
+  
+
   /****************************************************************************/
   /*outside functions---------------------------------------------------------*/
 
@@ -231,6 +240,10 @@ function responses (x, y, w, i){
 
   if (msg.includes('Kimetsu no Yaiba')){
     x.channel.send('shut up you goddamn incel');
+  }
+
+  if (msg.includes('parrot party')){
+    x.channel.send(parrotred + " " + parrotblue + " " + parrotgray + " " + parrotteal + " " + parrotgreen);
   }
 }
 module.exports = responses;
