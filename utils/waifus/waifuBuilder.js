@@ -109,7 +109,7 @@ class Waifu {
   }
   //hide------------------------------------------------------------------------
   onHide(x) {
-    this.stealth = 5;
+    this.stealth = this.stealth + 5;
     this.hidden = true;
     x.channel.send(`**${this.name}** is attempting to hide`);
   }
