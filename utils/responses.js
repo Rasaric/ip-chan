@@ -237,6 +237,11 @@ function responses (x, y, w, i){
       files: ["./images/endi.png"]
     });
   }
+  if (msg.contains(':squeak:')){
+    x.channel.send("", {
+      files: ["./images/squeak.png"]
+    });
+  }
 
   if (msg.includes('Kimetsu no Yaiba')){
     x.channel.send('shut up you goddamn incel');
