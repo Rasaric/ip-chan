@@ -237,7 +237,7 @@ function responses (x, y, w, i){
       files: ["./images/endi.png"]
     });
   }
-  if (msg.contains(':squeak:')){
+  if (msg.includes(':squeak:')){
     x.channel.send("", {
       files: ["./images/squeak.png"]
     });
