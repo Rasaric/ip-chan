@@ -11,7 +11,12 @@ bdays = require("../../JSON/bdays.json");
 bdaymsgs = require("../../JSON/bdaymsgs.json");
 id = require('../../JSON/id.json');
 
+
+
 function bDayChecker(x) {
+  let ipServer = x.guilds.get(id.IpServerId);
+  let guildNames = ipServer.members.map(u=> `<@!${u.id}>`);
+
   //get date, day, month--------------------------------------------------------
   var offset = -4;
   let today = new Date(new Date().getTime() + offset * 3600 * 1000);
@@ -38,19 +43,22 @@ function bDayChecker(x) {
   }
 
   for (let festivity in bdays) {
-    //random birthday options
-    const options = bdaymsgs.messages;
-
-    if (bdays[festivity].day-1 == dd && bdays[festivity].mon == mm) {
-      x.channels.get(id.IpMainChannelId).send(festivity + "'s birthday is tomorrow, are you ready?");
-    }
-    else if (bdays[festivity].day == dd && bdays[festivity].mon == mm) {
-      //generate random number
-      const randomNum = Math.floor(Math.random() * options.length);
-      //pick a number and call a birthday greeting
-      const option = options[randomNum];
-      optionMod=option.replace('festivity', festivity)
-      return x.channels.get(id.IpMainChannelId).send(optionMod);
+    for (let member in guildNames) {
+      if (festivity == guildNames[member]) {
+        if (bdays[festivity].day-1 == dd && bdays[festivity].mon == mm) {
+          x.channels.get(id.IpMainChannelId).send(festivity + "'s birthday is tomorrow, are you ready?");
+        }
+        else if (bdays[festivity].day == dd && bdays[festivity].mon == mm) {
+          //random birthday options
+          const options = bdaymsgs.messages;
+          //generate random number
+          const randomNum = Math.floor(Math.random() * options.length);
+          //pick a number and call a birthday greeting
+          const option = options[randomNum];
+          optionMod=option.replace('festivity', festivity)
+          return x.channels.get(id.TestchannelID).send(optionMod);
+        }
+      }
     }
   }
 }

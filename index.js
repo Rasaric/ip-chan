@@ -1,6 +1,6 @@
 //all the required shit---------------------------------------------------------
 const Discord = require("discord.js");
-const bot = new Discord.Client();
+const bot = new Discord.Client({fetchAllMembers: true});
 var waifus = [];
 
 //birthday functions------------------------------------------------------------
