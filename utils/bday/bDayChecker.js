@@ -56,7 +56,7 @@ function bDayChecker(x) {
           //pick a number and call a birthday greeting
           const option = options[randomNum];
           optionMod=option.replace('festivity', festivity)
-          return x.channels.get(id.TestchannelID).send(optionMod);
+          return x.channels.get(id.IpMainChannelId).send(optionMod);
         }
       }
     }
