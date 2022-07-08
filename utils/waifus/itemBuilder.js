@@ -20,7 +20,7 @@ class Item {
     this.hp = hp;
     this.lewd = lewd;
     this.pure = pure;
-    this.equiped = false;
+    this.equipped = false;
   }
 
   /*Item Methods**************************************************************/
